@@ -1,0 +1,23 @@
+{
+  "errors_generic": "现在我们遇到一些问题。请刷新重试。",
+  "errors_imageSource": "图片不可用。",
+  "errors_singleMessage": "您刚刚发送的消息存在一个错误，不过可以随时向我咨询其他问题。",
+  "input_placeholder": "输入一些内容…",
+  "input_ariaInputLabel": "输入一则消息，按 Enter 键发送",
+  "input_buttonLabel": "单击以发送消息",
+  "window_title": "Watson Assistant 交谈窗口",
+  "window_ariaWindowOpened": "已打开 Watson Assistant 交谈窗口",
+  "window_ariaWindowClosed": "已关闭 Watson Assistant 交谈窗口",
+  "launcher_isOpen": "关闭 Watson Assistant 交谈窗口",
+  "launcher_isClosed": "打开 Watson Assistant 交谈窗口",
+  "messages_youSaid": "用户",
+  "messages_watsonSaid": "Watson Assistant",
+  "messages_searchResults": "搜索结果",
+  "options_select": "选择选项",
+  "options_seeMore": "查看更多选项",
+  "options_ariaOptionsDisabled": "这些选项已禁用，无法选择",
+  "header_previewLinkTitle": "预览助理",
+  "agent_mockTitle": "连接到代理",
+  "agent_mockDescription": "已收到“连接到代理”响应类型。在生产中，您将编写代码来处理此连接。",
+  "agent_mockMessageLabel": "此消息将发送至代理："
+}

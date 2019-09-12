@@ -1,0 +1,23 @@
+{
+  "errors_generic": "複数の問題が発生しています。リフレッシュして再試行してください。",
+  "errors_imageSource": "画像はご利用になれません。",
+  "errors_singleMessage": "先ほどの送信メッセージにエラーがありました。別のご質問をお願いします。",
+  "input_placeholder": "何か入力してください...",
+  "input_ariaInputLabel": "メッセージを入力し、Enter を押して送信",
+  "input_buttonLabel": "クリックしてメッセージを送信",
+  "window_title": "Watson Assistant チャット・ウィンドウ",
+  "window_ariaWindowOpened": "Watson Assistant チャット・ウィンドウを開きました",
+  "window_ariaWindowClosed": "Watson Assistant チャット・ウィンドウを閉じました",
+  "launcher_isOpen": "Watson Assistant チャット・ウィンドウを閉じる",
+  "launcher_isClosed": "Watson Assistant チャット・ウィンドウを開く",
+  "messages_youSaid": "あなたの発言:",
+  "messages_watsonSaid": "Watson Assistant の発言:",
+  "messages_searchResults": "検索結果",
+  "options_select": "オプションの選択",
+  "options_seeMore": "別のオプションを表示する",
+  "options_ariaOptionsDisabled": "オプションは使用不可のため選択できません",
+  "header_previewLinkTitle": "Assistant プレビュー",
+  "agent_mockTitle": "Connect to Agent",
+  "agent_mockDescription": "「Connect to Agent」応答タイプを受け取りました。本番環境では、この接続を処理するためのコードを書くことになります。",
+  "agent_mockMessageLabel": "メッセージは、エージェントに送られます:"
+}

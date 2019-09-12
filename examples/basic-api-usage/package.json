@@ -1,0 +1,13 @@
+{
+  "name": "watson-assistant-chat-basic-api-usage",
+  "version": "1.0.0",
+  "description": "Basic examples of how to use Watson Assistant Chat api.",
+  "scripts": {
+    "start": "http-server ./ -o"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "errors_generic": "Er zijn op dit moment enkele problemen. Probeer het opnieuw door te vernieuwen.",
+  "errors_imageSource": "Afbeelding is niet beschikbaar.",
+  "errors_singleMessage": "Er is iets fout gegaan bij het bericht dat u net hebt gestuurd; u kunt me wel iets anders vragen.",
+  "input_placeholder": "Typ iets...",
+  "input_ariaInputLabel": "Typ een bericht en druk op Enter om het te verzenden",
+  "input_buttonLabel": "Klik om een bericht te verzenden",
+  "window_title": "Chatvenster van Watson Assistant",
+  "window_ariaWindowOpened": "Het chatvenster van Watson Assistant is geopend",
+  "window_ariaWindowClosed": "Het chatvenster van Watson Assistant is gesloten",
+  "launcher_isOpen": "Het chatvenster van Watson Assistant sluiten",
+  "launcher_isClosed": "Het chatvenster van Watson Assistant openen",
+  "messages_youSaid": "U zei",
+  "messages_watsonSaid": "Watson Assistant zei",
+  "messages_searchResults": "Zoekresultaten",
+  "options_select": "Selecteer een optie",
+  "options_seeMore": "Meer opties bekijken",
+  "options_ariaOptionsDisabled": "Deze opties zijn uitgeschakeld en kunnen niet geselecteerd worden",
+  "header_previewLinkTitle": "Assistant-preview",
+  "agent_mockTitle": "Verbinden met agent",
+  "agent_mockDescription": "Het responstype verbinden met agent is ontvangen. In productie zou u code schrijven om deze verbinding af te handelen.",
+  "agent_mockMessageLabel": "Dit bericht wordt aan de agent gezonden:"
+}

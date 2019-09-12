@@ -1,0 +1,23 @@
+{
+  "errors_generic": "Estamos tendo alguns problemas agora. Atualize para tentar novamente.",
+  "errors_imageSource": "A imagem não está disponível.",
+  "errors_singleMessage": "Ocorreu um erro na mensagem que você acabou de enviar, mas fique à vontade para me perguntar outra coisa.",
+  "input_placeholder": "Digite alguma coisa...",
+  "input_ariaInputLabel": "Digite uma mensagem e pressione Enter para enviar",
+  "input_buttonLabel": "Clique para enviar a mensagem",
+  "window_title": "Janela de bate-papo do Watson Assistant",
+  "window_ariaWindowOpened": "Janela de bate-papo do Watson Assistant aberta",
+  "window_ariaWindowClosed": "Janela de bate-papo do Watson Assistant fechada",
+  "launcher_isOpen": "Fechar a janela de bate-papo do Watson Assistant",
+  "launcher_isClosed": "Abrir a janela de bate-papo do Watson Assistant",
+  "messages_youSaid": "Você disse",
+  "messages_watsonSaid": "O Watson Assistant disse",
+  "messages_searchResults": "Resultados da pesquisa",
+  "options_select": "Selecione uma opção",
+  "options_seeMore": "Consulte mais opções",
+  "options_ariaOptionsDisabled": "Essas opções estão desativadas e não podem ser selecionadas",
+  "header_previewLinkTitle": "Visualização prévia do Assistente",
+  "agent_mockTitle": "Conectar ao Agente",
+  "agent_mockDescription": "O tipo de resposta de conexão com o agente foi recebido. Na produção, você escreveria o código para manipular essa conexão.",
+  "agent_mockMessageLabel": "Essa mensagem será enviada ao agente:"
+}

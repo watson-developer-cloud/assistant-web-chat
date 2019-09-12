@@ -1,0 +1,23 @@
+{
+  "errors_generic": "نواجه بعض المشاكل في الوقت الحالي. يرجى التجديد لاعادة المحاولة.",
+  "errors_imageSource": "الصورة غير متاحة.",
+  "errors_singleMessage": "يوجد خطأ في الرسالة التي قمت بارسالها للتو، لكن لا تتردد في طلب شيء آخر.",
+  "input_placeholder": "أدخل شيء...",
+  "input_ariaInputLabel": "أدخل رسالة واضغط Enter للارسال",
+  "input_buttonLabel": "اضغط لارسال الرسالة",
+  "window_title": "نافذة محادثة Watson Assistant",
+  "window_ariaWindowOpened": "تم فتح نافذة محادثة Watson Assistant",
+  "window_ariaWindowClosed": "تم اغلاق نافذة محادثة Watson Assistant",
+  "launcher_isOpen": "اغلاق نافذة محادثة Watson Assistant",
+  "launcher_isClosed": "فتح نافذة محادثة Watson Assistant",
+  "messages_youSaid": "أنت قلت",
+  "messages_watsonSaid": "Watson Assistant قال",
+  "messages_searchResults": "نتائج البحث",
+  "options_select": "تحديد اختيار",
+  "options_seeMore": "لمزيد من الاختيارات",
+  "options_ariaOptionsDisabled": "سيتم الغاء اتاحة هذه الاختيارات ولا يمكن تحديدها",
+  "header_previewLinkTitle": "معاينة المساعد",
+  "agent_mockTitle": "الاتصال بالأداة البرمجية",
+  "agent_mockDescription": "تم استلام نوع الاستجابة اتصال بالأداة البرمجية. في عملية الانتاج، ستقوم بكتابة كود للتعامل مع عملية الاتصال هذه.",
+  "agent_mockMessageLabel": "سيتم ارسال هذه الرسالة الى الأداة البرمجية:"
+}
