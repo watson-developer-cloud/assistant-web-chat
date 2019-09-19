@@ -1,6 +1,7 @@
 # Watson Assistant Web Chat (BETA)
 
-This project is currently in BETA.
+This project is currently in BETA. Breaking API changes will not follow [semver](https://semver.org/) until we reach version 1.0.0. All API
+methods subject to change until 1.0.0.
 
 ## Contents
 
@@ -16,7 +17,7 @@ This project is currently in BETA.
 
 Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) Web Chat (BETA). With just a few lines of code, you can add a Web Chat widget to your website and take advantage of all the best and newest that Watson Assistant has to offer.
 
-This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed, configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Dedicated Watson Assistant plans.
+This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed, configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Premium Watson Assistant plans.
 
 **Note:** In this documentation, _Web Chat_ refers to the widget code in this repository; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
 

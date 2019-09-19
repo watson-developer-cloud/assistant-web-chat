@@ -52,72 +52,14 @@
 </header>
 <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
 <script>
-
-  // When the instance is ready, we can call a function that adds event handlers to the instance.
-  function addEventListeners(instance) {
-    // Lets attach the instance to "window" so we can access it globally. In production, we would likely want to do something more clever.
-    window.instance = instance;
-
-    // Here we subscribe to the "pre:send" event with `preSendhandler` as our callback.
-    instance.on({ type: "pre:send", handler: preSendhandler });
-
-    // Because we may have been trying to call our public `send()` function before the instance was ready, here we can process any unsent messages because we know we are ready now.
-    processQueue();
-  }
-
   // Following the v2 message API, we add some items to context.
   function preSendhandler(event) {
     event.data.context = event.data.context || {};
-    message.context.skills = message.context.skills || {};
-    message.context.skills['main skill'] = message.context.skills.main_skill || {};
-    message.context.skills['main skill'].user_defined = message.context.skills['main skill'].user_defined || {};
-    message.context.skills['main skill'].user_defined.party_time = true;
+    event.data.context.skills = event.data.context.skills || {};
+    event.data.context.skills['main skill'] = event.data.context.skills.main_skill || {};
+    event.data.context.skills['main skill'].user_defined = event.data.context.skills['main skill'].user_defined || {};
+    event.data.context.skills['main skill'].user_defined.party_time = true;
   }
-
-  // Since we are just calling "send()" whenever we want, we want to queue up messages until the instance is ready.
-  function processQueue() {
-    var i;
-    if (window.instance && messageQueue && messageQueue.length > 0) {
-      for (i = 0; i < messageQueue.length; i++) {
-        var msg = messageQueue[i];
-        window.instance.send(msg);
-      }
-      messageQueue = [];
-    }
-  }
-
-  // Here we just call the send method on our instance if its ready, if not we push into queue for later processing.
-  function send(msg) {
-    if (window.instance) {
-      window.instance.send(msg);
-    } else {
-      messageQueue.push(msg);
-    }
-  }
-
-  var messageQueue = [];
-
-  // Invoke our send function and send some context along with it.
-  send({
-    "context": {
-      "global": {
-        "system": {
-          "user_id": "my_user_id"
-        }
-      },
-      "skills": {
-        "main skill": {
-          "user_defined": {
-            "account_number": "123456"
-          }
-        }
-      }
-    },
-    "input": {
-      "message_type": "text",
-      "text": "Hello"
-    }
-  });
 </script>
 <script>
   window.loadWatsonAssistantChat({
@@ -125,7 +67,7 @@
     region: 'INSERT YOUR REGION'
   }).then(function(instance){
     // When this promise returns, we know WatsonAssistantChat is ready.
-    addEventListeners(instance);
+    instance.on({ type: "pre:send", handler: preSendhandler });
     instance.render();
   });
 </script>
