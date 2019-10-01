@@ -1,25 +1,72 @@
-# Watson Assistant Web Chat (BETA)
+# Watson Assistant Web Chat
 
-This project is currently in BETA. Breaking API changes will not follow [semver](https://semver.org/) until we reach version 1.0.0. All API
-methods subject to change until 1.0.0.
+## Table of Contents
 
-## Contents
+- [Watson Assistant Web Chat](#watson-assistant-web-chat)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Managing Context](#managing-context)
+    - [Theming](#theming)
+    - [Languages and Strings](#languages-and-strings)
+  - [Configuration](#configuration)
+  - [Managing Your Web Chat After Initialization](#managing-your-web-chat-after-initialization)
+    - [instance.render()](#instancerender)
+    - [instance.on()](#instanceon)
+    - [instance.off()](#instanceoff)
+    - [instance.once()](#instanceonce)
+    - [instance.send()](#instancesend)
+    - [instance.updateLanguagePack()](#instanceupdatelanguagepack)
+    - [instance.getLocale()](#instancegetlocale)
+    - [instance.updateUserID()](#instanceupdateuserid)
+    - [instance.toggleOpen()](#instancetoggleopen)
+    - [instance.openWindow()](#instanceopenwindow)
+    - [instance.closeWindow()](#instanceclosewindow)
+    - [instance.destroy()](#instancedestroy)
+  - [Events](#events)
+    - [Events summary](#events-summary)
+    - [Event callbacks](#event-callbacks)
+    - [Event details](#event-details)
+      - [`pre:send`](#presend)
+      - [`send`](#send)
+      - [`pre:receive`](#prereceive)
+      - [`receive`](#receive)
+      - [`error`](#error)
+      - [`customResponse`](#customresponse)
+      - [`window:open`](#windowopen)
+      - [`window:close`](#windowclose)
+      - [Wildcard (`*`)](#wildcard)
+  - [Examples](#examples)
 
-- [Introduction](#introduction)
-- [Configuration](#configuration-options)
-- [Initializing your Web Chat](#initializing-your-web-chat)
-- [Instance API](#instance-api)
-- [Events](#events)
-- [Event callbacks](#event-callbacks)
-- [Event details](#event-details)
+## Overview
 
-## Introduction
+Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) Web Chat. With just a few lines of code, you can add a Web Chat widget to your website and take advantage of all the best and newest that Watson Assistant has to offer.
 
-Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) Web Chat (BETA). With just a few lines of code, you can add a Web Chat widget to your website and take advantage of all the best and newest that Watson Assistant has to offer.
+This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed,
+configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Premium Watson Assistant
+plans.
 
-This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed, configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Premium Watson Assistant plans.
+In this documentation, _Web Chat_ refers to the widget code in this repository; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
 
-**Note:** In this documentation, _Web Chat_ refers to the widget code in this repository; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
+### Managing Context
+
+The Web Chat is build on top of the v2 Watson Assistant API. In the v1 version of the Watson Assistant API, developers
+had to manage context on their own. With the v2 version of the API, we manage context for you as part of the session. This means you do not have to pass
+context back and forth on every message from the Web Chat, but it will be available in your Dialog skill. If you do pass
+in context variables (see [`pre:send`](#presend)), it will merge with the
+existing context in memory. When merging, the variables you are passing in will overwrite existing values if there is a conflict. See the
+Watson Assistant documentation sections on [Create a
+session](https://cloud.ibm.com/apidocs/assistant-v2#create-a-session) and [Send user input to an
+Assistant](https://cloud.ibm.com/apidocs/assistant-v2#send-user-input-to-assistant) for more information on sessions in
+the v2 API.
+
+### Theming
+
+For information on how to edit the branding, theme and colors of the Web Chat, see the [Theming](theming/README.md) page.
+
+### Languages and Strings
+
+For information on how to provide Web Chat with non-English strings, of even English strings that better match your
+brand and tone, see the [Languages](languages/README.md) page.
 
 ## Configuration
 
@@ -40,15 +87,16 @@ When you create a Web Chat integration in the Watson Assistant UI, you are given
 </script>
 ```
 
-There are additional configuration options you can use to control how your Web Chat instance behaves, including language strings and custom styling. Most users do not need to modify any of these options; the most commonly used is `options.language`.
+There are additional configuration options you can use to control how your Web Chat instance behaves, including language strings and custom styling.
 
 | Parameter | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | options | <code>Object</code> | Required |  | Web Chat configuration options |
 | options.integrationID | <code>string</code> | Required |  |The integration ID of your Web Chat integration. This is exposed as a UUID (for example, `1d7e34d5-3952-4b86-90eb-7c7232b9b540`). |
 | options.region | <code>string</code> | Required |  |Which data center your integration was created in (for example, `us-south`). |
-| options.userID | <code>string</code> | Optional |  | An ID that uniquely identifies the end user at run time. This can be used to delete the user's data on request, in compliance with GDPR.
+| options.userID | <code>string</code> | Optional |  | An ID that uniquely identifies the end user at run time. This can be used to delete the user's data on request, in compliance with GDPR. **Note: this configuration item will be replaced by a JWT based authentication mechanism before this project leaves beta. This configuration option will likely be removed at that time.**
 | options.subscriptionID | <code>string</code> | Optional | | The ID of your subscription. For Premium instances, this option is required and is provided in the snippet that you copy and paste. If you are not using a Premium instance, this ID is absent.
+| options.cssVariables | <code>object</code> | This is a map that can be used to override the values for CSS variables in the application. These styles will merge with whatever you have set inside the Watson Assistant configuration page. On conflict, that values set here will override those set inside Watson Assistant. For details on specific values you can set, see [./theming/README.md]('./theming/README.md'). |
 | options.showLauncher | <code>boolean</code> | Optional | <code>true</code> | Whether to render the chat launcher element used to open and close the chat window. If you specify `false`, your website code is responsible for firing the [launcher:toggle](#launchertoggle-event), [launcher:open](#launcheropen-event) or [launcher:close](#launcherclose-event) events from your own chat launcher. Alternatively, you can use `options.openChatByDefault` to open the chat interface at initialization. |
 | options.openChatByDefault | <code>boolean</code> | Optional | <code>false</code> | Whether to render the chat window initially in an open state. By default, the chat window is rendered in a closed state. |
 | options.languagePack | <code>Object</code> | Optional |  | An object with strings in the format of the `.json` files in [languages](languages). See [languages/README.md](languages/README.md) for more details. This setting replaces all of the default strings based on your `options.locale` setting. This setting performs a replacement rather than a merge, so the provided language pack must contain a full set of strings.
@@ -56,9 +104,14 @@ There are additional configuration options you can use to control how your Web C
 | options.element | <code>Element</code> | Optional |  | The containing DOM element where the the Web Chat widget should be rendered within the page. By default, Web Chat generates its own element. |
 | options.debug | <code>boolean</code> |  Optional | <code>false</code> | Automatically adds a listener that outputs a console message for each event.
 
-## Initializing your Web Chat
+## Managing Your Web Chat After Initialization
 
-The `loadWatsonAssistantChat` method returns a promise that resolves with an instance whose API you can use to subscribe to events and issue actions.
+After you have started your Web Chat with your configuration, the returned instance has an API to allow you to [manage
+events](#events) flowing to or from the Web Chat. This instance also enables you to request that the widget perform
+certain actions. The event system is the key to extending and manipulating the Web Chat on your own website. For more
+details about the supported events, see [Events](#events).
+
+You can subscribe to events using the [`on`](#instance.on) and [`once`](#instance.once) methods. Event handlers are called in the order in which they were registered.
 
 ```html
 <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
@@ -84,54 +137,14 @@ The `loadWatsonAssistantChat` method returns a promise that resolves with an ins
       instance.off({ type: "send", handler: handler});
     }, 30000);
 
-    // Actually render the Web Chat. We fetch initial data like your initial welcome message in this step as well.
+    // Actually render the Web Chat.
     instance.render();
   });
 </script>
 ```
 
-## Instance API
-
-The returned instance has an API to allow you to [manage events](#events) flowing to or from the Web Chat. This instance also enables you to request that the widget perform certain actions. The event system is the key to extending and manipulating the Web Chat on your own website. For more details about the supported events, see [Events](#events).
-
-You can subscribe to events using the [`on`](#instance.on) and [`once`](#instance.once) methods. Event handlers are called in the order in which they were registered.
-
-- [Watson Assistant Web Chat (BETA)](#watson-assistant-web-chat-beta)
-  - [Contents](#contents)
-  - [Introduction](#introduction)
-  - [Configuration](#configuration)
-  - [Initializing your Web Chat](#initializing-your-web-chat)
-  - [Instance API](#instance-api)
-    - [instance.render() ⇒ <code>Promise<instance></code>](#instancerender-%e2%87%92-codepromiseinstancecode)
-    - [instance.on(options) ⇒ <code>instance</code>](#instanceonoptions-%e2%87%92-codeinstancecode)
-    - [instance.off(options) ⇒ <code>instance</code>](#instanceoffoptions-%e2%87%92-codeinstancecode)
-    - [instance.once(options) ⇒ <code>instance</code>](#instanceonceoptions-%e2%87%92-codeinstancecode)
-    - [instance.send()](#instancesend)
-    - [instance.updateLanguagePack()](#instanceupdatelanguagepack)
-    - [instance.getLocale()](#instancegetlocale)
-    - [instance.updateUserID()](#instanceupdateuserid)
-    - [instance.toggleOpen()](#instancetoggleopen)
-    - [instance.openWindow()](#instanceopenwindow)
-    - [instance.closeWindow()](#instanceclosewindow)
-    - [instance.destroy()](#instancedestroy)
-  - [Events](#events)
-    - [Events summary](#events-summary)
-    - [Event callbacks](#event-callbacks)
-    - [Event details](#event-details)
-      - [`pre:send`](#presend)
-      - [`send`](#send)
-      - [`pre:receive`](#prereceive)
-      - [`receive`](#receive)
-      - [`error`](#error)
-      - [`customResponse`](#customresponse)
-      - [`window:open`](#windowopen)
-      - [`window:close`](#windowclose)
-      - [Wildcard (`*`)](#wildcard)
-  - [Examples](#examples)
-
-
 <a name="instance.render"></a>
-### instance.render() ⇒ <code>Promise<instance></code>
+### instance.render()
 
 Renders the Web Chat on your page.
 
@@ -151,7 +164,7 @@ handlers, register them before you call the `render` method. If not, do so when 
 ```
 
 <a name="instance.on"></a>
-### instance.on(options) ⇒ <code>instance</code>
+### instance.on()
 Subscribes to a type of event, using a callback that will be called whenever events of the specified type are fired. You can register as many subscriptions to an event type as you want. Subscriptions are called in order, starting with the first registered.
 
 This method returns the instance itself, for chaining purposes.
@@ -186,7 +199,7 @@ This method returns the instance itself, for chaining purposes.
 ```
 
 <a name="instance.off"></a>
-### instance.off(options) ⇒ <code>instance</code>
+### instance.off()
 Removes a subscription to an event type. After you remove a subscription, the callback handler is no longer called for that event type.
 
 This method returns the instance itself, for chaining purposes.
@@ -233,7 +246,7 @@ This method returns the instance itself, for chaining purposes.
 ```
 
 <a name="instance.once"></a>
-### instance.once(options) ⇒ <code>instance</code>
+### instance.once()
 Subscribes an event handler as a listener for only one occurrence of the specified event type. After the next event of the specified type is handled, this handler is automatically removed.
 
 This method returns the instance itself, for chaining purposes.
@@ -397,7 +410,15 @@ When an event fires, subscribed callbacks are called in the order in which they 
 }
 ```
 
-To prevent accidental reassignment of data that might be in use by other methods, the parameters for most callbacks are deep clones of the event data rather than references to the original objects. The exceptions are the `pre:send` and `pre:receive` events. These events do provide references to the original objects, making it possible for your code to manipulate the data before it is passed on to the `send` or `receive` events. For example, you might use the `pre:send` event to modify context variables before sending a message to your assistant.
+To prevent accidental reassignment of data that might be in use by other methods, the parameters for most callbacks are
+deep clones of the event data rather than references to the original objects. The exceptions are the `pre:send` and
+`pre:receive` events. These events do provide references to the original objects, making it possible for your code to
+manipulate the data before it is passed on to the `send` or `receive` events. For example, you might use the `pre:send`
+event to modify context variables before sending a message to your assistant.
+
+By default, Event callbacks require no return value. However, you may *optionally* return a Promise object. In that case
+we will pause processing the queue of events until the Promise is resolved. This is helpful for asyncronyous methods
+that need to be called when you are pre-processing data from your `pre:send` or `pre:receive` event handlers.
 
 ### Event details
 
@@ -503,14 +524,6 @@ function handler(event) {
   console.log('intents:', event.data.output.intents);
 }
 instance.on({ type: "receive", handler: handler });
-var myMessage = {
-  output: {
-    generic: [
-      { response_type: 'text', text: 'test' }
-    ]
-  }
-};
-instance.fire({ type: "receive", data: myMessage });
 ```
 
 <a name="event-error"></a>
@@ -529,7 +542,10 @@ Fired when the Web Chat encounters an error (including network, response format,
 
 #### `customResponse`
 
-Fired when the Web Chat receives a response with an unrecognized `response_type` from your assistant. The event includes the response data and the DOM element where any response should be rendered. Based on the response type, you can choose to render a custom view, perform an action on your website, or both.
+Fired when the Web Chat receives a response with an unrecognized `response_type` from your assistant. The event includes
+the response data and the DOM element where any response should be rendered. Based on the response type, you can choose
+to render a custom view, perform an action on your website, or both. A current use case for this would be a
+`connect_to_agent` response, which the Web Chat does not currently handle directly.
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -598,4 +614,4 @@ instance.on({ type: "*", handler: handler });
 
 ## Examples
 
-For a full list of examples showing why and how to use these events, see the [Examples](examples/README.md).
+For a full list of examples showing how to use Web Chat, see the [Examples](examples/README.md) page.
