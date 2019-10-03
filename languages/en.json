@@ -42,6 +42,8 @@
   "agent_ariaAgentConnected": "This agent is connected",
   "agent_ariaAgentNotConnected": "This agent is not connected",
   "agent_youEndedChat": "You ended the conversation",
+  "agent_agentEndedChat": "{personName} ended the conversation",
+  "agent_agentEndedChatNoName": "The live agent ended the conversation",
   "agent_transferring": "You are being transferred to {personName}",
   "agent_transferringNoName": "You are being transferred to a new agent",
   "agent_endChat": "End live chat",
@@ -51,6 +53,9 @@
   "agent_ariaConfirmEndChatNo": "Click to continue the chat with the live agent",
   "agent_ariaConfirmEndChatYes": "Click to end the chat with the live agent",
   "process_getStartedButton": "Get started",
+  "process_continueButton": "Continue",
+  "process_reviewButton": "Review",
+  "process_closeButton": "Close thread",
   "icon_ariaUnreadMessages": "There {count, plural, one {is} other {are}} {count, number} unread {count, plural, one {message} other {messages}}",
   "showMore": "Show more",
   "showLess": "Show less"
