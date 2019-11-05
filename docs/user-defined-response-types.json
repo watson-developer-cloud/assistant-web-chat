@@ -1,0 +1,149 @@
+{
+  "name": "Show Me a Color Block",
+  "intents": [
+    {
+      "intent": "color_block",
+      "examples": [
+        {
+          "text": "color block"
+        },
+        {
+          "text": "Show me a color block"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "c276bdae-e384-4350-95a1-1bf68ebe054f",
+  "description": "A sample skill to show off creating a user_defined response type.",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_8_1571943631595"
+    },
+    {
+      "type": "standard",
+      "title": "color block",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Below is a block with a button in it. When you click the button, a random background color will be chosen."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "replace with user_defined"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Isn't that fun?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "user_defined_response_data": {
+          "template_name": "color_box"
+        }
+      },
+      "conditions": "#color_block",
+      "dialog_node": "node_8_1571943631595",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This dialog skill is configured to send a \"user_defined\" response type."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Select a response",
+            "options": [
+              {
+                "label": "Show me a color block.",
+                "value": {
+                  "input": {
+                    "text": "Show me a color block."
+                  }
+                }
+              }
+            ],
+            "description": "If you declare \"Show me a color block\", a user_defined response type will be returned that creates an element with a random background color.",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "c276bdae-e384-4350-95a1-1bf68ebe054f",
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}

@@ -1,0 +1,199 @@
+/* Tomorrow Night Blue Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #7285b7;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #ff9da4;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #ffc58f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #ffeead;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #d1f1a9;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #bbdaff;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #ebbbff;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #002451;
+  color: white;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.dark {
+  background-color: #000;
+}
+
+.hero {
+  color:#fff;
+  border-bottom: 1px solid #393939;
+  position: relative;
+}
+
+.hero-image-background {
+  background-image: url('webchat.jpg');
+  filter: blur(2px);
+  background-size: cover;
+  z-index: 1;
+  width:100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.hero-background {
+  background: #000;
+  opacity: 0.7;
+  position:absolute;
+  z-index:2;
+  width:100%;
+  height:100%;
+  top: 0;
+  left: 0;
+}
+
+.hero--content {
+  position: relative;
+  text-align:center;
+  padding: 8rem 6rem;
+  height: 100vh;
+  z-index: 5;
+}
+
+.hero--content--buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+  width: 320px;
+  margin: auto;
+}
+
+.hero--content--buttons a {
+  margin: 0 0.5rem;
+  flex-basis: calc(50% - 1rem);
+}
+
+.homepage--dots{
+  position:absolute;
+  z-index:3;
+  width:100%;
+  height:100%;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16' xml:space='preserve'%3E%3Crect width='16' fill='none' height='16'/%3E%3Crect x='0' y='0' fill='white' width='1' height='1'/%3E%3C/svg%3E");
+  background-size:16px;
+  opacity:.35;
+}
+
+h2, h3, p {
+  margin-bottom: 0.75rem;
+}
+
+.bx--header {
+  position: relative;
+}
+
+.bx--header ~ .bx--content {
+  margin-top: 0;
+}
+
+.bx--content {
+  padding: 3rem;
+}
+
+.content {
+  margin-top: 1.5rem;
+}
+
+.dark .content {
+  padding: 3rem;
+  margin-top: 0;
+}
+
+#documentation h1 { display: none; }
+
+#documentation h2 { margin-top: 1.5rem;}
+
+#documentation h3 { margin-top: 1rem;}
+
+#documentation table { margin-bottom: 1rem;}
+
+#documentation pre { margin-bottom: 1rem; }
+
+.files .bx--structured-list {
+  margin-bottom: 0;
+}
+
+.files {
+  margin-top: 1.5rem;
+}
+
+#try_it_out button.bx--btn.bx--btn--primary.bx--btn--sm:not([disabled]) {
+  animation: fadeInFromNone 0.2s ease-out;
+}
+
+#try_it_out button.bx--btn.bx--btn--primary.bx--btn--sm[disabled] {
+  opacity: 0;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

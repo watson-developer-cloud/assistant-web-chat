@@ -1,72 +1,56 @@
-# Watson Assistant Web Chat
+Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) Web Chat. With just a few lines of code, you can add a Web Chat widget to your website and take advantage of all the best and newest that Watson Assistant has to offer.
+
+This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed, configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Premium Watson Assistant plans.
+
+In this documentation, _Web Chat_ refers to the widget code in this repository; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
 
 ## Table of Contents
 
-- [Watson Assistant Web Chat](#watson-assistant-web-chat)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-    - [Managing Context](#managing-context)
-    - [Theming](#theming)
-    - [Languages and Strings](#languages-and-strings)
-  - [Configuration](#configuration)
-  - [Managing Your Web Chat After Initialization](#managing-your-web-chat-after-initialization)
-    - [instance.render()](#instancerender)
-    - [instance.on()](#instanceon)
-    - [instance.off()](#instanceoff)
-    - [instance.once()](#instanceonce)
-    - [instance.send()](#instancesend)
-    - [instance.updateLanguagePack()](#instanceupdatelanguagepack)
-    - [instance.getLocale()](#instancegetlocale)
-    - [instance.updateUserID()](#instanceupdateuserid)
-    - [instance.toggleOpen()](#instancetoggleopen)
-    - [instance.openWindow()](#instanceopenwindow)
-    - [instance.closeWindow()](#instanceclosewindow)
-    - [instance.destroy()](#instancedestroy)
-  - [Events](#events)
-    - [Events summary](#events-summary)
-    - [Event callbacks](#event-callbacks)
-    - [Event details](#event-details)
-      - [`pre:send`](#presend)
-      - [`send`](#send)
-      - [`pre:receive`](#prereceive)
-      - [`receive`](#receive)
-      - [`error`](#error)
-      - [`customResponse`](#customresponse)
-      - [`window:open`](#windowopen)
-      - [`window:close`](#windowclose)
-      - [Wildcard (`*`)](#wildcard)
-  - [Examples](#examples)
-
-## Overview
-
-Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) Web Chat. With just a few lines of code, you can add a Web Chat widget to your website and take advantage of all the best and newest that Watson Assistant has to offer.
-
-This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed,
-configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Premium Watson Assistant
-plans.
-
-In this documentation, _Web Chat_ refers to the widget code in this repository; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
+- [Table of Contents](#table-of-contents)
+  - [Managing Context](#managing-context)
+- [Configuration](#configuration)
+  - [Theming](#theming)
+    - [Customizable Variables](#customizable-variables)
+  - [Languages](#languages)
+    - [Available Locales](#available-locales)
+- [Managing Your Web Chat After Initialization](#managing-your-web-chat-after-initialization)
+  - [instance.render()](#instancerender)
+  - [instance.on()](#instanceon)
+  - [instance.off()](#instanceoff)
+  - [instance.once()](#instanceonce)
+  - [instance.send()](#instancesend)
+  - [instance.updateLanguagePack()](#instanceupdatelanguagepack)
+  - [instance.getLocale()](#instancegetlocale)
+  - [instance.updateUserID()](#instanceupdateuserid)
+  - [instance.toggleOpen()](#instancetoggleopen)
+  - [instance.openWindow()](#instanceopenwindow)
+  - [instance.closeWindow()](#instanceclosewindow)
+  - [instance.destroy()](#instancedestroy)
+- [Events](#events)
+  - [Events summary](#events-summary)
+  - [Event callbacks](#event-callbacks)
+  - [Event details](#event-details)
+    - [`pre:send`](#presend)
+    - [`send`](#send)
+    - [`pre:receive`](#prereceive)
+    - [`receive`](#receive)
+    - [`error`](#error)
+    - [`customResponse`](#customresponse)
+    - [`window:open`](#windowopen)
+    - [`window:close`](#windowclose)
+    - [Wildcard (`*`)](#wildcard)
 
 ### Managing Context
 
 The Web Chat is build on top of the v2 Watson Assistant API. In the v1 version of the Watson Assistant API, developers
 had to manage context on their own. With the v2 version of the API, we manage context for you as part of the session. This means you do not have to pass
-context back and forth on every message from the Web Chat, but it will be available in your Dialog skill. If you do pass
+context back and forth on every message from the Web Chat, but it will be available in your dialog skill. If you do pass
 in context variables (see [`pre:send`](#presend)), it will merge with the
 existing context in memory. When merging, the variables you are passing in will overwrite existing values if there is a conflict. See the
 Watson Assistant documentation sections on [Create a
 session](https://cloud.ibm.com/apidocs/assistant-v2#create-a-session) and [Send user input to an
 Assistant](https://cloud.ibm.com/apidocs/assistant-v2#send-user-input-to-assistant) for more information on sessions in
 the v2 API.
-
-### Theming
-
-For information on how to edit the branding, theme and colors of the Web Chat, see the [Theming](theming/README.md) page.
-
-### Languages and Strings
-
-For information on how to provide Web Chat with non-English strings, of even English strings that better match your
-brand and tone, see the [Languages](languages/README.md) page.
 
 ## Configuration
 
@@ -96,13 +80,61 @@ There are additional configuration options you can use to control how your Web C
 | options.region | <code>string</code> | Required |  |Which data center your integration was created in (for example, `us-south`). |
 | options.userID | <code>string</code> | Optional |  | An ID that uniquely identifies the end user at run time. This can be used to delete the user's data on request, in compliance with GDPR. **Note: this configuration item will be replaced by a JWT based authentication mechanism before this project leaves beta. This configuration option will likely be removed at that time.**
 | options.subscriptionID | <code>string</code> | Optional | | The ID of your subscription. For Premium instances, this option is required and is provided in the snippet that you copy and paste. If you are not using a Premium instance, this ID is absent.
-| options.cssVariables | <code>object</code> | This is a map that can be used to override the values for CSS variables in the application. These styles will merge with whatever you have set inside the Watson Assistant configuration page. On conflict, that values set here will override those set inside Watson Assistant. For details on specific values you can set, see [./theming/README.md]('./theming/README.md'). |
+| options.cssVariables | <code>object</code> | Optional | |This is a map that can be used to override the values for CSS variables in the application. These styles will merge with whatever you have set inside the Watson Assistant configuration page. If there is a conflict, that values set here will override those set inside Watson Assistant. For details on specific values you can set, see [Theming](#theming). |
 | options.showLauncher | <code>boolean</code> | Optional | <code>true</code> | Whether to render the chat launcher element used to open and close the chat window. If you specify `false`, your website code is responsible for firing the [launcher:toggle](#launchertoggle-event), [launcher:open](#launcheropen-event) or [launcher:close](#launcherclose-event) events from your own chat launcher. Alternatively, you can use `options.openChatByDefault` to open the chat interface at initialization. |
 | options.openChatByDefault | <code>boolean</code> | Optional | <code>false</code> | Whether to render the chat window initially in an open state. By default, the chat window is rendered in a closed state. |
-| options.languagePack | <code>Object</code> | Optional |  | An object with strings in the format of the `.json` files in [languages](languages). See [languages/README.md](languages/README.md) for more details. This setting replaces all of the default strings based on your `options.locale` setting. This setting performs a replacement rather than a merge, so the provided language pack must contain a full set of strings.
-| options.locale | <code>string</code> | Optional |  | The locale to use for UI strings and date string formatting. See [languages/README.md](languages/README.md) for the available locales. By default, the locale is automatically detected based on the browser language preferences. If the browser language is not a supported language, the default is US English (`en`). |
+| options.languagePack | <code>Object</code> | Optional |  | An object with strings in the format of the `.json` files in [languages](languages). See [languages](#languages) for more details. This setting replaces all of the default strings based on your `options.locale` setting. This setting performs a replacement rather than a merge, so the provided language pack must contain a full set of strings.
+| options.locale | <code>string</code> | Optional |  | The locale to use for UI strings and date string formatting. See [languages](#languages) for the available locales. By default, the locale is automatically detected based on the browser language preferences. If the browser language is not a supported language, the default is US English (`en`). |
 | options.element | <code>Element</code> | Optional |  | The containing DOM element where the the Web Chat widget should be rendered within the page. By default, Web Chat generates its own element. |
 | options.debug | <code>boolean</code> |  Optional | <code>false</code> | Automatically adds a listener that outputs a console message for each event.
+
+### Theming
+
+As part of your [Configuration Options](#configuration) for your Web Chat, you have the ability to
+provide variables for theming your widget. This will allow you to make the Web Chat match your brand on your website.
+
+The list of customizable variables is short for now, but it will expand significantly by the time beta testing completes and Web Chat becomes a generally available feature of Watson Assistant.
+
+**Example**
+```html
+<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+<script>
+  var options = {
+    integrationID: 'YOUR_INTEGRATION_ID', // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540'
+    region: 'YOUR_REGION', // 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', etc
+    cssVariables: {
+      'BASE-z-index': '99999'
+    }
+  };
+  window.loadWatsonAssistantChat(options).then(function(instance) {
+    instance.render();
+  });
+</script>
+```
+
+#### Customizable Variables
+
+| Key | Default | Description |
+| --- | --- | --- |
+| BASE-z-index | 8000 | The z-index on your website that the Web Chat is assigned to. |
+
+### Languages
+
+The [languages](https://github.com/watson-developer-cloud/assistant-web-chat/tree/master/languages) folder contains [ICU Message Format](http://userguide.icu-project.org/formatparse/messages) JSON representations of all of the languages that are supported by both Watson Assistant dialog skills and the Web Chat widget. Web Chat defaults to English (US), but you can pass in an object of language strings with
+[the updateLanguagePack](#instanceupdatelanguagepack) method.
+
+Note that the provided JSON object does not need to contain all strings, but just the strings you want to update. Your changes will be merged with the existing language strings.
+
+Even if you do not need to change languages, you can also edit these strings if you want to customize the messages for branding or stylistic reasons.
+
+#### Available Locales
+
+In addition to language strings, we allow a more specific setting of `locale`. A `locale` goes beyond language strings.
+A `locale` also controls the format dates and times the web chat shows. For instance, date strings in UK English vs US English will be different (DD-MM-YYYY vs MM-DD-YYYY). This setting does NOT automatically change any strings in your dialog or search skill, but
+applies to any strings generated by Web Chat itself. The current accepted locales are listed below. They are a superset
+of the languages available for your dialog skill.
+
+ **Available locales**: ar, 'ar-dz', 'ar-kw', 'ar-ly', 'ar-ma', 'ar-sa', 'ar-tn', cs, de, 'de-at', 'de-ch', en, 'en-sg', 'en-au', 'en-ca', 'en-gb', 'en-ie', 'en-il', 'en-nz', es, 'es-do', 'es-us', fr, 'fr-ca', 'fr-ch', it, 'it-ch', ja, ko, pt, 'pt-br', zh, 'zh-cn', 'zh-tw'
 
 ## Managing Your Web Chat After Initialization
 
@@ -395,7 +427,7 @@ The following table summarizes the events that are fired by Web Chat. For more i
 | [pre:receive](#event-prereceive) | Fired before the Web Chat receives a response from your assistant, before the `receive` event.
 | [receive](#event-receive) | Fired when the Web Chat receives a response from your assistant, after the `pre:receive` event.
 | [error](#event-error) | Fired when the Web Chat encounters an error.
-| [customResponse](#event-customResponse) | Fired if a response with an unrecognized `response_type` is received.
+| [customResponse](#event-customResponse) | Fired if a response with an unrecognized or `user_defined` response type is received.
 | [window:open](#event-windowopen) | Fired when the chat window is opened.
 | [window:close](#event-windowclose) | Fired when the chat window is closed.
 
@@ -506,7 +538,7 @@ instance.on({ type: "pre:receive", handler: handler });
 
 #### `receive`
 
-Fired when the Web Chat receives a response from your assistant, after the `pre:receive` event. This event indicates that the response has been received; if the `response_type` is recognized, the response is then rendered in your chat window.
+Fired when the Web Chat receives a response from your assistant, after the `pre:receive` event. This event indicates that the response has been received; if the response type is recognized, the response is then rendered in your chat window.
 
 | Parameter | Type | Description |
 | --- | --- | --- |
@@ -542,10 +574,18 @@ Fired when the Web Chat encounters an error (including network, response format,
 
 #### `customResponse`
 
-Fired when the Web Chat receives a response with an unrecognized `response_type` from your assistant. The event includes
+Fired when the Web Chat receives a response with an unrecognized response type from your assistant. The event includes
 the response data and the DOM element where any response should be rendered. Based on the response type, you can choose
-to render a custom view, perform an action on your website, or both. A current use case for this would be a
-`connect_to_agent` response, which the Web Chat does not currently handle directly.
+to render a custom view, perform an action on your website, or both.
+
+There are two use cases for this event.
+
+1) A `user_defined` response type. This is a response type that allows you to define your own content. You also have a
+   chance to mark your `user_defined` response type as `silent` and not render anything, but throw an action on your web
+   page, instead. For instance, you could kick off a tutorial or interact with other widgets on your web page. Please see
+   [the examples on user_defined response types](./examples/README.md).
+2) A known response type that the Web Chat does not handle. _Currently_, the Web Chat does not have support for the
+   `connect_to_agent` response type.
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -553,7 +593,7 @@ to render a custom view, perform an action on your website, or both. A current u
 | event.type | <code>String</code> | Event type (`customResponse`) |
 | event.data | <code>Object</code> | Event data |
 | event.data.message | <code>Object</code> | A v2 message API Response object. (For more information, see the [API Reference](https://cloud.ibm.com/apidocs/assistant-v2#send-user-input-to-assistant).) This parameter is a copy of the response that was received. |
-| event.data.element | <code>Element</code> | A DOM element inside the chat window where the response should be rendered. |
+| event.data.element | <code>Element</code> | A DOM element inside the chat window where the response should be rendered. This will be null if a `user_defined` message has the `silent` attribute set to `true`.  |
 
 **Example**
 
@@ -611,7 +651,3 @@ function handler(event) {
 }
 instance.on({ type: "*", handler: handler });
 ```
-
-## Examples
-
-For a full list of examples showing how to use Web Chat, see the [Examples](examples/README.md) page.

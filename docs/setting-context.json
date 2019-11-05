@@ -1,0 +1,152 @@
+{
+  "name": "Party Time",
+  "intents": [
+    {
+      "intent": "party_time_query",
+      "examples": [
+        {
+          "text": "Can I party now?"
+        },
+        {
+          "text": "Is it time to party?"
+        },
+        {
+          "text": "Is it party time?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "58612f3b-0b2e-4bfa-b928-d6210437fd63",
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It is not party time."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "#party_time_query",
+      "dialog_node": "node_8_1571757419434",
+      "previous_sibling": "node_7_1571754782107"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This dialog skill is configured with an environment variable \"party_time\" that is set to \"false\". We have a \"pre:send\" event handler that will set it to \"true\" the first time a message is sent."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Select a response",
+            "options": [
+              {
+                "label": "Is it party time?",
+                "value": {
+                  "input": {
+                    "text": "Is it party time?"
+                  }
+                }
+              }
+            ],
+            "description": "When you ask \"Is it party time?\" we will set \"party_time\" to true.",
+            "response_type": "option"
+          }
+        ]
+      },
+      "context": {
+        "party_time": false
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_8_1571757419434"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It is party time!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#party_time_query && $party_time",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_7_1571754782107"
+    }
+  ],
+  "workspace_id": "58612f3b-0b2e-4bfa-b928-d6210437fd63",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
