@@ -16,14 +16,33 @@
       'likely want to allow your development team direct access to code in the browser instead of ' + 
       'adding code inside Watson Assistant.</p><p>In this case we provide the ability to define a ' + 
       '"user_defined" response type.</p>';
-    var INTEGRATION_ID = '88c5ab94-0804-45ae-864c-ee8e7845a5d4';
+    var INTEGRATION_ID = 'bbed64d6-75b8-436b-a333-06bd0c3d3724';
     var REGION = 'us-south';
-    var FILES = [{ name: 'user-defined-response-types.json', href: 'user-defined-response-types.json', description: 'A dialog skill configured to send a user_defined response type.' }];
+    var FILES = [
+        {
+          name: 'user-defined-response-types.json',
+          href: 'user-defined-response-types.json',
+          description: 'A dialog skill configured to send a user_defined response type.'
+        },
+        {
+          name: 'user_defined_templates/carousel.js',
+          href: 'user_defined_templates/carousel.js',
+          description: 'A handler for the custom carousel template that exposes the handleCarouselTemplate function.'
+        },
+        {
+          name: 'user_defined_templates/color-box.js',
+          href: 'user_defined_templates/color-box.js',
+          description: 'A handler for the custom color box template that exposes the handleColorBoxTemplate function.'
+        }
+      ];
     var config = {
       integrationID: INTEGRATION_ID,
       region: REGION
     };
   </script>
+  <!-- Bring in the response type handler code -->
+  <script src="user_defined_templates/carousel.js"></script>
+  <script src="user_defined_templates/color-box.js"></script>
   <script id="custom_content">
   
     /*
@@ -31,16 +50,17 @@
       - Upload the included `user-defined-response-types.json` skill and create a Web Chat integration
         in an assistant using the uploaded skill.
       - Update your config `integrationID` and `region`.
-      - Tell the Web Chat "Show me a color block".
+      - Be sure to include `user_defined_templates/carousel.js` and `user_defined_templates/color-box.js`
+      - Tell the Web Chat "Show me a color block" or "Show slide show".
       - The code listening for a `customResponse` event will render a simple widget into the Web Chat
-        with a button that allows you to randomly change the background of the element.
+        for the correct response.
     */
 
     /**
      * THIS IS A TEMPORARY WORK AROUND UNTIL user_defined IS A NATIVE SUPPORT RESPONSE TYPE IN WATSON ASSISTANT!
      * 
      * If `user_defined_response_data` has a value, we convert the response to follow the `user_defined` response type.
-     * We are going to look for `user_defined_response_data` inside context, and if it exists change the text response we
+     * We are going to look for `user_defined_response_data` inside `output.user_defined`, and if it exists change the text response we
      * see that has "replace with user_defined" as its value.
      * 
      * {
@@ -62,14 +82,13 @@
      * @param event.data.message The original message.
      */ 
     function convertToUserDefinedResponse(event) {
-      if(event.data.context.skills['main skill'].user_defined && event.data.context.skills['main skill'].user_defined.user_defined_response_data) {
-        var outputKey = event.data.output.generic ? 'generic' : 'webchat';
+      if(event.data.output.user_defined && event.data.output.user_defined.template_name) {
         // Map over all items in the output array.
-        event.data.output[outputKey] = event.data.output[outputKey].map(item => {
+        event.data.output.generic = event.data.output.generic.map(item => {
           // If we find one that matches our convention to transform to user_defined response_type, make the transformation.
           if(item.response_type === 'text' && item.text === 'replace with user_defined') {
             item.response_type = 'user_defined';
-            item.user_defined = event.data.context.skills['main skill'].user_defined.user_defined_response_data;
+            item.user_defined = event.data.output.user_defined;
             delete item.text;
           }
           return item;
@@ -77,41 +96,6 @@
       }
     }
 
-    /**
-     * THIS IS A TEMPORARY WORK AROUND UNTIL user_defined IS A NATIVE SUPPORT RESPONSE TYPE IN WATSON ASSISTANT!
-     * 
-     * Clean up context when we send the message back to unset our marker for a custom response type. 
-     * 
-     * @param event The event passed from Watson Assistant
-     * @param event.type The type of event, in this case "pre:send".
-     * @param event.data.message The original message.
-     */
-    function userDefinedCleanup(event) {
-      if (event.data.context && event.data.context.skills['main skill'].user_defined) {
-        event.data.context.skills['main skill'].user_defined.user_defined_response_data = false;
-      }
-    }
-
-    /**
-     * Handler for the color box template.
-     * 
-     * @param event The event passed from Watson Assistant
-     * @param event.type The type of event, in this case "customResponse".
-     * @param event.data.message The original message.
-     * @param event.data.element An HTML element that is rendered in Web Chat for you to manipulate. If you have set
-     * user_defined.silent to true, no HTML element will be created.
-     */
-    function handleColorBoxTemplate(event) {
-      // The event is of the shape: { type, data: { message, element }}.
-      var colors = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","DarkOrange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","RebeccaPurple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"];
-      var element = document.createElement('div');
-      element.setAttribute('style', 'width:100%; height:100%; background-color: red; padding: 24px; text-align: center;');
-      element.innerHTML = '<button>Make random background color!</button>'
-      element.querySelector('button').addEventListener('click', function(e) {
-        element.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      });
-      event.data.element.appendChild(element);
-    }
 
     /**
      * Watch for the customResponse event and forward incoming data to the correct handler.
@@ -127,7 +111,12 @@
       // Add a switch so you can watch for different custom responses.
       switch(message.user_defined.template_name) {
         case 'color_box':
+          // Defined in user_defined_templates/color-box.js
           handleColorBoxTemplate(event);
+          break;
+        case 'carousel':
+          // Defined in user_defined_templates/carousel.js
+          handleCarouselTemplate(event);
           break;
         default:
           console.error('Unhandled response type.')
@@ -139,8 +128,7 @@
       region: REGION
     }).then(function(instance){
       window.instance = instance;
-      // We won't need either of these two once `user_defined` is a native response type in Watson Assistant.
-      instance.on({ type: "pre:send", handler: userDefinedCleanup });
+      // We won't need this once `user_defined` is a native response type in Watson Assistant.
       instance.on({ type: "pre:receive", handler: convertToUserDefinedResponse });
       // We WILL need this one to handle the response.
       instance.on({ type: "customResponse", handler: customResponseHandler });

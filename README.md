@@ -7,6 +7,7 @@ In this documentation, _Web Chat_ refers to the widget code in this repository; 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+  - [Browser Support](#browser-support)
   - [Managing Context](#managing-context)
 - [Configuration](#configuration)
   - [Theming](#theming)
@@ -39,6 +40,14 @@ In this documentation, _Web Chat_ refers to the widget code in this repository; 
     - [`window:open`](#windowopen)
     - [`window:close`](#windowclose)
     - [Wildcard (`*`)](#wildcard)
+
+### Browser Support
+
+If the last two versions of a browser add up to more than 1% of all web traffic we support it. We support the last two versions of the following browsers unless noted.
+
+**Desktop:** IE11 (most recent IE), Edge, Firefox, Firefox ESR (most recent ESR), Chrome, Safari, Opera
+
+**Mobile:** Safari, Chrome for Android, Samsung Mobile Browser, UC Browser for Android, Mobile Firefox
 
 ### Managing Context
 
