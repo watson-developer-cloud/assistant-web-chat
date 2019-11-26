@@ -94,7 +94,7 @@ There are additional configuration options you can use to control how your Web C
 | options.openChatByDefault | <code>boolean</code> | Optional | <code>false</code> | Whether to render the chat window initially in an open state. By default, the chat window is rendered in a closed state. |
 | options.languagePack | <code>Object</code> | Optional |  | An object with strings in the format of the `.json` files in [languages](languages). See [languages](#languages) for more details. This setting replaces all of the default strings based on your `options.locale` setting. This setting performs a replacement rather than a merge, so the provided language pack must contain a full set of strings.
 | options.locale | <code>string</code> | Optional |  | The locale to use for UI strings and date string formatting. See [languages](#languages) for the available locales. By default, the locale is automatically detected based on the browser language preferences. If the browser language is not a supported language, the default is US English (`en`). |
-| options.element | <code>Element</code> | Optional |  | The containing DOM element where the the Web Chat widget should be rendered within the page. By default, Web Chat generates its own element. |
+| options.element | <code>Element</code> | Optional |  | The containing DOM element where the Web Chat widget should be rendered within the page. By default, Web Chat generates its own element. |
 | options.debug | <code>boolean</code> |  Optional | <code>false</code> | Automatically adds a listener that outputs a console message for each event.
 
 ### Theming
