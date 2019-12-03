@@ -1,18 +1,20 @@
-// This file grabs the markdown from the public docs and converts it to HTML.
+/**
+ * This file grabs the markdown from the public docs and converts it to HTML.
+*/
 
 function httpGetAsync(url, callback) {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.onreadystatechange = function() { 
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-          callback(xmlHttp.responseText);
-  }
-  xmlHttp.open("GET", url, true);
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
+  };
+  xmlHttp.open('GET', url, true);
   xmlHttp.send(null);
 }
 var documentation = document.querySelector('#documentation');
-var url = documentation.getAttribute('src');
+var url =
+  window.location.hostname === 'https://raw.githubusercontent.com/watson-developer-cloud/assistant-web-chat/master/API.md';
 httpGetAsync(url, function(text) {
-  var converter = new showdown.Converter({ 'tables': true, 'ghCompatibleHeaderId': true });
+  var converter = new showdown.Converter({ tables: true, ghCompatibleHeaderId: true });
   var html = converter.makeHtml(text);
   var div = document.createElement('div');
   div.innerHTML = html;

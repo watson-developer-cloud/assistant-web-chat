@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IBM Watson Assistant Web Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="carbon-components.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+  <script>
+    // Set the TITLE, TEXT_CONTENT, INTEGRATION_ID, FILES and REGION for this example.
+    var TITLE = '';
+    var TEXT_CONTENT = '<p></p>';
+    var INTEGRATION_ID = '';
+    var REGION = '';
+
+    // Any related files like a skill json needed to run this example locally in for format of { name: 'My file', description: 'My description.' href: 'it.json' }
+    var FILES = [];
+
+    var config = {
+      integrationID: INTEGRATION_ID,
+      region: REGION
+    };
+  </script>
+  <!-- Whatever is in #custom_content is what is copied into the context of the page. You can leave this unset and
+  inject any code blocks manually if you put them in <pre><code></code></pre> so the auto-formatter can pick it up. -->
+  <script id="custom_content">
+
+    /* 
+      Instructions
+      - Upload the included XXXXX.json skill and create a Web Chat integration in an assistant using the uploaded skill.
+      - Update config with your `integrationID` and `region`.
+      - Add additional instructions
+    */
+
+    // Add your custom functions
+
+    window.loadWatsonAssistantChat(config).then(function(instance){
+      window.instance = instance;
+      // Add your event subscriptions.
+      instance.render();
+    });
+  </script>
+  <script src="libs.js"></script>
+  <script src="code.js"></script>
+</body>
+</html>

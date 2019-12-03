@@ -3,7 +3,7 @@
 ## Overview
 
 This folder contains [ICU Message Format](http://userguide.icu-project.org/formatparse/messages) JSON representations of all of the languages that are supported by both Watson Assistant dialog skills and the Web Chat widget. Web Chat defaults to English (US), but you can pass in an object of language strings with
-[the updateLanguagePack](../public#instanceupdatelanguagepack) method.
+[the updateLanguagePack](https://watson-developer-cloud.github.io/assistant-web-chat/documentation.html#instanceupdatelanguagepack) method.
 
 Note that the provided JSON object does not need to contain all strings, but just the strings you want to update. Your changes will be merged with the existing language strings.
 
