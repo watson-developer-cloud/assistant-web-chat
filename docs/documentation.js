@@ -11,8 +11,7 @@ function httpGetAsync(url, callback) {
   xmlHttp.send(null);
 }
 var documentation = document.querySelector('#documentation');
-var url =
-  window.location.hostname === 'https://raw.githubusercontent.com/watson-developer-cloud/assistant-web-chat/master/API.md';
+var url = 'https://raw.githubusercontent.com/watson-developer-cloud/assistant-web-chat/master/API.md';
 httpGetAsync(url, function(text) {
   var converter = new showdown.Converter({ tables: true, ghCompatibleHeaderId: true });
   var html = converter.makeHtml(text);
