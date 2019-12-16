@@ -7,7 +7,7 @@ In this documentation, _Web Chat_ refers to the widget code in this repository; 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-  - [Browser Support](#browser-support)
+  - [Key Concepts](#key-concepts)
 - [Configuration](#configuration)
   - [Theming](#theming)
     - [Customizable Variables](#customizable-variables)
@@ -31,23 +31,28 @@ In this documentation, _Web Chat_ refers to the widget code in this repository; 
   - [Event callbacks](#event-callbacks)
   - [Managing Context](#managing-context)
   - [Event details](#event-details)
-    - [`pre:send`](#presend)
-    - [`send`](#send)
-    - [`pre:receive`](#prereceive)
-    - [`receive`](#receive)
-    - [`error`](#error)
-    - [`customResponse`](#customresponse)
-    - [`window:open`](#windowopen)
-    - [`window:close`](#windowclose)
-    - [Wildcard (`*`)](#wildcard)
+    - [pre:send](#presend)
+    - [send](#send)
+    - [pre:receive](#prereceive)
+    - [receive](#receive)
+    - [error](#error)
+    - [customResponse](#customresponse)
+    - [window:open](#windowopen)
+    - [window:close](#windowclose)
+    - [Wildcard (*)](#wildcard)
+- [Browser Support](#browser-support)
 
-### Browser Support
+### Key Concepts
 
-If the last two versions of a browser add up to more than 1% of all web traffic we support it. We support the last two versions of the following browsers unless noted.
+Web Chat is extendable and customizable in two main ways.
 
-**Desktop:** IE11 (most recent IE), Edge, Firefox, Firefox ESR (most recent ESR), Chrome, Safari, Opera
+1) Through editing the [configuration object](#configuration). This allows you to adjust theming, swap out Web Chat
+   provided text, the location of the
+   Web Chat, whether or not you use the IBM provided launcher or your own and more.
+2) By [listening to events](#events) when messages are sent or received, the chat window is open or closed, etc, you can
+   update context, filter private information before it is sent to IBM, render custom views, or even have your Web Chat
+   interact with your website to change pages or open 3rd party scripts.
 
-**Mobile:** Safari, Chrome for Android, Samsung Mobile Browser, UC Browser for Android, Mobile Firefox
 
 ## Configuration
 
@@ -142,7 +147,11 @@ events](#events) flowing to or from the Web Chat. This instance also enables you
 certain actions. The event system is the key to extending and manipulating the Web Chat on your own website. For more
 details about the supported events, see [Events](#events).
 
-You can subscribe to events using the [`on`](#instance.on) and [`once`](#instance.once) methods. Event handlers are called in the order in which they were registered.
+You can subscribe to events using the [`on`](#instance.on) and [`once`](#instance.once) methods. Event handlers are 
+called in the order in which they were registered. The chat widget doesn't do any special handling of errors that are
+thrown from your handlers. If your handler throws an error or rejects the returned Promise, then processing of whatever
+action that triggered the event stops and no additional event handlers will be called. For example, if you have a
+`pre:send` handler and it throws an error. The message will not be sent.
 
 ```html
 <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
@@ -662,3 +671,11 @@ function handler(event) {
 }
 instance.on({ type: "*", handler: handler });
 ```
+
+## Browser Support
+
+If the last two versions of a browser add up to more than 1% of all web traffic we support it. We support the last two versions of the following browsers unless noted.
+
+**Desktop:** IE11 (most recent IE), Edge, Firefox, Firefox ESR (most recent ESR), Chrome, Safari, Opera
+
+**Mobile:** Safari, Chrome for Android, Samsung Mobile Browser, UC Browser for Android, Mobile Firefox

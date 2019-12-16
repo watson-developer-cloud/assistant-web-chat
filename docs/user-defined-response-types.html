@@ -59,9 +59,8 @@
     /**
      * THIS IS A TEMPORARY WORK AROUND UNTIL user_defined IS A NATIVE SUPPORT RESPONSE TYPE IN WATSON ASSISTANT!
      * 
-     * If `user_defined_response_data` has a value, we convert the response to follow the `user_defined` response type.
-     * We are going to look for `user_defined_response_data` inside `output.user_defined`, and if it exists change the text response we
-     * see that has "replace with user_defined" as its value.
+     * If `user_defined.template_name` has a value, we convert the response to follow the `user_defined` response type.
+     * We will replace the text response with "replace with user_defined" as its value. In the near future, you will be able to define the `user_defined` response type from inside Watson Assistant.
      * 
      * {
      *   "output": {
