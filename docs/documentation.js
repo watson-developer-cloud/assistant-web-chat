@@ -38,4 +38,8 @@ httpGetAsync(url, function(text) {
   documentation.querySelectorAll('pre code').forEach(function(block) {
     hljs.highlightBlock(block);
   });
+  if (window.location.hash) {
+    var el = document.querySelector(window.location.hash);
+    el.scrollIntoView();
+  }
 });

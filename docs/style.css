@@ -165,9 +165,11 @@ h2, h3, p {
 
 #documentation h1 { display: none; }
 
-#documentation h2 { margin-top: 1.5rem;}
+#documentation h2 { margin-top: 3rem;}
 
-#documentation h3 { margin-top: 1rem;}
+#documentation h3 { margin-top: 2rem;}
+
+#documentation h4 { margin-top: 2rem;}
 
 #documentation table { margin-bottom: 1rem;}
 

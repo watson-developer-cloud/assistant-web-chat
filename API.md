@@ -122,12 +122,21 @@ The list of customizable variables is short for now, but it will expand signific
 
 ### Languages
 
+The Web Chat has a set of hard-coded text strings that are used to respond to customers. For example, the default error message text is, "We are having some issues right now. Please refresh to try again."
+
+You can replace these text strings with statements that use your own wording. You can also specify the text strings in
+languages other than English. To do so, you provide your replacement strings in a JSON object. You do not need to
+replace all of the strings, only the strings you want to change. Your changes will be merged with the existing language
+strings.
+
 The [languages folder](https://github.com/watson-developer-cloud/assistant-web-chat/tree/master/languages) contains [ICU Message Format](http://userguide.icu-project.org/formatparse/messages) JSON representations of all of the languages that are supported by both Watson Assistant dialog skills and the Web Chat widget. Web Chat defaults to English (US), but you can pass in an object of language strings with
 [the updateLanguagePack](#instanceupdatelanguagepack) method.
 
 *Note that the provided JSON object does not need to contain all strings, but just the strings you want to update. Your changes will be merged with the existing language strings.*
 
-Even if you do not need to change languages, you can also edit these strings if you want to customize the messages for branding or stylistic reasons.
+Even if you do not need to change languages, you can also edit these strings if you want to customize the messages for
+branding or stylistic reasons. For instance, when you are prompting someone to enter their name, you might want to
+replace the text of "Enter a message" with "Enter your name".
 
 #### Available Locales
 
