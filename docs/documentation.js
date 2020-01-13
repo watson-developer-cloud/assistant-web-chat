@@ -3,19 +3,19 @@
 */
 
 function httpGetAsync(url, callback) {
-  var xmlHttp = new XMLHttpRequest();
+  const xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
   };
   xmlHttp.open('GET', url, true);
   xmlHttp.send(null);
 }
-var documentation = document.querySelector('#documentation');
-var url = 'https://raw.githubusercontent.com/watson-developer-cloud/assistant-web-chat/master/API.md';
+const documentation = document.querySelector('#documentation');
+const url = 'https://raw.githubusercontent.com/watson-developer-cloud/assistant-web-chat/master/API.md';
 httpGetAsync(url, function(text) {
-  var converter = new showdown.Converter({ tables: true, ghCompatibleHeaderId: true });
-  var html = converter.makeHtml(text);
-  var div = document.createElement('div');
+  const converter = new showdown.Converter({ tables: true, ghCompatibleHeaderId: true });
+  const html = converter.makeHtml(text);
+  const div = document.createElement('div');
   div.innerHTML = html;
   // Add a bunch of CSS classnames.
   div.querySelectorAll('ul').forEach(function(ul) {
@@ -31,7 +31,7 @@ httpGetAsync(url, function(text) {
     table.classList.add('bx--data-table');
   });
   div.querySelectorAll('th').forEach(function(th) {
-    var text = th.textContent;
+    const text = th.textContent;
     th.innerHTML = '<span class="bx--table-header-label">' + text + '</span>';
   });
   documentation.appendChild(div);
@@ -39,7 +39,7 @@ httpGetAsync(url, function(text) {
     hljs.highlightBlock(block);
   });
   if (window.location.hash) {
-    var el = document.querySelector(window.location.hash);
+    const el = document.querySelector(window.location.hash);
     el.scrollIntoView();
   }
 });

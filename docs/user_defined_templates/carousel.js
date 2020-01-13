@@ -1,24 +1,7 @@
 function MySimpleCarousel(event) {
   this.event = event;
   // Because we render Web Chat to Shadow DOM, we should use `style` tags rather than `link` tags to bring in our CSS.
-  this.css =
-    '.carousel_container { width: 100px; position: relative; margin: 1em; overflow: hidden; } ' +
-    '.carousel_container .carousel_container_content {  min-height: 320px; margin: 0 0 1rem 0;  padding: 0; overflow: hidden; } ' +
-    '.carousel_container .carousel_container_content li {  margin: 0;  padding: 0;  width: 100%;  list-style: none; z-index: 2;} ' +
-    '.carousel_container.carousel_container_active {  min-height: 320px; } ' +
-    '.carousel_container.carousel_container_active li { min-height: 320px; padding: 24px 32px; background: #fff; display:none; } ' +
-    '.carousel_container.carousel_container_active li.carousel_container_current { position: absolute; top:0; left:0; z-index: 3; display:block; } ' +
-    '.carousel_container .carousel_container_buttons { display: none;} ' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons { display: block; } ' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next { position: absolute; right: -1rem; top: 40%; z-index: 10; display: none; } ' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_prev { position: absolute; left: -1rem; top: 40%; z-index: 10; display: none; } ' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next.carousel_container_visible, .carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_prev.carousel_container_visible { display: block; border-radius: 0; background: #0f62fe; color: #fff; border: none; margin: 0; padding: 0; width: auto; overflow: visible; font: inherit; line-height: normal; -webkit-font-smoothing: inherit; -moz-osx-font-smoothing: inherit; -webkit-appearance: none; }' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next.carousel_container_visible .carousel_container_icon, .carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_prev.carousel_container_visible .carousel_container_icon { cursor: pointer; padding: 8px 0px; }' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next.carousel_container_visible:hover, .carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_prev.carousel_container_visible:hover { background: #0353e9; }' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next.carousel_container_visible:focus, .carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_prev.carousel_container_visible:focus { outline: 1px solid #0f62fe; outline-offset: 2px; }' +
-    '.carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next.carousel_container_visible .carousel_container_label, .carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_prev.carousel_container_visible .carousel_container_label { background: #000; cursor: pointer; padding: 4px 8px; font-size: 0.6rem; font-weight: bold; text-transform: uppercase;}' +
-    '.carousel_container.carousel_container_active li img.carousel_slide_image { display: block; height: 160px; width: 100%; margin-bottom: 8px; } ' +
-    '.carousel_container.carousel_container_active li .carousel_slide_title { font-weight: bold; margin-bottom:4px; }';
+  this.css = '@import "user_defined_templates/carousel.css"';
 }
 
 /**
@@ -112,7 +95,7 @@ MySimpleCarousel.prototype.writeHTML = function() {
   const element = document.createElement('div');
   element.classList.add('carousel_container');
   element.innerHTML =
-    '<div class="carousel_container_buttons"><button class="carousel_container_prev"><div class="carousel_container_icon">◀</div><div class="carousel_container_label">Back</div></button><button class="carousel_container_next"><div class="carousel_container_icon">▶</div><div class="carousel_container_label">Next</div></button></div><ol class="carousel_container_content"></ol>';
+    '<div class="carousel_container_buttons"><button class="carousel_container_prev"><div class="carousel_container_icon"><img src="user_defined_templates/left.svg" /></div><div class="carousel_container_label">Back</div></button><button class="carousel_container_next"><div class="carousel_container_icon"><img src="user_defined_templates/right.svg" /></div><div class="carousel_container_label">Next</div></button></div><ol class="carousel_container_content"></ol>';
   const content = element.querySelector('.carousel_container_content');
   const message = this.event.data.message;
   message.user_defined.slides.forEach(function(slide) {

@@ -5,27 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="carbon-components.min.css">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <!-- Any styles you put in #template_styles will get added to the example code. -->
+  <style id="template_styles"></style>
+  <script src="libs.js"></script>
+  <script src="writeTemplate.js"></script>
   <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
   <script>
-    // Set the TITLE, TEXT_CONTENT, INTEGRATION_ID, FILES and REGION for this example.
-    var TITLE = '';
-    var TEXT_CONTENT = '<p></p>';
-    var INTEGRATION_ID = '';
-    var REGION = '';
-
-    // Any related files like a skill json needed to run this example locally in for format of { name: 'My file', description: 'My description.' href: 'it.json' }
-    var FILES = [];
-
-    var config = {
-      integrationID: INTEGRATION_ID,
-      region: REGION
+    const config = {
+      integrationID: '',
+      region: ''
     };
   </script>
-  <!-- Whatever is in #custom_content is what is copied into the context of the page. You can leave this unset and
+</head>
+<body>
+  <!-- Any html you put in #template_html will get added to the example code above any #template_script. -->
+  <section id="template_html"></section>
+  <!-- Whatever is in #template_script is what is copied into the context of the page. You can leave this unset and
   inject any code blocks manually if you put them in <pre><code></code></pre> so the auto-formatter can pick it up. -->
-  <script id="custom_content">
+  <script id="template_script">
 
     /* 
       Instructions
@@ -37,12 +34,20 @@
     // Add your custom functions
 
     window.loadWatsonAssistantChat(config).then(function(instance){
-      window.instance = instance;
       // Add your event subscriptions.
       instance.render();
     });
   </script>
-  <script src="libs.js"></script>
-  <script src="code.js"></script>
+  <script>
+    const options = {
+      title: '',
+      html_content: '<p></p>',
+      integrationID: config.integrationID,
+      region: config.region,
+      // Any related files like a skill json needed to run this example locally in for format of { name: 'My file', description: 'My description.' href: 'it.json' }
+      files: []
+    }
+    writeTemplate(options);
+  </script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Tomorrow Night Blue Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
@@ -174,6 +176,8 @@ h2, h3, p {
 #documentation table { margin-bottom: 1rem;}
 
 #documentation pre { margin-bottom: 1rem; }
+
+#template_html { display: none; }
 
 .files .bx--structured-list {
   margin-bottom: 0;

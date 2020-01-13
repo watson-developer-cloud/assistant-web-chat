@@ -2,18 +2,19 @@ Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) Web C
 
 This repository is meant for developers who have deployed Web Chat from Watson Assistant and are looking to embed, configure, customize and extend their Web Chat instance. Web Chat is only available to Plus or Premium Watson Assistant plans.
 
-In this documentation, _Web Chat_ refers to the widget code in this repository; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
+In this documentation, _Web Chat_ refers to the chat widget; _your assistant_ refers to the assistant you have configured within your Watson Assistant service instance.
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-  - [Key Concepts](#key-concepts)
+- [Key Concepts](#key-concepts)
+  - [Browser Support](#browser-support)
 - [Configuration](#configuration)
   - [Theming](#theming)
     - [Customizable Variables](#customizable-variables)
   - [Languages](#languages)
     - [Available Locales](#available-locales)
-- [Managing Your Web Chat After Initialization](#managing-your-web-chat-after-initialization)
+- [Instance Methods](#instance-methods)
   - [instance.render()](#instancerender)
   - [instance.on()](#instanceon)
   - [instance.off()](#instanceoff)
@@ -40,18 +41,26 @@ In this documentation, _Web Chat_ refers to the widget code in this repository; 
     - [window:open](#windowopen)
     - [window:close](#windowclose)
     - [Wildcard (*)](#wildcard)
-- [Browser Support](#browser-support)
 
-### Key Concepts
+## Key Concepts
 
-Web Chat is extendable and customizable in two main ways.
+Web Chat is extendable and customizable in three main ways.
 
 1) Through editing the [configuration object](#configuration). This allows you to adjust theming, swap out Web Chat
    provided text, the location of the
    Web Chat, whether or not you use the IBM provided launcher or your own and more.
-2) By [listening to events](#events) when messages are sent or received, the chat window is open or closed, etc, you can
+2) By calling [methods](#instance-methods) on the configured chat instance after initialization.
+3) By [listening to events](#events) when messages are sent or received, the chat window is open or closed, etc, you can
    update context, filter private information before it is sent to IBM, render custom views, or even have your Web Chat
    interact with your website to change pages or open 3rd party scripts.
+
+### Browser Support
+
+If the last two versions of a browser add up to more than 1% of all web traffic we support it. We support the last two versions of the following browsers unless noted.
+
+**Desktop:** IE11 (most recent IE), Edge, Firefox, Firefox ESR (most recent ESR), Chrome, Safari, Opera
+
+**Mobile:** Safari, Chrome for Android, Samsung Mobile Browser, UC Browser for Android, Mobile Firefox
 
 
 ## Configuration
@@ -61,7 +70,7 @@ When you create a Web Chat integration in the Watson Assistant UI, you are given
 ```html
 <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
 <script>
-  var options = {
+  const options = {
     integrationID: 'YOUR_INTEGRATION_ID', // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540'
     region: 'YOUR_REGION' // 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', etc
   };
@@ -83,11 +92,12 @@ There are additional configuration options you can use to control how your Web C
 | options.userID | <code>string</code> | Optional |  | An ID that uniquely identifies the end user at run time. This can be used to delete the user's data on request, in compliance with GDPR. **Note: this configuration item will be replaced by a JWT based authentication mechanism before this project leaves beta. This configuration option will likely be removed at that time.**
 | options.subscriptionID | <code>string</code> | Optional | | The ID of your subscription. For Premium instances, this option is required and is provided in the snippet that you copy and paste. If you are not using a Premium instance, this ID is absent.
 | options.cssVariables | <code>object</code> | Optional | |This is a map that can be used to override the values for styling variables in the application. These styles will merge with whatever you have set inside the Watson Assistant configuration page. If there is a conflict, that values set here will override those set inside Watson Assistant. For details on specific values you can set, see [Theming](#theming). |
-| options.showLauncher | <code>boolean</code> | Optional | <code>true</code> | Whether to render the chat launcher element used to open and close the chat window. If you specify `false`, your website code is responsible for firing [instance.openWindow()](#instanceopenwindow) from your own chat launcher. Alternatively, you can use `options.openChatByDefault` to open the chat interface at initialization. |
-| options.openChatByDefault | <code>boolean</code> | Optional | <code>false</code> | Whether to render the chat window initially in an open state. By default, the chat window is rendered in a closed state. |
 | options.languagePack | <code>Object</code> | Optional |  | An object with strings in the format of the `.json` files in the [languages folder](https://github.com/watson-developer-cloud/assistant-web-chat/tree/master/languages). See [the languages section](#languages) for more details. This setting replaces all of the default strings based on your `options.locale` setting. This setting performs a replacement rather than a merge, so the provided language pack must contain a full set of strings.
 | options.locale | <code>string</code> | Optional |  | The locale to use for UI strings and date string formatting. See [the languages section](#languages) for the available locales. By default, the locale is automatically detected based on the browser language preferences. If the browser language is not a supported language, the default is US English (`en`). |
-| options.element | <code>Element</code> | Optional |  | The containing DOM element where the Web Chat widget should be rendered within the page. By default, Web Chat generates its own element. |
+| options.element | <code>Element</code> | Optional |  | The containing DOM element where the Web Chat widget should be rendered within the page. The Web Chat will grow to the size of the DOM element provided and in the location that the DOM element is located. By default, Web Chat generates its own element. Often, in this scenario, people choose to provide their own launching mechanism and set `options.showLauncher` to false. |
+| options.showLauncher | <code>boolean</code> | Optional | <code>true</code> | Whether to render the chat launcher element used to open and close the chat window. If you specify `false`, your website code is responsible for firing [instance.openWindow()](#instanceopenwindow) from your own chat launcher, or you can use this in combination with `options.openChatByDefault` and `options.hideCloseButton` to have a Web Chat that is always open and needs no launcher. |
+| options.openChatByDefault | <code>boolean</code> | Optional | <code>false</code> | Whether to render the chat window initially in an open state. By default, the chat window is rendered in a closed state. |
+| options.hideCloseButton | <code>boolean</code> | Optional | <code>false</code> | Most often used in conjunction with `options.openChatByDefault` and `options.showLauncher`, this hides the ability to minimize the Web Chat in the Web Chat's UI. This is used if you want to always have the Web Chat open or you have provided your own modal or panel the Web Chat lives in. |
 | options.debug | <code>boolean</code> |  Optional | <code>false</code> | Automatically adds a listener that outputs a console message for each event and sends other logging info to console.log.
 
 ### Theming
@@ -101,11 +111,11 @@ The list of customizable variables is short for now, but it will expand signific
 ```html
 <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
 <script>
-  var options = {
+  const options = {
     integrationID: 'YOUR_INTEGRATION_ID', // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540'
     region: 'YOUR_REGION', // 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', etc
     cssVariables: {
-      'BASE-z-index': '99999'
+      'BASE-z-index': '42'
     }
   };
   window.loadWatsonAssistantChat(options).then(function(instance) {
@@ -118,7 +128,7 @@ The list of customizable variables is short for now, but it will expand signific
 
 | Key | Default | Description |
 | --- | --- | --- |
-| BASE-z-index | 8000 | The z-index on your website that the Web Chat is assigned to. |
+| BASE-z-index | 99999 | The z-index on your website that the Web Chat is assigned to. |
 
 ### Languages
 
@@ -149,48 +159,11 @@ below. They are a superset of the languages available for your dialog skill.
 
  **Available locales**: ar, 'ar-dz', 'ar-kw', 'ar-ly', 'ar-ma', 'ar-sa', 'ar-tn', cs, de, 'de-at', 'de-ch', en, 'en-sg', 'en-au', 'en-ca', 'en-gb', 'en-ie', 'en-il', 'en-nz', es, 'es-do', 'es-us', fr, 'fr-ca', 'fr-ch', it, 'it-ch', ja, ko, pt, 'pt-br', zh, 'zh-cn', 'zh-tw'
 
-## Managing Your Web Chat After Initialization
+## Instance Methods
 
-After you have started your Web Chat with your configuration, the returned instance has an API to allow you to [manage
-events](#events) flowing to or from the Web Chat. This instance also enables you to request that the widget perform
-certain actions. The event system is the key to extending and manipulating the Web Chat on your own website. For more
-details about the supported events, see [Events](#events).
+After `loadWatsonAssistantChat` is loaded with your [configuration options](#configuration), it returns an instance of the Web Chat. This
+instance has many utility methods available for you to do things like render the Web Chat, send a message or listen to [events](#events).
 
-You can subscribe to events using the [`on`](#instance.on) and [`once`](#instance.once) methods. Event handlers are 
-called in the order in which they were registered. The chat widget doesn't do any special handling of errors that are
-thrown from your handlers. If your handler throws an error or rejects the returned Promise, then processing of whatever
-action that triggered the event stops and no additional event handlers will be called. For example, if you have a
-`pre:send` handler and it throws an error. The message will not be sent.
-
-```html
-<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
-<script>
-  var options = {
-    integrationID: 'YOUR_INTEGRATION_ID',
-    region: 'YOUR_REGION'
-  };
-  window.loadWatsonAssistantChat(options).then(function(instance) {
-    // Your handler
-    function handler(obj) {
-      console.log(obj.type, obj.data);
-    }
-    console.log('instance', instance);
-
-    // console.log out details of any "receive" event
-    instance.on({ type: "receive", handler: handler });
-    // console.log out details of any "send" event
-    instance.on({ type: "send", handler: handler });
-
-    // 30 seconds later, unsubscribe from listening to "send" events
-    setTimeout(function(){
-      instance.off({ type: "send", handler: handler});
-    }, 30000);
-
-    // Actually render the Web Chat.
-    instance.render();
-  });
-</script>
-```
 
 <a name="instance.render"></a>
 ### instance.render()
@@ -314,7 +287,7 @@ This method returns the instance itself, for chaining purposes.
       console.log(obj.type, obj.data);
     }
 
-    var mockSendObject = {};
+    const mockSendObject = {};
 
     instance.once({ type: "send", handler: handler });
 
@@ -348,13 +321,13 @@ This method returns a Promise that resolved successfully if the message was succ
 
 **Example**
 ```js
-var sendObject = {
+const sendObject = {
   "input": {
     "message_type": "text",
     "text": "get human agent"
   }
 };
-var sendOptions = {
+const sendOptions = {
   "silent": true
 }
 instance.send(mockSendObject, sendOptions).catch(function(error) {
@@ -368,7 +341,7 @@ Updates the current language pack with the values from the provided language pac
 
 **Example**
 ```js
-var languagePack = {};
+const languagePack = {};
 instance.updateLanguagePack(languagePack);
 ```
 
@@ -430,7 +403,48 @@ instance.destroy();
 
 ## Events
 
-The Web Chat uses an event system to communicate with your website. With these events you can build your own custom UI responses, send messages to your assistant from your website code, or even have your website react to changes of state within the Web Chat. See the [examples for how to use events](https://watson-developer-cloud.github.io/assistant-web-chat/examples.html).
+The Web Chat uses an event system to communicate with your website. With these events you can build your own custom UI
+responses, send messages to your assistant from your website code, or even have your website react to changes of state
+within the Web Chat. See the [examples for how to use
+events](https://watson-developer-cloud.github.io/assistant-web-chat/examples.html).
+
+You can subscribe to events using the [`on`](#instance.on) and [`once`](#instance.once) methods. Event handlers are 
+called in the order in which they were registered. The chat widget doesn't do any special handling of errors that are
+thrown from your handlers. If your handler throws an error or rejects the returned Promise, then processing of whatever
+action that triggered the event stops and no additional event handlers will be called. For example, if you have a
+`pre:send` handler and it throws an error. The message will not be sent.
+
+**Example**
+
+```html
+<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+<script>
+  const options = {
+    integrationID: 'YOUR_INTEGRATION_ID',
+    region: 'YOUR_REGION'
+  };
+  window.loadWatsonAssistantChat(options).then(function(instance) {
+    // Your handler
+    function handler(obj) {
+      console.log(obj.type, obj.data);
+    }
+    console.log('instance', instance);
+
+    // console.log out details of any "receive" event
+    instance.on({ type: "receive", handler: handler });
+    // console.log out details of any "send" event
+    instance.on({ type: "send", handler: handler });
+
+    // 30 seconds later, unsubscribe from listening to "send" events
+    setTimeout(function(){
+      instance.off({ type: "send", handler: handler});
+    }, 30000);
+
+    // Actually render the Web Chat.
+    instance.render();
+  });
+</script>
+```
 
 ### Events summary
 
@@ -452,7 +466,7 @@ The following table summarizes the events that are fired by Web Chat. For more i
 
 When an event fires, subscribed callbacks are called in the order in which they were subscribed using the `on` or `once` method. Each callback parameter is an object:
 
-```javascript
+```js
 {
   type: 'string',
   data: {} //object specific to event type
@@ -548,9 +562,9 @@ Fired when receiving a response from the assistant, before the `receive` event. 
  * Override our response_type for options with one of your own.
  */
 function handler(event) {
-  var generic = event.data.output.generic;
-  for (var i = 0; i < generic.length; i++) {
-    var item = generic[i];
+  const generic = event.data.output.generic;
+  for (let i = 0; i < generic.length; i++) {
+    const item = generic[i];
     if (item.response_type === "options") {
       item.response_type = "my_custom_options_override";
     }
@@ -628,9 +642,9 @@ There are two use cases for this event.
 
 ```js
 function handler(event) {
-  var type = event.type;
-  var message = JSON.stringify(event.data.message);
-  var element = event.data.element;
+  const type = event.type;
+  const message = JSON.stringify(event.data.message);
+  const element = event.data.element;
   if (type === "my_silly_response_type") {
     element.innerHTML = message;
   }
@@ -680,11 +694,3 @@ function handler(event) {
 }
 instance.on({ type: "*", handler: handler });
 ```
-
-## Browser Support
-
-If the last two versions of a browser add up to more than 1% of all web traffic we support it. We support the last two versions of the following browsers unless noted.
-
-**Desktop:** IE11 (most recent IE), Edge, Firefox, Firefox ESR (most recent ESR), Chrome, Safari, Opera
-
-**Mobile:** Safari, Chrome for Android, Samsung Mobile Browser, UC Browser for Android, Mobile Firefox

@@ -5,46 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="carbon-components.min.css">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <script src="libs.js"></script>
+  <script src="writeTemplate.js"></script>
   <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
-  <script>
-    var TITLE = 'User defined response types';
-    var TEXT_CONTENT = '<p>You may need to display information that is not covered by the basic ' +
-      'response types that Watson Assistant provides. One option for this is just putting HTML/CSS' +
-      ' directly into your Text response type. However, for more complicated interactions, you will ' +
-      'likely want to allow your development team direct access to code in the browser instead of ' + 
-      'adding code inside Watson Assistant.</p><p>In this case we provide the ability to define a ' + 
-      '"user_defined" response type.</p>';
-    var INTEGRATION_ID = 'bbed64d6-75b8-436b-a333-06bd0c3d3724';
-    var REGION = 'us-south';
-    var FILES = [
-        {
-          name: 'user-defined-response-types.json',
-          href: 'user-defined-response-types.json',
-          description: 'A dialog skill configured to send a user_defined response type.'
-        },
-        {
-          name: 'user_defined_templates/carousel.js',
-          href: 'user_defined_templates/carousel.js',
-          description: 'A handler for the custom carousel template that exposes the handleCarouselTemplate function.'
-        },
-        {
-          name: 'user_defined_templates/color-box.js',
-          href: 'user_defined_templates/color-box.js',
-          description: 'A handler for the custom color box template that exposes the handleColorBoxTemplate function.'
-        }
-      ];
-    var config = {
-      integrationID: INTEGRATION_ID,
-      region: REGION
-    };
-  </script>
   <!-- Bring in the response type handler code -->
   <script src="user_defined_templates/carousel.js"></script>
   <script src="user_defined_templates/color-box.js"></script>
-  <script id="custom_content">
-  
+  <script>
+    const options = {
+      integrationID: 'bbed64d6-75b8-436b-a333-06bd0c3d3724',
+      region: 'us-south'
+    };
+  </script>
+</head>
+<body>
+  <script id="template_script">
     /*
       Instructions
       - Upload the included `user-defined-response-types.json` skill and create a Web Chat integration
@@ -57,10 +32,13 @@
     */
 
     /**
-     * THIS IS A TEMPORARY WORK AROUND UNTIL user_defined IS A NATIVE SUPPORT RESPONSE TYPE IN WATSON ASSISTANT!
+     * THE TEMPORARY_convertToUserDefinedResponse IS A TEMPORARY WORK AROUND UNTIL user_defined
+     * IS A SUPPORTED RESPONSE TYPE IN WATSON ASSISTANT!
      * 
      * If `user_defined.template_name` has a value, we convert the response to follow the `user_defined` response type.
-     * We will replace the text response with "replace with user_defined" as its value. In the near future, you will be able to define the `user_defined` response type from inside Watson Assistant.
+     * We will replace the text response with "replace with user_defined" as its value.
+     *
+     * In the near future, you will be able to define the `user_defined` response type from inside Watson Assistant.
      * 
      * {
      *   "output": {
@@ -68,9 +46,7 @@
      *       {
      *         "response_type": "user_defined",
      *         // You can add whatever custom variables you like inside the user_defined object.
-     *         "user_defined": {
-     *          "silent": true // only if you do NOT want an element added to the DOM to display the response type.
-     *         }
+     *         "user_defined": {}
      *       }
      *     ]
      *   }
@@ -80,10 +56,10 @@
      * @param event.type The type of event, in this case "pre:receive".
      * @param event.data.message The original message.
      */ 
-    function convertToUserDefinedResponse(event) {
+    function TEMPORARY_convertToUserDefinedResponse(event) {
       if(event.data.output.user_defined && event.data.output.user_defined.template_name) {
         // Map over all items in the output array.
-        event.data.output.generic = event.data.output.generic.map(item => {
+        event.data.output.generic = event.data.output.generic.map(function(item) {
           // If we find one that matches our convention to transform to user_defined response_type, make the transformation.
           if(item.response_type === 'text' && item.text === 'replace with user_defined') {
             item.response_type = 'user_defined';
@@ -94,19 +70,16 @@
         });
       }
     }
-
-
     /**
      * Watch for the customResponse event and forward incoming data to the correct handler.
      * 
      * @param event The event passed from Watson Assistant
      * @param event.type The type of event, in this case "customResponse".
      * @param event.data.message The original message.
-     * @param event.data.element An HTML element that is rendered in Web Chat for you to manipulate. If you have set
-     * user_defined.silent to true, no HTML element will be created.
+     * @param event.data.element An HTML element that is rendered in Web Chat for you to manipulate.
      */
     function customResponseHandler(event) {
-      var message = event.data.message;
+      const message = event.data.message;
       // Add a switch so you can watch for different custom responses.
       switch(message.user_defined.template_name) {
         case 'color_box':
@@ -122,19 +95,46 @@
       }
     }
 
-    window.loadWatsonAssistantChat({
-      integrationID: INTEGRATION_ID,
-      region: REGION
-    }).then(function(instance){
-      window.instance = instance;
+    // Initialize the Web Chat with the default options including your
+    // integrationsID and region.
+    window.loadWatsonAssistantChat(options).then(function(instance){
       // We won't need this once `user_defined` is a native response type in Watson Assistant.
-      instance.on({ type: "pre:receive", handler: convertToUserDefinedResponse });
-      // We WILL need this one to handle the response.
+      instance.on({ type: "pre:receive", handler: TEMPORARY_convertToUserDefinedResponse });
+      // Watch for the customResponse event to handle the user defined response type.
       instance.on({ type: "customResponse", handler: customResponseHandler });
       instance.render();
     });
   </script>
-  <script src="libs.js"></script>
-  <script src="code.js"></script>
+  <script>
+    const templateConfig = {
+      title: 'User defined response types',
+      html_content: '<p>You may need to display information that is not covered by the basic ' +
+      'response types that Watson Assistant provides. One option for this is just putting HTML/CSS' +
+      ' directly into your Text response type. However, for more complicated interactions, you will ' +
+      'likely want to allow your development team direct access to code in the browser instead of ' + 
+      'adding code inside Watson Assistant.</p><p>In this case we provide the ability to define a ' + 
+      '"user_defined" response type.</p>',
+      integrationID: options.integrationID,
+      region: options.region,
+      files: [
+        {
+          name: 'user-defined-response-types.json',
+          href: 'user-defined-response-types.json',
+          description: 'A dialog skill configured to send a user_defined response type.'
+        },
+        {
+          name: 'user_defined_templates/carousel.js',
+          href: 'user_defined_templates/carousel.js',
+          description: 'A handler for the custom carousel template that exposes the handleCarouselTemplate function.'
+        },
+        {
+          name: 'user_defined_templates/color-box.js',
+          href: 'user_defined_templates/color-box.js',
+          description: 'A handler for the custom color box template that exposes the handleColorBoxTemplate function.'
+        }
+      ]
+    };
+    writeTemplate(templateConfig);
+  </script>
 </body>
 </html>
