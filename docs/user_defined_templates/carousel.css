@@ -34,6 +34,7 @@
 
 .carousel_container.carousel_container_active .carousel_container_buttons {
 	display: block;
+	position: relative;
 }
 
 .carousel_container.carousel_container_active .carousel_container_buttons .carousel_container_next {
