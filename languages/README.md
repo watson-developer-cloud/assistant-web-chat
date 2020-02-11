@@ -1,4 +1,4 @@
-# Watson Assistant Web Chat Language Configuration
+# Web Chat Language Configuration
 
 ## Overview
 

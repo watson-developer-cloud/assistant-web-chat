@@ -1,3 +1,4 @@
+/* eslint-disable header/header */
 /**
  * Handler for the color box template.
  *

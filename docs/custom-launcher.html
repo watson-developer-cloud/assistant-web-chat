@@ -27,7 +27,7 @@
       margin-left: -40%;
       animation-duration: 0.5s;
       transition-duration: 0.5s;
-      z-index: 4;
+      z-index: 8000;
     }
 
     .chatElement.opening {
@@ -120,7 +120,7 @@
   </style>
    <script src="libs.js"></script>
    <script src="writeTemplate.js"></script>
-   <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+   <script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
    <script>
      const options = {
       integrationID: 'f38e21ee-d79c-4427-859c-4fdd9bbed8f1',
@@ -212,7 +212,7 @@
     }
  
     // Initialize the Web Chat with the default options including your
-    // integrationsID, region and our updates above to options.element and
+    // integrationID, region and our updates above to options.element and
     // options.showLauncher.
     window.loadWatsonAssistantChat(options).then(function(instance){
 

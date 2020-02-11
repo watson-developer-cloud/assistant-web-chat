@@ -117,7 +117,8 @@ MySimpleCarousel.prototype.writeHTML = function() {
  * @param event The event passed from Watson Assistant.
  * @param event.type The type of event, in this case "customResponse".
  * @param event.data.message The original message.
- * @param event.data.element An HTML element that is rendered in Web Chat for you to manipulate.
+ * @param event.data.element An HTML element that is rendered in Web Chat for you to manipulate. If you have set
+ * user_defined.silent to true, no HTML element will be created.
  */
 function handleCarouselTemplate(event) {
   const carousel = new MySimpleCarousel(event);

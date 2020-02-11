@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="libs.js"></script>
   <script src="writeTemplate.js"></script>
-  <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+  <script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
   <!-- Bring in the response type handler code -->
   <script src="user_defined_templates/carousel.js"></script>
   <script src="user_defined_templates/color-box.js"></script>
@@ -96,7 +96,7 @@
     }
 
     // Initialize the Web Chat with the default options including your
-    // integrationsID and region.
+    // integrationID and region.
     window.loadWatsonAssistantChat(options).then(function(instance){
       // We won't need this once `user_defined` is a native response type in Watson Assistant.
       instance.on({ type: "pre:receive", handler: TEMPORARY_convertToUserDefinedResponse });

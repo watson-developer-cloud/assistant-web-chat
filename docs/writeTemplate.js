@@ -57,7 +57,7 @@ function addAndFormatSampleCode(container, options) {
 
     if (template_script) {
       textContent +=
-        '<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>\n<script>\n\n    // integrationID and region are required config options to your Web Chat.\n    // We provide them here, but can extend this "options" variable\n    // before we initialize the Web Chat.\n    const options = {\n        integrationID: "' +
+        '<script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>\n<script>\n\n    // integrationID and region are required config options to your Web Chat.\n    // We provide them here, but can extend this "options" variable\n    // before we initialize the Web Chat.\n    const options = {\n        integrationID: "' +
         options.integrationID +
         '",\n        region: "' +
         options.region +

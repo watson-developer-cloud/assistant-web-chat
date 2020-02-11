@@ -26,21 +26,22 @@ In this documentation, _Web Chat_ refers to the chat widget; _your assistant_ re
   - [instance.toggleOpen()](#instancetoggleopen)
   - [instance.openWindow()](#instanceopenwindow)
   - [instance.closeWindow()](#instanceclosewindow)
+  - [instance.doAutoScroll()](#instanceDoAutoScroll)
   - [instance.destroy()](#instancedestroy)
 - [Events](#events)
   - [Events summary](#events-summary)
   - [Event callbacks](#event-callbacks)
   - [Managing Context](#managing-context)
   - [Event details](#event-details)
-    - [pre:send](#presend)
-    - [send](#send)
-    - [pre:receive](#prereceive)
-    - [receive](#receive)
-    - [error](#error)
-    - [customResponse](#customresponse)
-    - [window:open](#windowopen)
-    - [window:close](#windowclose)
-    - [Wildcard (*)](#wildcard)
+    - [`pre:send`](#presend)
+    - [`send`](#send)
+    - [`pre:receive`](#prereceive)
+    - [`receive`](#receive)
+    - [`error`](#error)
+    - [`customResponse`](#customresponse)
+    - [`window:open`](#windowopen)
+    - [`window:close`](#windowclose)
+    - [Wildcard (`*`)](#wildcard)
 
 ## Key Concepts
 
@@ -68,16 +69,14 @@ If the last two versions of a browser add up to more than 1% of all web traffic 
 When you create a Web Chat integration in the Watson Assistant UI, you are given a small embed code to add to your website that looks similar to this example:
 
 ```html
-<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+<script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
 <script>
   const options = {
     integrationID: 'YOUR_INTEGRATION_ID', // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540'
     region: 'YOUR_REGION' // 'us-south', 'us-east', 'jp-tok' 'au-syd', 'eu-gb', 'eu-de', etc
   };
   window.loadWatsonAssistantChat(options).then(function(instance) {
-    instance.render().then(function() {
-      console.log('Web Chat has rendered and fetched initial welcome message');
-    });
+    instance.render();
   });
 </script>
 ```
@@ -109,7 +108,7 @@ The list of customizable variables is short for now, but it will expand signific
 
 **Example**
 ```html
-<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+<script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
 <script>
   const options = {
     integrationID: 'YOUR_INTEGRATION_ID', // A UUID like '1d7e34d5-3952-4b86-90eb-7c7232b9b540'
@@ -392,6 +391,16 @@ Closes the chat window if it is currently open, and fires the [`window:close`](#
 instance.closeWindow();
 ```
 
+<a name="instance.doAutoScroll"></a>
+### instance.doAutoScroll()
+Requests the current messages list to auto-scroll to the bottom. The scrolling will scroll to the last set of messages
+from either the user or from the bot.
+
+**Example**
+```js
+instance.doAutoScroll();
+```
+
 <a name="instance.destroy"></a>
 ### instance.destroy()
 Destroy the Web Chat widget and return initial content to the DOM. The chat window and chat launcher are both destroyed. All subscriptions to events are removed.
@@ -417,7 +426,7 @@ action that triggered the event stops and no additional event handlers will be c
 **Example**
 
 ```html
-<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+<script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
 <script>
   const options = {
     integrationID: 'YOUR_INTEGRATION_ID',

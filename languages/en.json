@@ -18,6 +18,7 @@
   "messages_searchResults": "Search results",
   "messages_botIsTyping": "{botName} is typing",
   "messages_agentIsTyping": "The live agent is typing",
+  "messages_scrollHandle": "Messages list",
   "buttons_cancel": "Cancel",
   "options_select": "Select an option",
   "options_seeMore": "See more options",
@@ -76,5 +77,10 @@
   "process_confirmNewThread": "Are you sure you want to start a new thread?",
   "icon_ariaUnreadMessages": "There {count, plural, one {is} other {are}} {count, number} unread {count, plural, one {message} other {messages}}",
   "showMore": "Show more",
-  "showLess": "Show less"
+  "showLess": "Show less",
+  "alternateResponses_button": "I wanted something else",
+  "alternateResponses_title": "You might want to try...",
+  "alternateResponses_close": "Close",
+  "alternateResponses_opened": "The more options panel has been opened",
+  "alternateResponses_closed": "The more options panel has been closed"
 }

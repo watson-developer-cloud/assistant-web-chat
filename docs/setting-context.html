@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="libs.js"></script>
   <script src="writeTemplate.js"></script>
-  <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+  <script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
   <script>
     const options = {
       integrationID: '2bfa63dc-b3d4-4d33-ae14-f9e80f18977f',
@@ -49,7 +49,7 @@
     }
 
     // Initialize the Web Chat with the default options including your
-    // integrationsID and region.
+    // integrationID and region.
     window.loadWatsonAssistantChat(options).then(function(instance){
       // Subscribe to the "pre:send" event.
       instance.on({ type: "pre:send", handler: preSendhandler });

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IBM Watson Assistant Web Chat Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="carbon-components.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="container">
+    <header aria-label="IBM Platform Name" class="bx--header" role="banner"><a class="bx--header__name replace" href="https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation"><span
+    class="bx--header__name--prefix">IBM</span>&nbsp;Watson Assistant Web Chat</a></header>
+    <div class="hero">
+      <div class="hero-image-background"></div>
+      <div class="hero-background"></div>
+      <div class="homepage--dots"></div>
+      <div class="hero--content">
+        <h2>Watson Assistant Web Chat</h2>
+        <h3>This page has moved, click the button below or you will be re-directed in 5 seconds.</h3>
+        <div class="hero--content--buttons">
+          <a href="https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation"
+          class="bx--btn bx--btn--primary replace">Web Chat developer documentation.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let redirectDomain = "https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation"
+    const currentDomain = window.location.hostname;
+    if (currentDomain === "pages.github.ibm.com") {
+      redirectDomain = "https://integrations.us-south.assistant.dev.watson.cloud.ibm.com/web/developer-documentation";
+      const links = document.querySelectorAll('.replace');
+      for (let i = 0; i < links.length; i++) {
+        links[0].setAttribute('href', redirectDomain);
+      }
+    }
+    setTimeout(function() {
+      window.location.replace(redirectDomain);
+    }, 5000);
+  </script>
+</body>
+</html>
