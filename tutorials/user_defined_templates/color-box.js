@@ -159,11 +159,24 @@ function handleColorBoxTemplate(event) {
     'Yellow',
     'YellowGreen'
   ];
+  const parent = document.createElement('div');
+
+  // Create a element with the 'ibm-web-chat-card' class we will add our content to.
+  // This class will make the element look like one of the cards used in Web Chat.
+  const card = document.createElement('div');
+  card.classList.add('ibm-web-chat-card');
+
   const element = document.createElement('div');
   element.setAttribute('style', 'width:100%; height:100%; background-color: red; padding: 24px; text-align: center;');
   element.innerHTML = '<button>Make random background color!</button>';
   element.querySelector('button').addEventListener('click', function addBackgroundColor(e) {
     element.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
   });
-  event.data.element.appendChild(element);
+
+  // Add our color picker inside the card.
+  card.innerHTML = '<p style="margin-top:0;"><strong>My Color Changing Card</strong></p>';
+  card.appendChild(element);
+
+  parent.appendChild(card);
+  event.data.element.appendChild(parent);
 }

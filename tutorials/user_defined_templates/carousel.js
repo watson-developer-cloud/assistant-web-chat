@@ -1,3 +1,4 @@
+/* eslint-disable header/header */
 function MySimpleCarousel(event) {
   this.event = event;
   // Because we render Web Chat to Shadow DOM, we should use `style` tags rather than `link` tags to bring in our CSS.
@@ -95,18 +96,18 @@ MySimpleCarousel.prototype.writeHTML = function() {
   const element = document.createElement('div');
   element.classList.add('carousel_container');
   element.innerHTML =
-    '<div class="carousel_container_buttons"><button class="carousel_container_prev"><div class="carousel_container_icon"><img src="user_defined_templates/left.svg" /></div><div class="carousel_container_label">Back</div></button><button class="carousel_container_next"><div class="carousel_container_icon"><img src="user_defined_templates/right.svg" /></div><div class="carousel_container_label">Next</div></button></div><ol class="carousel_container_content"></ol>';
+    '<div class="carousel_container_buttons"><button class="carousel_container_prev"><div class="carousel_container_icon"><img src="user_defined_templates/left.svg" alt="previous" /></div></button><button class="carousel_container_next"><div class="carousel_container_icon"><img src="user_defined_templates/right.svg" alt="next" /></div></button></div><ol class="carousel_container_content"></ol>';
   const content = element.querySelector('.carousel_container_content');
   const message = this.event.data.message;
   message.user_defined.slides.forEach(function(slide) {
     content.innerHTML +=
-      '<li><img class="carousel_slide_image" src="' +
+      '<li><div class="ibm-web-chat-card"><img class="carousel_slide_image" src="' +
       slide.image +
       '"/><div class="carousel_slide_title">' +
       slide.title +
       '</div><div class="carousel_slide_description">' +
       slide.description +
-      '</div></li>';
+      '</div></div></li>';
   });
   this.event.data.element.appendChild(element);
 };
