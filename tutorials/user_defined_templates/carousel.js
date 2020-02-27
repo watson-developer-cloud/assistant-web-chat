@@ -1,3 +1,6 @@
+// Setting your instance in the handleCarouselTemplate method gives access to instance methods like doAutoScroll.
+let myInstance;
+
 /* eslint-disable header/header */
 function MySimpleCarousel(event) {
   this.event = event;
@@ -99,9 +102,10 @@ MySimpleCarousel.prototype.writeHTML = function() {
     '<div class="carousel_container_buttons"><button class="carousel_container_prev"><div class="carousel_container_icon"><img src="user_defined_templates/left.svg" alt="previous" /></div></button><button class="carousel_container_next"><div class="carousel_container_icon"><img src="user_defined_templates/right.svg" alt="next" /></div></button></div><ol class="carousel_container_content"></ol>';
   const content = element.querySelector('.carousel_container_content');
   const message = this.event.data.message;
+  //Call doAutoScroll on image loads to move the carousel to the bottom of the web chat after they load.
   message.user_defined.slides.forEach(function(slide) {
     content.innerHTML +=
-      '<li><div class="ibm-web-chat-card"><img class="carousel_slide_image" src="' +
+      '<li><div class="ibm-web-chat-card"><img class="carousel_slide_image" onLoad="myInstance.doAutoScroll()" src="' +
       slide.image +
       '"/><div class="carousel_slide_title">' +
       slide.title +
@@ -121,7 +125,8 @@ MySimpleCarousel.prototype.writeHTML = function() {
  * @param event.data.element An HTML element that is rendered in Web Chat for you to manipulate. If you have set
  * user_defined.silent to true, no HTML element will be created.
  */
-function handleCarouselTemplate(event) {
+function handleCarouselTemplate(event, instance) {
+  myInstance = instance;
   const carousel = new MySimpleCarousel(event);
   carousel.start();
 }
