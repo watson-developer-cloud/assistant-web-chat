@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "نعم ",
   "agent_ariaConfirmEndChatNo": "اضغط للاستمرار في المحادثة مع الوكيل المباشر ",
   "agent_ariaConfirmEndChatYes": "اضغط لانهاء المحادثة مع الوكيل المباشر ",
-  "process_getStartedButton": "البدء ",
   "icon_ariaUnreadMessages": "يوجد {count, plural, one { } other { }zero{ }two{ }few{ }many{ }} {count, number} {count, plural, one {رسالة/رسائل} other {رسالة/رسائل}zero{رسالة/رسائل}two{رسالة/رسائل}few{رسالة/رسائل}many{رسالة/رسائل}} لم يتم قرائتها ",
   "showMore": "عرض المزيد",
   "showLess": "عرض أقل"

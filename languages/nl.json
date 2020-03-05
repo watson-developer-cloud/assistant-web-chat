@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "Ja",
   "agent_ariaConfirmEndChatNo": "Klik om de chat met de live agent voort te zetten",
   "agent_ariaConfirmEndChatYes": "Klik om de chat met de live agent te beëindigen",
-  "process_getStartedButton": "Aan de slag",
   "icon_ariaUnreadMessages": "Er {count, plural, one {is} other {zijn}} {count, number} ongelezen {count, plural, one {bericht} other {berichten}}",
   "showMore": "Meer afbeelden",
   "showLess": "Minder afbeelden"

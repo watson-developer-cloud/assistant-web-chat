@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "Sim",
   "agent_ariaConfirmEndChatNo": "Clique para continuar o bate-papo com o agente em tempo real",
   "agent_ariaConfirmEndChatYes": "Clique para encerrar o bate-papo com o agente em tempo real",
-  "process_getStartedButton": "Iniciar com",
   "icon_ariaUnreadMessages": "Há {count, plural, one {is} other {are}} {count, number} unread {count, plural, one {message} other {messages}}",
   "showMore": "Mostrar mais",
   "showLess": "Mostrar menos"

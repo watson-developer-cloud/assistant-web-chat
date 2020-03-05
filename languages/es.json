@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "Sí",
   "agent_ariaConfirmEndChatNo": "Pulse para continuar la conversación con el agente en directo",
   "agent_ariaConfirmEndChatYes": "Pulse para finalizar la conversación con el agente en directo",
-  "process_getStartedButton": "Empezar",
   "icon_ariaUnreadMessages": "Hay {count, plural, uno {$}} other {}} {count, número} sin leer {count, plural, un {$}mensaje} other {mensajes}}",
   "showMore": "Mostrar más",
   "showLess": "Mostrar menos"

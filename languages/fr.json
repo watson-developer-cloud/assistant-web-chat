@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "Oui",
   "agent_ariaConfirmEndChatNo": "Cliquez pour continuer le dialogue avec l'agent en ligne",
   "agent_ariaConfirmEndChatYes": "Cliquez pour mettre fin au dialogue avec l'agent en ligne",
-  "process_getStartedButton": "Commencer",
   "icon_ariaUnreadMessages": "Il y {count, plural, one {a} other {a}} {count, number} {count, plural, one {un message non lu} other {des messages non lus}}",
   "showMore": "Afficher plus",
   "showLess": "Afficher moins"

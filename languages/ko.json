@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "예",
   "agent_ariaConfirmEndChatNo": "라이브 에이전트와 대화를 계속하려면 클릭하십시오.",
   "agent_ariaConfirmEndChatYes": "라이브 에이전트와 대화를 종료하려면 클릭하십시오.",
-  "process_getStartedButton": "시작하기",
   "icon_ariaUnreadMessages": "읽지 않은 {count, plural,  other {}}{count, number}개의 {count, plural,  other {메시지}}가 있음",
   "showMore": "자세히 보기",
   "showLess": "간단히 보기"

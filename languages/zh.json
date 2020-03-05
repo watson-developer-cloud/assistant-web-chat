@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "是",
   "agent_ariaConfirmEndChatNo": "单击以继续与实时代理的交谈",
   "agent_ariaConfirmEndChatYes": "单击以结束与人工代理的交谈",
-  "process_getStartedButton": "开始",
   "icon_ariaUnreadMessages": "{count, plural,  other {有 }} {count, number} 条未读{count, plural,  other {消息}}",
   "showMore": "显示更多",
   "showLess": "显示更少"

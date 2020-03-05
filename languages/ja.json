@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "はい",
   "agent_ariaConfirmEndChatNo": "クリックしてライブ・エージェントとのチャットを続ける",
   "agent_ariaConfirmEndChatYes": "クリックしてライブ・エージェントとのチャットを終了する",
-  "process_getStartedButton": "開始する",
   "icon_ariaUnreadMessages": "{count, plural,  other {}} {count, number} 件の未読の{count, plural,  other {メッセージ}}があります",
   "showMore": "さらに表示",
   "showLess": "表示を減らす"

@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "Ja",
   "agent_ariaConfirmEndChatNo": "Zum Fortsetzen des Chats mit dem Live-Agenten klicken",
   "agent_ariaConfirmEndChatYes": "Zum Beenden des Chats mit dem Live-Agenten klicken",
-  "process_getStartedButton": "Los geht's",
   "icon_ariaUnreadMessages": "Es {count, plural, one {gibt} other {gibt}} {count, number} ungelesene {count, plural, one {Nachricht} other {Nachrichten}}",
   "showMore": "Mehr anzeigen",
   "showLess": "Weniger anzeigen"

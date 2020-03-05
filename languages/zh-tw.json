@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "是",
   "agent_ariaConfirmEndChatNo": "按一下以繼續與在線客服人員的會談",
   "agent_ariaConfirmEndChatYes": "按一下以結束與在線客服人員的會談",
-  "process_getStartedButton": "開始",
   "icon_ariaUnreadMessages": "有 {count, plural,  other {}} {count, number} 則未讀取{count, plural,  other {訊息}}",
   "showMore": "顯示更多",
   "showLess": "顯示更少"

@@ -50,7 +50,6 @@
   "agent_confirmEndChatYes": "Ano",
   "agent_ariaConfirmEndChatNo": "Klepnutím budete pokračovat v konverzaci s živým agentem.",
   "agent_ariaConfirmEndChatYes": "Klepnutím ukončíte konverzaci s živým agentem.",
-  "process_getStartedButton": "Začínáme",
   "icon_ariaUnreadMessages": "Máte {count, number} {count, plural, one {nepřečtenou zprávu} other {nepřečtených zpráv}few{nepřečtené zprávy}}",
   "showMore": "Zobrazit více",
   "showLess": "Zobrazit méně"
