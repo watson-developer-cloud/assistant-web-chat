@@ -26,6 +26,7 @@
   "options_ariaOptionsDisabled": "These options are disabled and cannot be selected",
   "header_previewLinkTitle": "Assistant preview",
   "header_ariaBotAvatar": "{botName} avatar image",
+  "agent_reason_error": "Hmmm... I'm experiencing some difficulties. I need a human agent to manually continue the conversation.",
   "agent_mockTitle": "Connect to Agent",
   "agent_mockDescription": "The connect to agent response type was received. In production, you would write code to handle this connection.",
   "agent_mockMessageLabel": "This message will be sent to the agent:",
