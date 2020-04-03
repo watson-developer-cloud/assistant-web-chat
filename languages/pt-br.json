@@ -37,7 +37,7 @@
   "agent_agentNoNameTitle": "Agente",
   "agent_agentJoinedName": "{personName} entrou no bate-papo",
   "agent_agentJoinedNoName": "Um agente entrou no bate-papo",
-  "agent_connectingMinutes": "Solicitação por agente enviada ...<br/>O tempo de espera atual é de  <b>{time, number} {time, plural, um {minuto} other {minutos}}</b>.",
+  "agent_connectingMinutes": "Solicitação por agente enviada ...<br/>O tempo de espera atual é de <b>{time, number} {time, plural, one {minuto} other {minutos}}</b>.",
   "agent_connectingQueue": "Solicitação por agente enviada ...<br/>Você é o número <b>{position, number}</b> da fila.",
   "agent_ariaOpenedAgentView": "Agora, visualizando o bate-papo com um agente em tempo real. Clique no botão de alternância para retornar ao {botName}.",
   "agent_ariaOpenedBotView": "Agora, visualizando o bate-papo com o {botName}. Clique no botão de alternância para retornar ao agente em tempo real.",
