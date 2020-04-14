@@ -6,6 +6,7 @@
   "errors_ariaMessageRetrying": "We are having some trouble sending your message but are still trying",
   "errors_ariaMessageFailed": "Your message failed to be sent",
   "errors_noAgentsAvailable": "No agents are available.",
+  "errors_busy": "I'm sorry, but I can’t help you right now. I'm answering questions from lots of people at the moment. Please try again later.",
   "input_placeholder": "Type something...",
   "input_buttonLabel": "Click to send message",
   "window_title": "Chat window",
