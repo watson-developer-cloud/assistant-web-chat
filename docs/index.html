@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>IBM Watson Assistant Web Chat Documentation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="carbon-components.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="dark">
-  <div class="container">
-    <header aria-label="IBM Platform Name" class="bx--header" role="banner"><a class="bx--header__name" href="https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation"><span
-    class="bx--header__name--prefix">IBM</span>&nbsp;Watson Assistant Web Chat</a></header>
-    <div class="hero">
-      <div class="hero-image-background"></div>
-      <div class="hero-background"></div>
-      <div class="homepage--dots"></div>
-      <div class="hero--content">
-        <h2>Watson Assistant Web Chat</h2>
-        <h3>This page has moved, click the button below or you will be re-directed in 5 seconds.</h3>
-        <div class="hero--content--buttons">
-          <a href="https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation"
-          class="bx--btn bx--btn--primary">Web Chat developer documentation.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-    const redirectDomain = "https://integrations.us-south.assistant.watson.cloud.ibm.com/web/developer-documentation"
-    setTimeout(function() {
-      window.location.replace(redirectDomain);
-    }, 5000);
-  </script>
-</body>
+<html lang="en">
+  <head>
+    <title>Watson Assistant Web Chat Documentation</title>
+    <meta name="description" content="Web Chat is a framework-agnostic code snippet you can immediately embed on your website. Web Chat can be extended and customized in a variety of ways, so you can concentrate on your unique solutions.">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://web-chat.assistant.watson.cloud.ibm.com/docs.html">
+    <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+    <meta name="dcterms.rightsHolder" content="IBM">
+    <meta name="dcterms.dateCopyrighted" content="2020">
+    <link rel="shortcut icon" href="https://web-chat.assistant.watson.cloud.ibm.com/favicon.ico">
+    <script>
+      (function() {
+        function getUrlParameter(name) {
+          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+          const results = regex.exec(location.search);
+          return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+        const baseURL = 'https://web-chat.assistant.watson.cloud.ibm.com/docs.html';
+        const canonical = document.querySelector('link[rel="canonical"]');
+        const to = getUrlParameter('to');
+        if (canonical !== null && to) {
+          canonical.href = baseURL + '?to=' + to;
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <root />
+    <script src="https://web-chat.assistant.watson.cloud.ibm.com/docs.js"></script>
+  </body>
 </html>
