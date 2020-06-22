@@ -50,7 +50,7 @@
   "agent_ariaAgentConnected": "This agent is connected",
   "agent_ariaAgentNotConnected": "This agent is not connected",
   "agent_youEndedChat": "You ended the conversation",
-  "agent_disconnected": "Something went wrong and your connection to the service desk agent was lost. Please check your internet connection and try again",
+  "agent_disconnected": "Something went wrong and your connection to the service desk agent was lost. Check your internet connection and then try again to connect to an agent.",
   "agent_reconnected": "The agent has reconnected",
   "agent_agentLeftChat": "{personName} left the conversation",
   "agent_agentLeftChatNoName": "The live agent left the conversation",
