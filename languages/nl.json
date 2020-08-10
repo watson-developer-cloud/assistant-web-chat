@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "Ja",
   "icon_ariaUnreadMessages": "Er {count, plural, one {is} other {zijn}} {count, number} ongelezen {count, plural, one {bericht} other {berichten}}",
   "showMore": "Meer afbeelden",
-  "showLess": "Minder afbeelden",
-  "alternateResponses_button": "Ik zocht naar iets anders",
-  "alternateResponses_title": "U kunt ook het volgende proberen...",
-  "alternateResponses_close": "Sluiten",
-  "alternateResponses_opened": "Het venster voor extra opties is geopend",
-  "alternateResponses_closed": "Het venster voor extra opties is gesloten"
+  "showLess": "Minder afbeelden"
 }

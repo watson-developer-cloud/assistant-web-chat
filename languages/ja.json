@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "はい",
   "icon_ariaUnreadMessages": "{count, plural,  other {}} {count, number} 件の未読{count, plural,  other {メッセージ}}があります",
   "showMore": "さらに表示",
-  "showLess": "表示を減らす",
-  "alternateResponses_button": "別の応答を希望",
-  "alternateResponses_title": "別の応答...",
-  "alternateResponses_close": "閉じる",
-  "alternateResponses_opened": "追加オプションのパネルが開かれました",
-  "alternateResponses_closed": "追加オプションのパネルが閉じられました"
+  "showLess": "表示を減らす"
 }

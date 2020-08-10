@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "是",
   "icon_ariaUnreadMessages": "{count, plural,  other {有 }} {count, number} 条未读{count, plural,  other {消息}}",
   "showMore": "显示更多",
-  "showLess": "显示较少",
-  "alternateResponses_button": "我想试试别的",
-  "alternateResponses_title": "您可能想要尝试...",
-  "alternateResponses_close": "关闭",
-  "alternateResponses_opened": "已打开“更多选项”面板",
-  "alternateResponses_closed": "已关闭“更多选项”面板"
+  "showLess": "显示较少"
 }

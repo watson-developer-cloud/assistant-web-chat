@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "예",
   "icon_ariaUnreadMessages": "읽지 않은 {count, plural,  other {}}{count, number}개의 {count, plural,  other {메시지}}가 있음",
   "showMore": "자세히 보기",
-  "showLess": "간단히 보기",
-  "alternateResponses_button": "다른 것을 원했음",
-  "alternateResponses_title": "다음을 시도하려고 할 수 있음",
-  "alternateResponses_close": "닫기",
-  "alternateResponses_opened": "추가 옵션 패널이 열렸습니다.",
-  "alternateResponses_closed": "추가 옵션 패널이 닫혔습니다."
+  "showLess": "간단히 보기"
 }

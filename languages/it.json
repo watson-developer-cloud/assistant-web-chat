@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "Sì",
   "icon_ariaUnreadMessages": "{count, plural, one {C'è} other {Ci sono}} {count, number} {count, plural, one {messaggio} other {messaggi}} non letti",
   "showMore": "Mostra altro",
-  "showLess": "Mostra meno",
-  "alternateResponses_button": "Cercavo qualcos'altro",
-  "alternateResponses_title": "Si desidera provare...",
-  "alternateResponses_close": "Chiudi",
-  "alternateResponses_opened": "È stato aperto il pannello Ulteriori opzioni",
-  "alternateResponses_closed": "È stato chiuso il pannello Ulteriori opzioni"
+  "showLess": "Mostra meno"
 }

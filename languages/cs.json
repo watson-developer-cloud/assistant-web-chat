@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "Ano",
   "icon_ariaUnreadMessages": "Máte {count, number} {count, plural, one {nepřečtenou zprávu} other {nepřečtených zpráv}few{nepřečtené zprávy}}.",
   "showMore": "Zobrazit více",
-  "showLess": "Zobrazit méně",
-  "alternateResponses_button": "Chci něco jiného",
-  "alternateResponses_title": "Mohli byste chtít zkusit...",
-  "alternateResponses_close": "Zavřít",
-  "alternateResponses_opened": "Panel s dalšími volbami byl otevřen.",
-  "alternateResponses_closed": "Panel s dalšími volbami byl zavřen."
+  "showLess": "Zobrazit méně"
 }

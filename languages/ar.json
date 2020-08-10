@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "نعم",
   "icon_ariaUnreadMessages": "يوجد {count, plural, one { } other { }zero{ }two{ }few{ }many{ }} {count, number} {count, plural, one {رسالة/رسائل} other {رسالة/رسائل}zero{رسالة/رسائل}two{رسالة/رسائل}few{رسالة/رسائل}many{رسالة/رسائل}} لم يتم قرائتها",
   "showMore": "عرض المزيد",
-  "showLess": "عرض أقل",
-  "alternateResponses_button": "كنت أريد شيء آخر",
-  "alternateResponses_title": "قد ترغب في المحاولة...",
-  "alternateResponses_close": "اغلاق",
-  "alternateResponses_opened": "تم فتح لوحة المزيد من الاختيارات",
-  "alternateResponses_closed": "تم اغلاق لوحة المزيد من الاختيارات"
+  "showLess": "عرض أقل"
 }

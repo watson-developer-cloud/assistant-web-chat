@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "Ja",
   "icon_ariaUnreadMessages": "Es {count, plural, one {gibt} other {gibt}} {count, number} ungelesene {count, plural, one {Nachricht} other {Nachrichten}}",
   "showMore": "Mehr anzeigen",
-  "showLess": "Weniger anzeigen",
-  "alternateResponses_button": "Ich wollte etwas anderes",
-  "alternateResponses_title": "Versuchen Sie es mit...",
-  "alternateResponses_close": "Schließen",
-  "alternateResponses_opened": "Die Anzeige 'Weitere Optionen' wurde geöffnet",
-  "alternateResponses_closed": "Die Anzeige 'Weitere Optionen' wurde geschlossen"
+  "showLess": "Weniger anzeigen"
 }

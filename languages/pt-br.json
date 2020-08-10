@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "Sim",
   "icon_ariaUnreadMessages": "Há {count, plural, one {} other {}} {count, number} {count, plural, one {mensagem não lida} other {mensagens não lidas}}",
   "showMore": "Mostrar mais",
-  "showLess": "Mostrar menos",
-  "alternateResponses_button": "Queria algo diferente",
-  "alternateResponses_title": "Recomendamos que você tente...",
-  "alternateResponses_close": "Fechar",
-  "alternateResponses_opened": "A painel de mais opções foi aberto",
-  "alternateResponses_closed": "O painel de mais opções foi fechado"
+  "showLess": "Mostrar menos"
 }

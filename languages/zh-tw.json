@@ -64,10 +64,5 @@
   "agent_confirmEndChatYes": "是",
   "icon_ariaUnreadMessages": "有 {count, plural,  other {}} {count, number} 則未讀取{count, plural,  other {訊息}}",
   "showMore": "顯示更多",
-  "showLess": "顯示更少",
-  "alternateResponses_button": "我想試試別的",
-  "alternateResponses_title": "您不妨嘗試...",
-  "alternateResponses_close": "關閉",
-  "alternateResponses_opened": "其他選項畫面已開啟",
-  "alternateResponses_closed": "其他選項畫面已關閉"
+  "showLess": "顯示更少"
 }
