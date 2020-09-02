@@ -26,6 +26,7 @@
   "options_ariaOptionsDisabled": "These options are disabled and cannot be selected",
   "header_previewLinkTitle": "Assistant preview",
   "header_ariaBotAvatar": "{botName} avatar image",
+  "homeScreen_conversationStarterLabel": "Get started",
   "agent_reason_error": "Hmmm... I'm experiencing some difficulties. I need a human agent to manually continue the conversation.",
   "agent_mockTitle": "Connect to agent",
   "agent_mockDescription": "The connect to agent response type was received. In production, you would write code to handle this connection.",
@@ -64,5 +65,12 @@
   "agent_confirmEndChatYes": "Yes",
   "icon_ariaUnreadMessages": "There {count, plural, one {is} other {are}} {count, number} unread {count, plural, one {message} other {messages}}",
   "showMore": "Show more",
-  "showLess": "Show less"
+  "showLess": "Show less",
+  "suggestions_connectToAgent": "Connect to agent",
+  "suggestions_ariaListLabel": "The alternate suggestions list that contains additional options.",
+  "suggestions_ariaButtonToClose": "Alternate suggestions button. Click to close the alternate suggestions list.",
+  "suggestions_ariaButtonToOpen": "Alternate suggestions button. Click to open the alternate suggestions list.",
+  "suggestions_ariaAnnounceButtonShow": "Click the alternate suggestions button for more options.",
+  "suggestions_ariaAnnounceListOpen": "The alternate suggestions list has been opened. There {count, plural, one {is} other {are}} {count, number} {count, plural, one {option} other {options}}.",
+  "suggestions_ariaAnnounceListClosed": "The alternate suggestions list has been closed."
 }
