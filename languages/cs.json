@@ -31,7 +31,6 @@
   "agent_mockDescription": "Byla přijata odpověď typu Připojení k agentovi. V produkčním prostředí byste k obsloužení tohoto připojení napsali kód.",
   "agent_mockMessageLabel": "Tato zpráva se odešle agentovi:",
   "agent_chatTitle": "Podpora živého agenta",
-  "agent_chatDescription": "Upozorníme vás, až agent zodpoví váš požadavek. Doba odezvy se může lišit podle dostupnosti.",
   "agent_startChat": "Požadavek na agenta",
   "agent_chatRequested": "Požadavek na agenta byl odeslán...",
   "agent_connecting": "Požadavek na agenta byl odeslán...",

@@ -31,7 +31,6 @@
   "agent_mockDescription": "收到連接至客服人員回應類型。在正式作業中，您可以撰寫程式碼以處理此連線。",
   "agent_mockMessageLabel": "此訊息將傳送至客服人員：",
   "agent_chatTitle": "在線客服人員支援",
-  "agent_chatDescription": "有客服人員可以處理您的要求時，我們將通知您。回應時間會有不同，取決於客服人員的空閒情況。",
   "agent_startChat": "申請客服人員服務",
   "agent_chatRequested": "已傳送客服人員服務申請...",
   "agent_connecting": "已傳送客服人員服務申請...",

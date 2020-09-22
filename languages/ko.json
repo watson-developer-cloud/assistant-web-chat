@@ -31,7 +31,6 @@
   "agent_mockDescription": "에이전트에 연결 응답 유형이 수신되었습니다. 프로덕션에서 이 연결을 처리하는 코드를 작성합니다.",
   "agent_mockMessageLabel": "이 메시지는 다음 에이전트에게 전송됩니다.",
   "agent_chatTitle": "라이브 에이전트 지원",
-  "agent_chatDescription": "에이전트에서 요청에 대한 응답을 보내면 알림을 보내드리겠습니다. 응답 시간은 사용 가능성에 따라 달라집니다.",
   "agent_startChat": "에이전트 요청",
   "agent_chatRequested": "에이전트에 대한 요청이 전송됨...",
   "agent_connecting": "에이전트에 대한 요청이 전송됨...",

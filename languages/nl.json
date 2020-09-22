@@ -31,7 +31,6 @@
   "agent_mockDescription": "Het responstype verbinden met agent is ontvangen. In productie zou u code schrijven om deze verbinding af te handelen.",
   "agent_mockMessageLabel": "Dit bericht wordt aan de agent gezonden:",
   "agent_chatTitle": "Ondersteuning via live agent",
-  "agent_chatDescription": "Ik zal u waarschuwen wanneer een agent reageert op uw aanvraag. Responstijden zijn afhankelijk van de beschikbaarheid.",
   "agent_startChat": "Agent aanvragen",
   "agent_chatRequested": "Aanvraag voor agent verzonden...",
   "agent_connecting": "Aanvraag voor agent verzonden...",

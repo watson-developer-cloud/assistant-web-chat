@@ -31,7 +31,6 @@
   "agent_mockDescription": "Se ha recibido el tipo de respuesta Conectar con un agente. En producción, debería escribirse código para gestionar esta conexión.",
   "agent_mockMessageLabel": "Se enviará este mensaje al agente:",
   "agent_chatTitle": "Soporte de agente en directo",
-  "agent_chatDescription": "Le informaremos cuando un agente responda a su solicitud. Los tiempos de respuesta varían en función de la disponibilidad.",
   "agent_startChat": "Solicitar agente",
   "agent_chatRequested": "Se ha enviado una solicitud de agente...",
   "agent_connecting": "Se ha enviado una solicitud de agente...",

@@ -31,7 +31,6 @@
   "agent_mockDescription": "「エージェントに接続」応答タイプを受け取りました。 本番環境では、この接続を処理するためのコードを書くことになります。",
   "agent_mockMessageLabel": "メッセージは、エージェントに送られます:",
   "agent_chatTitle": "ライブ・エージェント・サポート",
-  "agent_chatDescription": "エージェントがリクエストに応答した場合、通知します。 応答時間は、状況により異なります。",
   "agent_startChat": "エージェントをリクエスト",
   "agent_chatRequested": "エージェント・リクエストを送信...",
   "agent_connecting": "エージェント・リクエストを送信...",

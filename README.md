@@ -4,6 +4,6 @@ Welcome to [Watson Assistant](https://www.ibm.com/cloud/watson-assistant/) web c
 
 This repository holds support assets for our documentation and coding example web site.
 
-## For documentation and coding examples, please visit https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html.
+**[Documentation and coding examples](https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html)**
 
-## For changelog for each version of web chat, please visit https://cloud.ibm.com/docs/assistant?topic=assistant-release-notes-chat
+**[Changelog for each version](https://cloud.ibm.com/docs/assistant?topic=assistant-release-notes-chat)**

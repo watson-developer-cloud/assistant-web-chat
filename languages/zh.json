@@ -31,7 +31,6 @@
   "agent_mockDescription": "已收到“连接到客服”响应类型。在生产环境中，您将编写代码来处理此连接。",
   "agent_mockMessageLabel": "此消息将发送至客服：",
   "agent_chatTitle": "实时客服支持",
-  "agent_chatDescription": "当客服回应了您的请求时，我将通知您。回应时间会有所不同，这取决于客服人员的空闲情况。",
   "agent_startChat": "请求客服",
   "agent_chatRequested": "已发送实时客服请求...",
   "agent_connecting": "已发送实时客服请求...",

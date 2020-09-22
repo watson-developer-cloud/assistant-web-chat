@@ -31,7 +31,6 @@
   "agent_mockDescription": "O tipo de resposta de conexão com o agente foi recebido. Na produção, você escreveria o código para manipular essa conexão.",
   "agent_mockMessageLabel": "Essa mensagem será enviada ao agente:",
   "agent_chatTitle": "Suporte com agente em tempo real",
-  "agent_chatDescription": "Avisarei quando um agente atender a sua solicitação. Os tempos de resposta variam de acordo com a disponibilidade.",
   "agent_startChat": "Solicitar agente",
   "agent_chatRequested": "Solicitação por agente enviada ...",
   "agent_connecting": "Solicitação por agente enviada ...",

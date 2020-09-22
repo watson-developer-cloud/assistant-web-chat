@@ -31,7 +31,6 @@
   "agent_mockDescription": "È stata ricevuta la risposta di tipo connetti all'agent. In produzione, andrebbe scritto un codice per gestire questa connessione.",
   "agent_mockMessageLabel": "Questo messaggio verrà inviato all'agent:",
   "agent_chatTitle": "Supporto agent live",
-  "agent_chatDescription": "L'utente verrà informato quando un agent risponde alla sua richiesta. I tempi di risposta possono variare a seconda delle disponibilità.",
   "agent_startChat": "Richiedi agent",
   "agent_chatRequested": "Richiesta per l'agent inviata...",
   "agent_connecting": "Richiesta per l'agent inviata...",
