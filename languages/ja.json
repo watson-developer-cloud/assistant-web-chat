@@ -74,7 +74,7 @@
   "suggestions_ariaAnnounceButtonShow": "追加のオプションについては、代替案のボタンをクリックしてください。",
   "suggestions_ariaAnnounceListOpen": "代替案のリストが開きました。{count, plural,  other { }} {count, number} {count, plural,  other { 個のオプションがあります}}。",
   "suggestions_ariaAnnounceListClosed": "代替案のリストが閉じました。",
-  "showMoreResults": "追加の結果を表示",
+  "showMoreResults": "その他の結果を表示",
   "disclaimer_title": "特記事項",
   "disclaimer_accept": "同意します",
   "disclaimer_decline": "同意しません"

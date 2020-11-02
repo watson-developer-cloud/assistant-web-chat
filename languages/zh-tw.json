@@ -27,8 +27,8 @@
   "header_previewLinkTitle": "Assistant 預覽",
   "header_ariaBotAvatar": "{botName} 頭像",
   "homeScreen_conversationStarterLabel": "開始使用",
-  "default_agent_availableMessage": "要求客服人員，他們準備好後，我會通知您。等候時間會有不同，取決於客服人員的空閒情況。",
-  "default_agent_unavailableMessage": "很抱歉，客服人員目前都忙。",
+  "default_agent_availableMessage": "收到您的客服人員需求，會在備妥時通知您。等候時間可能會因客服人員忙碌情況而不同。",
+  "default_agent_unavailableMessage": "很抱歉，客服人員目前都在忙碌中。",
   "agent_reason_error": "嗯... 我遇到了一些麻煩。我需要人工操作，讓真人服務專員繼續參與對話。",
   "agent_mockTitle": "連接至客服人員",
   "agent_mockDescription": "收到連接至客服人員回應類型。在正式作業中，您可以撰寫程式碼以處理此連線。",
@@ -75,7 +75,7 @@
   "suggestions_ariaAnnounceListOpen": "替代建議清單已開啟。有 {count, plural,  other {}} {count, number} {count, plural,  other {個選項}}。",
   "suggestions_ariaAnnounceListClosed": "替代建議清單已關閉。",
   "showMoreResults": "顯示更多結果",
-  "disclaimer_title": "放棄聲明",
+  "disclaimer_title": "免責聲明",
   "disclaimer_accept": "我接受",
   "disclaimer_decline": "我不接受"
 }
