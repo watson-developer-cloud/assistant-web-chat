@@ -62,13 +62,10 @@
             "selection_policy": "sequential"
           },
           {
-            "values": [
-              {
-                "text": "replace with user_defined"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
+            "user_defined": {
+              "template_name": "color_box"
+            },
+            "response_type": "user_defined"
           },
           {
             "values": [
@@ -79,10 +76,7 @@
             "response_type": "text",
             "selection_policy": "sequential"
           }
-        ],
-        "user_defined": {
-          "template_name": "color_box"
-        }
+        ]
       },
       "context": {},
       "conditions": "#color_block",
