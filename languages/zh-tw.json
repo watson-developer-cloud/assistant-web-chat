@@ -84,5 +84,6 @@
   "showMoreResults": "顯示更多結果",
   "disclaimer_title": "免責聲明",
   "disclaimer_accept": "我接受",
-  "disclaimer_decline": "我不接受"
+  "disclaimer_decline": "我不接受",
+  "sessionHistory_expired": "會談階段作業非作用中。請傳送訊息以繼續作業。如果您立即重新整理頁面，則將必須開始新交談。"
 }

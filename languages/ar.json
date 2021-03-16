@@ -84,5 +84,6 @@
   "showMoreResults": "عرض المزيد من النتائج",
   "disclaimer_title": "اخلاء المسؤولية",
   "disclaimer_accept": "أوافق",
-  "disclaimer_decline": "لا أوافق"
+  "disclaimer_decline": "لا أوافق",
+  "sessionHistory_expired": "جلسة المحادثة غير فعالة. قم بارسال أي رسالة للاستمرار. اذا قمت بتجديد الصفحة الآن، فسيتوجب عليك بدء محادثة جديدة."
 }

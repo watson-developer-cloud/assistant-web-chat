@@ -84,5 +84,6 @@
   "showMoreResults": "Mostra ulteriori risultati",
   "disclaimer_title": "Dichiarazione di non responsabilità",
   "disclaimer_accept": "Accetto",
-  "disclaimer_decline": "Non accetto"
+  "disclaimer_decline": "Non accetto",
+  "sessionHistory_expired": "Sessione di chat inattiva. Inviare qualsiasi messaggio per continuare. Se si aggiorna la pagina ora, sarà necessario avviare una nuova conversazione. "
 }

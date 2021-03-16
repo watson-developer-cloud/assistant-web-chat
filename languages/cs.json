@@ -84,5 +84,6 @@
   "showMoreResults": "Zobrazit další výsledky",
   "disclaimer_title": "Prohlášení",
   "disclaimer_accept": "Přijímám",
-  "disclaimer_decline": "Nepřijímám"
+  "disclaimer_decline": "Nepřijímám",
+  "sessionHistory_expired": "Relace konverzace je neaktivní. Pro pokračování odešlete libovolnou zprávu. Obnovíte-li teď stránku, budete muset začít novou konverzaci."
 }

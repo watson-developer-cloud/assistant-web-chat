@@ -84,5 +84,6 @@
   "showMoreResults": "その他の結果を表示",
   "disclaimer_title": "特記事項",
   "disclaimer_accept": "同意します",
-  "disclaimer_decline": "同意しません"
+  "disclaimer_decline": "同意しません",
+  "sessionHistory_expired": "チャットのセッションがアクティブになっていません。任意のメッセージを送信すると継続できます。今ここでページをリフレッシュすると新規で会話を開始する必要があります。"
 }

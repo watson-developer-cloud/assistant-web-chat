@@ -84,5 +84,6 @@
   "showMoreResults": "추가 결과 표시",
   "disclaimer_title": "면책사항",
   "disclaimer_accept": "동의함",
-  "disclaimer_decline": "동의하지 않음"
+  "disclaimer_decline": "동의하지 않음",
+  "sessionHistory_expired": "대화 세션이 비활성 상태입니다. 계속하려면 메시지를 보내십시오. 페이지를 새로 고침하면 새 대화를 시작할 수 있습니다."
 }

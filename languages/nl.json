@@ -84,5 +84,6 @@
   "showMoreResults": "Meer resultaten afbeelden",
   "disclaimer_title": "Disclaimer",
   "disclaimer_accept": "Ik ga akkoord",
-  "disclaimer_decline": "Ik ga niet akkoord"
+  "disclaimer_decline": "Ik ga niet akkoord",
+  "sessionHistory_expired": "Chatsessie is niet actief. Stuur een bericht om door te gaan. Als u de pagina nu vernieuwt, wordt er een nieuwe conversatie gestart."
 }

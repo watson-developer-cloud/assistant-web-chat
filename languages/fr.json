@@ -84,5 +84,6 @@
   "showMoreResults": "Afficher d'autres résultats",
   "disclaimer_title": "Clause de protection",
   "disclaimer_accept": "J'accepte",
-  "disclaimer_decline": "Je n'accepte pas"
+  "disclaimer_decline": "Je n'accepte pas",
+  "sessionHistory_expired": "Session de discussion inactive. Envoyez un message pour continuer. Si vous actualisez la page maintenant, vous devrez entamer une nouvelle conversation."
 }

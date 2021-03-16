@@ -84,5 +84,6 @@
   "showMoreResults": "Weitere Ergebnisse anzeigen",
   "disclaimer_title": "Haftungsausschluss",
   "disclaimer_accept": "Akzeptieren",
-  "disclaimer_decline": "Nicht akzeptieren"
+  "disclaimer_decline": "Nicht akzeptieren",
+  "sessionHistory_expired": "Chatsitzung inaktiviert. Senden Sie eine Nachricht, um fortzufahren. Wird die Seite jetzt aktualisiert, müssen Sie ein neues Gespräch beginnen."
 }

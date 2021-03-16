@@ -84,5 +84,6 @@
   "showMoreResults": "显示更多结果",
   "disclaimer_title": "免责声明",
   "disclaimer_accept": "我接受",
-  "disclaimer_decline": "我拒绝"
+  "disclaimer_decline": "我拒绝",
+  "sessionHistory_expired": "交谈会话处于非活动状态。发送任意消息即可继续交谈。如果现在刷新页面，将会开启新对话。"
 }

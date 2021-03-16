@@ -84,5 +84,6 @@
   "showMoreResults": "Mostrar más resultados",
   "disclaimer_title": "Declaración de limitación de responsabilidad",
   "disclaimer_accept": "Acepto",
-  "disclaimer_decline": "No acepto"
+  "disclaimer_decline": "No acepto",
+  "sessionHistory_expired": "La sesión de la conversación está inactiva. Envié un mensaje para continuar. Si renueva la página ahora, tendrá que iniciar una nueva conversación."
 }

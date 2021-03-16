@@ -84,5 +84,6 @@
   "showMoreResults": "Mostrar mais resultados",
   "disclaimer_title": "Renúncia de responsabilidade",
   "disclaimer_accept": "Aceito",
-  "disclaimer_decline": "Não aceito"
+  "disclaimer_decline": "Não aceito",
+  "sessionHistory_expired": "Sessão de bate-papo inativa. Envie uma mensagem para continuar. Se você atualizar a página agora, será necessário iniciar uma nova conversa."
 }
