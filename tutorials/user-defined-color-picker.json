@@ -1,0 +1,122 @@
+{
+  "intents": [
+    {
+      "intent": "color_picker",
+      "examples": [
+        {
+          "text": "Let me set the color of some text."
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_8_1571943631595"
+    },
+    {
+      "type": "standard",
+      "title": "color picker",
+      "output": {
+        "generic": [
+          {
+            "user_defined": {
+              "default_color": "blue",
+              "template_name": "color_picker"
+            },
+            "response_type": "user_defined"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "#color_picker",
+      "dialog_node": "node_8_1571943631595",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This dialog skill is configured to send a \"user_defined\" response type."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "If you declare \"Let me set the color of some text.\", a user_defined response type will be returned that creates an element with an input field that can be used to control text color.",
+            "options": [
+              {
+                "label": "Let me set the color of some text.",
+                "value": {
+                  "input": {
+                    "text": "Let me set the color of some text."
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "User Defined Color Picker",
+  "language": "en",
+  "description": "A sample skill to show off creating a user_defined response type."
+}
