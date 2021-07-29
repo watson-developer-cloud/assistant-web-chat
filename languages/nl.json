@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "Er is een informatiescherm geopend.",
   "general_ariaAnnounceClosedInformationOverlay": "Er is een informatiescherm gesloten.",
   "general_ariaAnnounceEscapeOverlay": "Druk op escape of klik op de knop voor sluiten om te sluiten.",
-  "branding_ariaInformationButton": "Meer informatie over IBM Watson."
+  "branding_ariaInformationButton": "Meer informatie over IBM Watson.",
+  "channelTransfer_failed": "Het is niet gelukt u over te dragen. Om het opnieuw te proberen, klikt u op de oorspronkelijke link of stuurt u uw bericht naar de assistent hier.",
+  "launcher_chatNow": "Nu chatten"
 }

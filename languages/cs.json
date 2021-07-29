@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "Informační panel byl otevřen.",
   "general_ariaAnnounceClosedInformationOverlay": "Informační panel byl zavřen.",
   "general_ariaAnnounceEscapeOverlay": "Stisknutím klávesy Esc nebo klepnutím na tlačítko pro zavření ho zavřete.",
-  "branding_ariaInformationButton": "Další informace o produktu IBM Watson."
+  "branding_ariaInformationButton": "Další informace o produktu IBM Watson.",
+  "channelTransfer_failed": "Při vašem přepojování se vyskytl problém. Chcete-li pokus zopakovat, klepněte na původní odkaz nebo zde odešlete zprávu asistentovi. ",
+  "launcher_chatNow": "Konverzovat nyní"
 }

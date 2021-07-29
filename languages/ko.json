@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "정보 패널이 열렸습니다.",
   "general_ariaAnnounceClosedInformationOverlay": "정보 패널이 닫혔습니다.",
   "general_ariaAnnounceEscapeOverlay": "닫으려면 Escape를 누르거나 닫기 단추를 클릭하십시오.",
-  "branding_ariaInformationButton": "IBM Watson에 대해 자세히 알아보십시오."
+  "branding_ariaInformationButton": "IBM Watson에 대해 자세히 알아보십시오.",
+  "channelTransfer_failed": "전송하는 중에 문제가 발생했습니다. 다시 시도하려면 원본 링크를 클릭하거나 여기에서 어시스턴트에게 메시지를 보내십시오.",
+  "launcher_chatNow": "지금 대화하기"
 }

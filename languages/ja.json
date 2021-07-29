@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "情報パネルを開きました。",
   "general_ariaAnnounceClosedInformationOverlay": "情報パネルを閉じました。",
   "general_ariaAnnounceEscapeOverlay": "閉じるには、Esc キーを押すか、「閉じる」ボタンをクリックします。",
-  "branding_ariaInformationButton": "IBM Watson についての詳細。"
+  "branding_ariaInformationButton": "IBM Watson についての詳細。",
+  "channelTransfer_failed": "転送中に問題が発生しました。再度試すには、元のリンクをクリックするか、こちらのアシスタントにメッセージを送信してください。",
+  "launcher_chatNow": "今すぐチャット"
 }

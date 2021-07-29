@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "Eine Informationsanzeige wurde geöffnet.",
   "general_ariaAnnounceClosedInformationOverlay": "Eine Informationsanzeige wurde geschlossen.",
   "general_ariaAnnounceEscapeOverlay": "Drücken Sie die Escape-Taste oder klicken Sie auf die Schaltfläche 'Schließen', um sie zu schließen.",
-  "branding_ariaInformationButton": "Weitere Informationen zu IBM Watson."
+  "branding_ariaInformationButton": "Weitere Informationen zu IBM Watson.",
+  "channelTransfer_failed": "Bei Ihrer Übertragung ist ein Problem aufgetreten. Klicken Sie auf den ursprünglichen Link oder senden Sie hier eine Nachricht an den Assistenten, um es erneut zu versuchen.",
+  "launcher_chatNow": "Chat starten"
 }

@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "Se ha abierto un panel de información. ",
   "general_ariaAnnounceClosedInformationOverlay": "Se ha cerrado un panel de información. ",
   "general_ariaAnnounceEscapeOverlay": "Para cerrar, pulse la tecla Esc o pulse el botón de cierre. ",
-  "branding_ariaInformationButton": "Obtener más información sobre IBM Watson. "
+  "branding_ariaInformationButton": "Obtener más información sobre IBM Watson. ",
+  "channelTransfer_failed": "Se ha producido un problema en la transferencia. Para intentarlo de nuevo, haga clic en el enlace original o envíe su mensaje al asistente aquí.",
+  "launcher_chatNow": "Conversar ahora"
 }

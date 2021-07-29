@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "已打开一个信息面板。",
   "general_ariaAnnounceClosedInformationOverlay": "已关闭一个信息面板。",
   "general_ariaAnnounceEscapeOverlay": "按下 ESC 键或者单击“关闭”按钮以关闭。",
-  "branding_ariaInformationButton": "进一步了解 IBM Watson。"
+  "branding_ariaInformationButton": "进一步了解 IBM Watson。",
+  "channelTransfer_failed": "转移您时出现问题。如果要重试，请单击原始链接或将您的消息发送给此处的助手。",
+  "launcher_chatNow": "立即交谈"
 }

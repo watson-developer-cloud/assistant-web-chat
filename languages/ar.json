@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "تم فتح شاشة المعلومات.",
   "general_ariaAnnounceClosedInformationOverlay": "تم اغلاق شاشة المعلومات.",
   "general_ariaAnnounceEscapeOverlay": "اضغط على Escape أو اضغط على الاختيار اغلاق للاغلاق.",
-  "branding_ariaInformationButton": "معرفة المزيد عن IBM Watson."
+  "branding_ariaInformationButton": "معرفة المزيد عن IBM Watson.",
+  "channelTransfer_failed": "كانت هناك مشكلة أثناء عملية النقل الخاصة بك. لاعادة المحاولة مرة أخرى، قم بالضغط على الرابط الأصلي أو ارسال رسالتك إلى المساعد هنا.",
+  "launcher_chatNow": "اجراء محادثة الآن"
 }

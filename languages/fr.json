@@ -110,5 +110,7 @@
   "general_ariaAnnounceOpenedInformationOverlay": "Un panneau d'information s'est ouvert.",
   "general_ariaAnnounceClosedInformationOverlay": "Un panneau d'information s'est refermé.",
   "general_ariaAnnounceEscapeOverlay": "Appuyez sur la touche d'échappement ou sur le bouton Fermer pour fermer.",
-  "branding_ariaInformationButton": "En savoir plus sur IBM Watson."
+  "branding_ariaInformationButton": "En savoir plus sur IBM Watson.",
+  "channelTransfer_failed": "Un problème s'est produit lors du transfert. Réessayez soit en cliquant sur le lien d'origine, soit en envoyant votre message à l'assistant à partir d'ici.",
+  "launcher_chatNow": "Discuter maintenant"
 }
