@@ -1,6 +1,9 @@
 {
   "errors_communicating": "Er is iets fout gegaan bij de communicatie met {botName}.",
   "errors_imageSource": "Afbeelding is niet beschikbaar.",
+  "errors_videoSource": "Video is niet beschikbaar.",
+  "errors_audioSource": "Audio is niet beschikbaar.",
+  "errors_iframeSource": "De webpagina is niet beschikbaar.",
   "errors_singleMessage": "Er is iets fout gegaan bij het bericht dat u net hebt gestuurd; u kunt me wel iets anders vragen.",
   "errors_ariaMessageRetrying": "Er zijn wat problemen bij het verzenden van uw bericht, maar we blijven het proberen.",
   "errors_ariaMessageFailed": "Het verzenden van uw bericht is mislukt.",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Druk op escape of klik op de knop voor sluiten om te sluiten.",
   "branding_ariaInformationButton": "Meer informatie over IBM Watson.",
   "channelTransfer_failed": "Het is niet gelukt u over te dragen. Om het opnieuw te proberen, klikt u op de oorspronkelijke link of stuurt u uw bericht naar de assistent hier.",
-  "launcher_chatNow": "Nu chatten"
+  "launcher_chatNow": "Nu chatten",
+  "iframe_ariaSourceLoaded": "De webpagina is geladen.",
+  "iframe_ariaImageAltText": "Previewafbeelding voor het venster van de webpagina.",
+  "iframe_ariaClosePanel": "Het venster van de webpagina sluiten.",
+  "iframe_ariaOpenedPanel": "Het venster van de webpagina is geopend.",
+  "iframe_ariaClosedPanel": "Het venster van de webpagina is gesloten.",
+  "iframe_ariaClickPreviewCard": "Klik op het venster van de webpagina en ga naar {source}."
 }

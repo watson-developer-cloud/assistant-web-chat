@@ -1,6 +1,9 @@
 {
   "errors_communicating": "Bei der Kommunikation mit {botName} ist ein Fehler aufgetreten.",
   "errors_imageSource": "Bild ist nicht verfügbar.",
+  "errors_videoSource": "Video ist nicht verfügbar.",
+  "errors_audioSource": "Audio ist nicht verfügbar.",
+  "errors_iframeSource": "Die Webseite ist nicht verfügbar.",
   "errors_singleMessage": "Es gibt ein Problem mit der Nachricht, die Sie gerade gesendet haben. Fragen Sie bitte etwas anderes.",
   "errors_ariaMessageRetrying": "Es gibt Probleme beim Senden Ihrer Nachricht, aber wir versuchen es weiter",
   "errors_ariaMessageFailed": "Ihre Nachricht konnte nicht gesendet werden",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Drücken Sie die Escape-Taste oder klicken Sie auf die Schaltfläche 'Schließen', um sie zu schließen.",
   "branding_ariaInformationButton": "Weitere Informationen zu IBM Watson.",
   "channelTransfer_failed": "Bei Ihrer Übertragung ist ein Problem aufgetreten. Klicken Sie auf den ursprünglichen Link oder senden Sie hier eine Nachricht an den Assistenten, um es erneut zu versuchen.",
-  "launcher_chatNow": "Chat starten"
+  "launcher_chatNow": "Chat starten",
+  "iframe_ariaSourceLoaded": "Die Webseite wurde geladen.",
+  "iframe_ariaImageAltText": "Vorschaubild für die Webseite.",
+  "iframe_ariaClosePanel": "Anzeige der Webseite schließen.",
+  "iframe_ariaOpenedPanel": "Anzeige der Webseite wurde geöffnet.",
+  "iframe_ariaClosedPanel": "Anzeige der Webseite wurde geschlossen.",
+  "iframe_ariaClickPreviewCard": "Klicken Sie hier, um die Webseite zu öffnen und {source} aufzurufen."
 }

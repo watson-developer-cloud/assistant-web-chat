@@ -1,6 +1,9 @@
 {
   "errors_communicating": "{botName} との通信中にエラーが発生しました。",
   "errors_imageSource": "画像はご利用になれません。",
+  "errors_videoSource": "動画を使用できません。",
+  "errors_audioSource": "音声を使用できません。",
+  "errors_iframeSource": "Web ページを使用できません。",
   "errors_singleMessage": "先ほど送信されたメッセージにエラーがありました。別のご質問をお願いします。",
   "errors_ariaMessageRetrying": "メッセージの送信で問題が発生していますが、送信を続けています",
   "errors_ariaMessageFailed": "あなたのメッセージを送信できませんでした",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "閉じるには、Esc キーを押すか、「閉じる」ボタンをクリックします。",
   "branding_ariaInformationButton": "IBM Watson についての詳細。",
   "channelTransfer_failed": "転送中に問題が発生しました。再度試すには、元のリンクをクリックするか、こちらのアシスタントにメッセージを送信してください。",
-  "launcher_chatNow": "今すぐチャット"
+  "launcher_chatNow": "今すぐチャット",
+  "iframe_ariaSourceLoaded": "Web ページがロードされました。",
+  "iframe_ariaImageAltText": "Web ページ・パネルのイメージをプレビューします。",
+  "iframe_ariaClosePanel": "Web ページ・パネルを閉じます。",
+  "iframe_ariaOpenedPanel": "Web ページ・パネルが開きました。",
+  "iframe_ariaClosedPanel": "Web ページ・パネルが閉じました。",
+  "iframe_ariaClickPreviewCard": "クリックして Web ページ・パネルを開き、{source} にアクセスしてください。"
 }

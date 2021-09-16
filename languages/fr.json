@@ -1,6 +1,9 @@
 {
   "errors_communicating": "Il y a eu une erreur en communiquant avec {botName}.",
   "errors_imageSource": "L'image n'est pas disponible.",
+  "errors_videoSource": "La vidéo n'est pas disponible.",
+  "errors_audioSource": "L'audio n'est pas disponible.",
+  "errors_iframeSource": "La page Web n'est pas disponible.",
   "errors_singleMessage": "Une erreur s'est produite avec le message que vous venez d'envoyer, mais n'hésitez pas à me demander autre chose.",
   "errors_ariaMessageRetrying": "Nous rencontrons un problème pour envoyer votre message mais nous essayons encore",
   "errors_ariaMessageFailed": "L'envoi de votre message a échoué",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Appuyez sur la touche d'échappement ou sur le bouton Fermer pour fermer.",
   "branding_ariaInformationButton": "En savoir plus sur IBM Watson.",
   "channelTransfer_failed": "Un problème s'est produit lors du transfert. Réessayez soit en cliquant sur le lien d'origine, soit en envoyant votre message à l'assistant à partir d'ici.",
-  "launcher_chatNow": "Discuter maintenant"
+  "launcher_chatNow": "Discuter maintenant",
+  "iframe_ariaSourceLoaded": "La page Web s'est chargée.",
+  "iframe_ariaImageAltText": "Prévisualiser l'image du panneau de la page Web.",
+  "iframe_ariaClosePanel": "Refermer le panneau de la page Web.",
+  "iframe_ariaOpenedPanel": "Le panneau de la page Web s'est ouvert.",
+  "iframe_ariaClosedPanel": "Le panneau de la page Web s'est refermé.",
+  "iframe_ariaClickPreviewCard": "Cliquez pour ouvrir le panneau de la page Web et visiter {source}."
 }

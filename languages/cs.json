@@ -1,6 +1,9 @@
 {
   "errors_communicating": "Došlo k chybě při komunikaci s robotem {botName}.",
   "errors_imageSource": "Obrázek není k dispozici.",
+  "errors_videoSource": "Video není k dispozici.",
+  "errors_audioSource": "Zvuk není k dispozici.",
+  "errors_iframeSource": "Webová stránka není k dispozici.",
   "errors_singleMessage": "Došlo k chybě s vaší právě odeslanou zprávou, ale klidně se zeptejte na něco jiného.",
   "errors_ariaMessageRetrying": "Máme nějaké potíže s odesláním vaší zprávy, ale zkoušíme to dál.",
   "errors_ariaMessageFailed": "Vaši zprávu se nepodařilo odeslat.",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Stisknutím klávesy Esc nebo klepnutím na tlačítko pro zavření ho zavřete.",
   "branding_ariaInformationButton": "Další informace o produktu IBM Watson.",
   "channelTransfer_failed": "Při vašem přepojování se vyskytl problém. Chcete-li pokus zopakovat, klepněte na původní odkaz nebo zde odešlete zprávu asistentovi. ",
-  "launcher_chatNow": "Konverzovat nyní"
+  "launcher_chatNow": "Konverzovat nyní",
+  "iframe_ariaSourceLoaded": "Webová stránka se načetla.",
+  "iframe_ariaImageAltText": "Náhled obrázku pro panel webové stránky.",
+  "iframe_ariaClosePanel": "Zavřete panel webové stránky.",
+  "iframe_ariaOpenedPanel": "Otevřel se panel webové stránky.",
+  "iframe_ariaClosedPanel": "Panel webové stránky se zavřel.",
+  "iframe_ariaClickPreviewCard": "Kliknutím otevřete panel webové stránky a navštivte {source}."
 }

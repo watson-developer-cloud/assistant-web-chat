@@ -1,6 +1,9 @@
 {
   "errors_communicating": "حدث خطأ أثناء الاتصال مع {botName}.",
   "errors_imageSource": "الصورة غير متاحة.",
+  "errors_videoSource": "الفيديو غير متاح.",
+  "errors_audioSource": "الصوت غير متاح.",
+  "errors_iframeSource": "صفحة الانترنت غير متاحة.",
   "errors_singleMessage": "يوجد خطأ في الرسالة التي قمت بارسالها للتو، لكن لا تتردد في طلب شيء آخر.",
   "errors_ariaMessageRetrying": "نواجه بعض المشاكل في ارسال رسالتك ولكننا لا نزال نحاول",
   "errors_ariaMessageFailed": "فشل في ارسال رسالتك",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "اضغط على Escape أو اضغط على الاختيار اغلاق للاغلاق.",
   "branding_ariaInformationButton": "معرفة المزيد عن IBM Watson.",
   "channelTransfer_failed": "كانت هناك مشكلة أثناء عملية النقل الخاصة بك. لاعادة المحاولة مرة أخرى، قم بالضغط على الرابط الأصلي أو ارسال رسالتك إلى المساعد هنا.",
-  "launcher_chatNow": "اجراء محادثة الآن"
+  "launcher_chatNow": "اجراء محادثة الآن",
+  "iframe_ariaSourceLoaded": "تم تحميل صفحة الانترنت.",
+  "iframe_ariaImageAltText": "معاينة صورة لشاشة صفحة الانترنت.",
+  "iframe_ariaClosePanel": "اغلاق شاشة صفحة الانترنت.",
+  "iframe_ariaOpenedPanel": "تم فتح شاشة صفحة الانترنت.",
+  "iframe_ariaClosedPanel": "تم غلق شاشة صفحة الانترنت.",
+  "iframe_ariaClickPreviewCard": "اضغط لفتح شاشة صفحة الانترنت وزيارة {source}."
 }

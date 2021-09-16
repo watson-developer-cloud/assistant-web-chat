@@ -1,6 +1,9 @@
 {
   "errors_communicating": "There was an error communicating with {botName}.",
   "errors_imageSource": "Image is not available.",
+  "errors_videoSource": "Video is not available.",
+  "errors_audioSource": "Audio is not available.",
+  "errors_iframeSource": "The web page is not available.",
   "errors_singleMessage": "There is an error with the message you just sent, but feel free to ask me something else.",
   "errors_ariaMessageRetrying": "We are having some trouble sending your message but are still trying",
   "errors_ariaMessageFailed": "Your message failed to be sent",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Press escape or click the close button to close.",
   "branding_ariaInformationButton": "Learn more about IBM Watson.",
   "channelTransfer_failed": "There was a problem transferring you. To try again either click the original link or send your message to the assistant here.",
-  "launcher_chatNow": "Chat now"
+  "launcher_chatNow": "Chat now",
+  "iframe_ariaSourceLoaded": "The web page has loaded.",
+  "iframe_ariaImageAltText": "Preview image for the web page panel.",
+  "iframe_ariaClosePanel": "Close the web page panel.",
+  "iframe_ariaOpenedPanel": "Web page panel has opened.",
+  "iframe_ariaClosedPanel": "Web page panel has closed.",
+  "iframe_ariaClickPreviewCard": "Click to open the web page panel and visit {source}."
 }

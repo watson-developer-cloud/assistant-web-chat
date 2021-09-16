@@ -1,6 +1,9 @@
 {
   "errors_communicating": "與 {botName} 通訊時發生錯誤。",
   "errors_imageSource": "影像無法使用。",
+  "errors_videoSource": "視訊無法使用。",
+  "errors_audioSource": "音訊無法使用。",
+  "errors_iframeSource": "網頁無法使用。",
   "errors_singleMessage": "您剛傳送的訊息出錯，但您可以隨時向我諮詢其他事宜。",
   "errors_ariaMessageRetrying": "我們在傳送您的訊息時遇到一些問題，但我們仍在嘗試",
   "errors_ariaMessageFailed": "您的訊息傳送失敗",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "按 Esc 鍵或按一下「關閉」按鈕以關閉。",
   "branding_ariaInformationButton": "進一步瞭解 IBM Watson。",
   "channelTransfer_failed": "轉接您時發生問題。如果要重試，請按一下原始鏈結，或將您的訊息傳送給這裡的助理。",
-  "launcher_chatNow": "立即會談"
+  "launcher_chatNow": "立即會談",
+  "iframe_ariaSourceLoaded": "已載入網頁。",
+  "iframe_ariaImageAltText": "預覽網頁畫面的影像。",
+  "iframe_ariaClosePanel": "關閉網頁畫面。",
+  "iframe_ariaOpenedPanel": "網頁畫面已開啟。",
+  "iframe_ariaClosedPanel": "網頁畫面已關閉。",
+  "iframe_ariaClickPreviewCard": "按一下以開啟網頁畫面並造訪 {source}。"
 }

@@ -1,6 +1,9 @@
 {
   "errors_communicating": "Houve um erro ao comunicar-se com o {botName}.",
   "errors_imageSource": "A imagem não está disponível.",
+  "errors_videoSource": "O vídeo não está disponível.",
+  "errors_audioSource": "O áudio não está disponível.",
+  "errors_iframeSource": "A página da web não está disponível.",
   "errors_singleMessage": "Ocorreu um erro na mensagem que você acabou de enviar, mas fique à vontade para me perguntar outra coisa.",
   "errors_ariaMessageRetrying": "Estamos com problemas para enviar sua mensagem, mas continuaremos tentando",
   "errors_ariaMessageFailed": "Não foi possível enviar a sua mensagem",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Pressione Esc ou clique no botão Fechar para fechar.",
   "branding_ariaInformationButton": "Saiba mais sobre o IBM Watson.",
   "channelTransfer_failed": "Houve um problema ao transferir você. Para tentar novamente, clique no link original ou envie sua mensagem para o assistente aqui.",
-  "launcher_chatNow": "Inicie um bate-papo agora"
+  "launcher_chatNow": "Inicie um bate-papo agora",
+  "iframe_ariaSourceLoaded": "A página da web foi carregada.",
+  "iframe_ariaImageAltText": "Visualizar imagem do painel da página da web.",
+  "iframe_ariaClosePanel": "Fechar o painel da página da web.",
+  "iframe_ariaOpenedPanel": "O painel da página da web foi aberto.",
+  "iframe_ariaClosedPanel": "O painel da página da web foi fechado.",
+  "iframe_ariaClickPreviewCard": "Clique para abrir o painel da página da web e visite {source}."
 }

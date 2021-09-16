@@ -1,6 +1,9 @@
 {
   "errors_communicating": "{botName}과 통신하는 중에 오류가 발생했습니다.",
   "errors_imageSource": "이미지를 사용할 수 없습니다.",
+  "errors_videoSource": "동영상을 사용할 수 없습니다.",
+  "errors_audioSource": "오디오를 사용할 수 없습니다.",
+  "errors_iframeSource": "웹 페이지를 사용할 수 없습니다.",
   "errors_singleMessage": "방금 전송한 메시지에 오류가 있습니다. 기타 다른 사항을 문의하십시오.",
   "errors_ariaMessageRetrying": "메시지를 전송하는 데 문제가 있지만 계속 시도하고 있습니다.",
   "errors_ariaMessageFailed": "메시지를 전송하는 데 실패했습니다.",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "닫으려면 Escape를 누르거나 닫기 단추를 클릭하십시오.",
   "branding_ariaInformationButton": "IBM Watson에 대해 자세히 알아보십시오.",
   "channelTransfer_failed": "전송하는 중에 문제가 발생했습니다. 다시 시도하려면 원본 링크를 클릭하거나 여기에서 어시스턴트에게 메시지를 보내십시오.",
-  "launcher_chatNow": "지금 대화하기"
+  "launcher_chatNow": "지금 대화하기",
+  "iframe_ariaSourceLoaded": "웹 페이지가 로드되었습니다.",
+  "iframe_ariaImageAltText": "웹 페이지 패널의 미리보기 이미지입니다.",
+  "iframe_ariaClosePanel": "웹 페이지 패널을 닫으십시오.",
+  "iframe_ariaOpenedPanel": "웹 페이지 패널이 열렸습니다.",
+  "iframe_ariaClosedPanel": "웹 페이지 패널이 닫혔습니다.",
+  "iframe_ariaClickPreviewCard": "웹 페이지 패널을 열고 {source}에 방문하려면 클릭하십시오."
 }

@@ -1,6 +1,9 @@
 {
   "errors_communicating": "Si è verificato un errore durante la comunicazione con {botName}.",
   "errors_imageSource": "Immagine non disponibile.",
+  "errors_videoSource": "Video non disponibile. ",
+  "errors_audioSource": "Audio non disponibile. ",
+  "errors_iframeSource": "Pagina Web non disponibile. ",
   "errors_singleMessage": "Si è verificato un errore con il messaggio appena inviato, ma puoi chiedermi qualcos'altro.",
   "errors_ariaMessageRetrying": "Si sono verificati dei problemi durante l'invio del messaggio, sono in corso ulteriori tentativi",
   "errors_ariaMessageFailed": "Non è stato possibile inviare il messaggio",
@@ -112,5 +115,11 @@
   "general_ariaAnnounceEscapeOverlay": "Premere esc o fare clic sul pulsante Chiudi per chiudere.",
   "branding_ariaInformationButton": "Ulteriori informazioni su IBM Watson.",
   "channelTransfer_failed": "Si è verificato un errore nel trasferimento. Provare a fare clic sul link originale o inviare il proprio messaggio all'assistente. ",
-  "launcher_chatNow": "Avvia chat"
+  "launcher_chatNow": "Avvia chat",
+  "iframe_ariaSourceLoaded": "La pagina Web è stata caricata. ",
+  "iframe_ariaImageAltText": "Immagine di anteprima per il pannello della pagina Web. ",
+  "iframe_ariaClosePanel": "Chiudere il pannello della pagina Web. ",
+  "iframe_ariaOpenedPanel": "Il pannello della pagina Web è stato aperto. ",
+  "iframe_ariaClosedPanel": "Il pannello della pagina Web è stato chiuso. ",
+  "iframe_ariaClickPreviewCard": "Fare clic per aprire il pannello della pagina Web e visitare {source}. "
 }
