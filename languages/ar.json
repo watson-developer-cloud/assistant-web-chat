@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "هذا الوكيل متصل",
   "agent_ariaAgentNotConnected": "هذا الوكيل غير متصل",
   "agent_youEndedChat": "لقد أنهيت المحادثة",
+  "agent_conversationWasEnded": "تم إنهاء المحادثة",
   "agent_disconnected": "حدث خطأ ما وتم فقد اتصالك بوكيل مكتب الخدمة. تحقق من اتصالك بالانترنت وأعد محاولة الاتصال بوكيل مرة أخرى.",
   "agent_reconnected": "تم اعادة الاتصال بالوكيل",
   "agent_agentLeftChat": "قام {personName} بمغادرة المحادثة",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "اغلاق شاشة صفحة الانترنت.",
   "iframe_ariaOpenedPanel": "تم فتح شاشة صفحة الانترنت.",
   "iframe_ariaClosedPanel": "تم غلق شاشة صفحة الانترنت.",
-  "iframe_ariaClickPreviewCard": "اضغط لفتح شاشة صفحة الانترنت وزيارة {source}."
+  "iframe_ariaClickPreviewCard": "اضغط لفتح شاشة صفحة الانترنت وزيارة {source}.",
+  "datePicker_chooseDate": "اختر تاريخ ({format})",
+  "datePicker_confirmDate": "تأكيد التاريخ"
 }

@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "已连接到该客服",
   "agent_ariaAgentNotConnected": "未连接到该客服",
   "agent_youEndedChat": "您结束了对话",
+  "agent_conversationWasEnded": "对话已结束",
   "agent_disconnected": "出现了问题，您与服务台客服的连接已断开。请检查您的因特网连接，然后重试连接到客服。",
   "agent_reconnected": "已重新连接客服",
   "agent_agentLeftChat": "{personName} 离开了对话",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "关闭网页面板。",
   "iframe_ariaOpenedPanel": "王爷面板已打开。",
   "iframe_ariaClosedPanel": "网页面板已关闭。",
-  "iframe_ariaClickPreviewCard": "单击以打开网页面板并访问 {source}。"
+  "iframe_ariaClickPreviewCard": "单击以打开网页面板并访问 {source}。",
+  "datePicker_chooseDate": "选择日期 ({format})",
+  "datePicker_confirmDate": "确认日期"
 }

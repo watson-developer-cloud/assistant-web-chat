@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "Questo agent è connesso",
   "agent_ariaAgentNotConnected": "Questo agent non è connesso",
   "agent_youEndedChat": "Hai terminato la conversazione",
+  "agent_conversationWasEnded": "La conversazione è terminata",
   "agent_disconnected": "Si è verificato un errore e la connessione all'agent del service desk è stata interrotta in modo imprevisto. Controllare la connessione internet e quindi riprovare la connessione ad un agent.",
   "agent_reconnected": "L'agent è stato riconnesso",
   "agent_agentLeftChat": "{personName} ha lasciato la conversazione",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "Chiudere il pannello della pagina Web.",
   "iframe_ariaOpenedPanel": "Il pannello della pagina Web è stato aperto.",
   "iframe_ariaClosedPanel": "Il pannello della pagina Web è stato chiuso.",
-  "iframe_ariaClickPreviewCard": "Fare clic per aprire il pannello della pagina Web e visitare {source}."
+  "iframe_ariaClickPreviewCard": "Fare clic per aprire il pannello della pagina Web e visitare {source}.",
+  "datePicker_chooseDate": "Scegliere una data ({format})",
+  "datePicker_confirmDate": "Conferma data"
 }

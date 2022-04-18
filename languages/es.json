@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "Este agente está conectado",
   "agent_ariaAgentNotConnected": "Este agente no está conectado",
   "agent_youEndedChat": "Ha finalizado la conversación",
+  "agent_conversationWasEnded": "La conversación se ha terminado",
   "agent_disconnected": "Se ha producido un error y se ha perdido su conexión con el agente del servicio de atención al usuario. Compruebe su conexión a Internet e intente de nuevo establecer contacto con un agente.",
   "agent_reconnected": "El agente se ha vuelto a conectar",
   "agent_agentLeftChat": "{personName} abandonó la conversación",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "Cerrar el panel de la página web.",
   "iframe_ariaOpenedPanel": "Se ha abierto el panel de la página web.",
   "iframe_ariaClosedPanel": "Se ha cerrado el panel de la página web.",
-  "iframe_ariaClickPreviewCard": "Pulse para abrir el panel de la página web y visite {source}."
+  "iframe_ariaClickPreviewCard": "Pulse para abrir el panel de la página web y visite {source}.",
+  "datePicker_chooseDate": "Elija una fecha ({format})",
+  "datePicker_confirmDate": "Confirme la fecha"
 }

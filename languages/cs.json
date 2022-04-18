@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "Tento agent je připojený.",
   "agent_ariaAgentNotConnected": "Tento agent není připojený.",
   "agent_youEndedChat": "Ukončili jste konverzaci.",
+  "agent_conversationWasEnded": "Konverzace byla ukončena",
   "agent_disconnected": "Něco se pokazilo a vaše připojení k agentovi Service Desk bylo ztraceno. Zkontrolujte své připojení k internetu a zkuste se připojit k agentovi znovu.",
   "agent_reconnected": "Agent se znovu připojil.",
   "agent_agentLeftChat": "Agent {personName} opustil konverzaci.",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "Zavřete panel webové stránky.",
   "iframe_ariaOpenedPanel": "Otevřel se panel webové stránky.",
   "iframe_ariaClosedPanel": "Panel webové stránky se zavřel.",
-  "iframe_ariaClickPreviewCard": "Kliknutím otevřete panel webové stránky a navštivte {source}."
+  "iframe_ariaClickPreviewCard": "Kliknutím otevřete panel webové stránky a navštivte {source}.",
+  "datePicker_chooseDate": "Zvolit datum ({formát})",
+  "datePicker_confirmDate": "Potvrdit datum"
 }

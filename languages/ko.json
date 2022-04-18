@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "이 에이전트가 연결됨",
   "agent_ariaAgentNotConnected": "이 에이전트가 연결되지 않음",
   "agent_youEndedChat": "대화를 종료함",
+  "agent_conversationWasEnded": "대화가 종료됨",
   "agent_disconnected": "문제가 발생하여 서비스 데스크 에이전트에 대한 연결이 끊어졌습니다. 인터넷 연결을 확인한 후 에이전트에 다시 연결해 보십시오.",
   "agent_reconnected": "에이전트가 다시 연결됨",
   "agent_agentLeftChat": "{personName}이 대화에서 나감",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "웹 페이지 패널을 닫으십시오.",
   "iframe_ariaOpenedPanel": "웹 페이지 패널이 열렸습니다.",
   "iframe_ariaClosedPanel": "웹 페이지 패널이 닫혔습니다.",
-  "iframe_ariaClickPreviewCard": "웹 페이지 패널을 열고 {source}에 방문하려면 클릭하십시오."
+  "iframe_ariaClickPreviewCard": "웹 페이지 패널을 열고 {source}에 방문하려면 클릭하십시오.",
+  "datePicker_chooseDate": "날짜 선택({format})",
+  "datePicker_confirmDate": "날짜 확인"
 }

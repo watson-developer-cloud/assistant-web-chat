@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "客服人員已連線",
   "agent_ariaAgentNotConnected": "此客服人員未連線",
   "agent_youEndedChat": "您已結束交談",
+  "agent_conversationWasEnded": "交談已結束",
   "agent_disconnected": "出問題了，與服務台客服人員的連線已中斷。請檢查您的網際網路連線，然後再重試連接至客服人員。",
   "agent_reconnected": "客服人員已重新連線",
   "agent_agentLeftChat": "{personName} 已離開交談",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "關閉網頁畫面。",
   "iframe_ariaOpenedPanel": "網頁畫面已開啟。",
   "iframe_ariaClosedPanel": "網頁畫面已關閉。",
-  "iframe_ariaClickPreviewCard": "按一下以開啟網頁畫面並造訪 {source}。"
+  "iframe_ariaClickPreviewCard": "按一下以開啟網頁畫面並造訪 {source}。",
+  "datePicker_chooseDate": "選擇日期 ({format})",
+  "datePicker_confirmDate": "確認日期"
 }

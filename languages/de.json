@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "Dieser Agent ist verbunden",
   "agent_ariaAgentNotConnected": "Dieser Agent ist nicht verbunden",
   "agent_youEndedChat": "Sie haben den Dialog beendet",
+  "agent_conversationWasEnded": "Der Dialog wurde beendet",
   "agent_disconnected": "Es ist ein Fehler aufgetreten und Ihre Verbindung zum Service-Desk-Agenten wurde unterbrochen. Überprüfen Sie Ihre Internetverbindung und versuchen Sie dann erneut, Kontakt mit einem Agenten herzustellen.",
   "agent_reconnected": "Der Agent hat die Verbindung wiederhergestellt",
   "agent_agentLeftChat": "{personName} hat den Dialog verlassen",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "Anzeige der Webseite schließen.",
   "iframe_ariaOpenedPanel": "Anzeige der Webseite wurde geöffnet.",
   "iframe_ariaClosedPanel": "Anzeige der Webseite wurde geschlossen.",
-  "iframe_ariaClickPreviewCard": "Klicken Sie hier, um die Webseite zu öffnen und {source} aufzurufen."
+  "iframe_ariaClickPreviewCard": "Klicken Sie hier, um die Webseite zu öffnen und {source} aufzurufen.",
+  "datePicker_chooseDate": "Datum auswählen ({format})",
+  "datePicker_confirmDate": "Datum bestätigen"
 }

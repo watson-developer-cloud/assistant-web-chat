@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "Cet agent est connecté",
   "agent_ariaAgentNotConnected": "Cet agent n'est pas connecté",
   "agent_youEndedChat": "Vous avez mis fin à la conversation",
+  "agent_conversationWasEnded": "La conversation a été terminée",
   "agent_disconnected": "Quelque chose s'est mal passé et votre connexion à l'agent du centre de services a été perdue. Merci de vérifier votre connexion à Internet et de réessayer de vous connecter à un agent.",
   "agent_reconnected": "L'agent s'est reconnecté",
   "agent_agentLeftChat": "{personName} a quitté la conversation",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "Refermer le panneau de la page Web.",
   "iframe_ariaOpenedPanel": "Le panneau de la page Web s'est ouvert.",
   "iframe_ariaClosedPanel": "Le panneau de la page Web s'est refermé.",
-  "iframe_ariaClickPreviewCard": "Cliquez pour ouvrir le panneau de la page Web et visiter {source}."
+  "iframe_ariaClickPreviewCard": "Cliquez pour ouvrir le panneau de la page Web et visiter {source}.",
+  "datePicker_chooseDate": "Choisissez une date ({format})",
+  "datePicker_confirmDate": "Confirmer la date"
 }

@@ -76,6 +76,7 @@
   "agent_ariaAgentConnected": "このエージェントは接続されています",
   "agent_ariaAgentNotConnected": "このエージェントは接続されていません",
   "agent_youEndedChat": "あなたは会話を終了しました",
+  "agent_conversationWasEnded": "会話は終了しました",
   "agent_disconnected": "問題が発生し、サービス・デスク・エージェントへの接続が切断されました。 インターネット接続をご確認になり、エージェントへ再接続してみてください。",
   "agent_reconnected": "エージェントが再度接続されました",
   "agent_agentLeftChat": "{personName} さんが会話を終了しました",
@@ -130,5 +131,7 @@
   "iframe_ariaClosePanel": "Web ページ・パネルを閉じます。",
   "iframe_ariaOpenedPanel": "Web ページ・パネルが開きました。",
   "iframe_ariaClosedPanel": "Web ページ・パネルが閉じました。",
-  "iframe_ariaClickPreviewCard": "クリックして Web ページ・パネルを開き、{source} にアクセスしてください。"
+  "iframe_ariaClickPreviewCard": "クリックして Web ページ・パネルを開き、{source} にアクセスしてください。",
+  "datePicker_chooseDate": "日付 ({format}) の選択",
+  "datePicker_confirmDate": "日付の確認"
 }

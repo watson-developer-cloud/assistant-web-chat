@@ -43,6 +43,7 @@
   "options_select": "Select an option",
   "options_ariaOptionsDisabled": "These options are disabled and cannot be selected",
   "header_previewLinkTitle": "Assistant preview",
+  "header_ariaCloseRestart": "End conversation and close the chat window",
   "header_ariaBotAvatar": "{botName} avatar image",
   "homeScreen_returnToAssistant": "Return to assistant",
   "homeScreen_returnToHome": "Return to the home screen",
@@ -76,6 +77,7 @@
   "agent_ariaAgentConnected": "This agent is connected",
   "agent_ariaAgentNotConnected": "This agent is not connected",
   "agent_youEndedChat": "You ended the conversation",
+  "agent_conversationWasEnded": "The conversation was ended",
   "agent_disconnected": "Something went wrong and your connection to the service desk agent was lost. Check your internet connection and then try again to connect to an agent.",
   "agent_reconnected": "The agent has reconnected",
   "agent_agentLeftChat": "{personName} left the conversation",
@@ -130,5 +132,11 @@
   "iframe_ariaClosePanel": "Close the web page panel.",
   "iframe_ariaOpenedPanel": "Web page panel has opened.",
   "iframe_ariaClosedPanel": "Web page panel has closed.",
-  "iframe_ariaClickPreviewCard": "Click to open the web page panel and visit {source}."
+  "iframe_ariaClickPreviewCard": "Click to open the web page panel and visit {source}.",
+  "closeAndRestartModal_title": "End conversation",
+  "closeAndRestartModal_message": "Are you sure you want to end your conversation?",
+  "closeAndRestartModal_confirm": "Yes",
+  "closeAndRestartModal_cancel": "No",
+  "datePicker_chooseDate": "Choose a date ({format})",
+  "datePicker_confirmDate": "Confirm date"
 }
