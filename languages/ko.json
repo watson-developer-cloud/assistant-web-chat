@@ -43,6 +43,7 @@
   "options_select": "옵션 선택",
   "options_ariaOptionsDisabled": "이 옵션은 사용 안함으로 설정되어 있으므로 선택할 수 없습니다.",
   "header_previewLinkTitle": "Assistant 미리보기",
+  "header_ariaCloseRestart": "대화 종료 후 대화 창 닫기",
   "header_ariaBotAvatar": "{botName} 아바타 이미지",
   "homeScreen_returnToAssistant": "어시스턴트로 돌아가기",
   "homeScreen_returnToHome": "홈 화면으로 돌아가기",
@@ -132,6 +133,10 @@
   "iframe_ariaOpenedPanel": "웹 페이지 패널이 열렸습니다.",
   "iframe_ariaClosedPanel": "웹 페이지 패널이 닫혔습니다.",
   "iframe_ariaClickPreviewCard": "웹 페이지 패널을 열고 {source}에 방문하려면 클릭하십시오.",
+  "closeAndRestartModal_title": "대화 종료",
+  "closeAndRestartModal_message": "정말 대화를 끝내시겠습니까?",
+  "closeAndRestartModal_confirm": "예",
+  "closeAndRestartModal_cancel": "아니오",
   "datePicker_chooseDate": "날짜 선택({format})",
   "datePicker_confirmDate": "날짜 확인"
 }

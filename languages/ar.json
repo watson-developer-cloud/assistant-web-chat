@@ -43,6 +43,7 @@
   "options_select": "تحديد اختيار",
   "options_ariaOptionsDisabled": "سيتم الغاء اتاحة هذه الاختيارات ولا يمكن تحديدها",
   "header_previewLinkTitle": "معاينة المساعد",
+  "header_ariaCloseRestart": "إنهاء المحادثة وإغلاق نافذة المحادثة",
   "header_ariaBotAvatar": "صورة {botName} الرمزية",
   "homeScreen_returnToAssistant": "العودة إلى المساعد",
   "homeScreen_returnToHome": "العودة إلى الشاشة الرئيسية",
@@ -132,6 +133,10 @@
   "iframe_ariaOpenedPanel": "تم فتح شاشة صفحة الانترنت.",
   "iframe_ariaClosedPanel": "تم غلق شاشة صفحة الانترنت.",
   "iframe_ariaClickPreviewCard": "اضغط لفتح شاشة صفحة الانترنت وزيارة {source}.",
+  "closeAndRestartModal_title": "إنهاء المحادثة",
+  "closeAndRestartModal_message": "هل تريد بالفعل إنهاء المحادثة الخاصة بك؟",
+  "closeAndRestartModal_confirm": "نعم",
+  "closeAndRestartModal_cancel": "لا",
   "datePicker_chooseDate": "اختر تاريخ ({format})",
   "datePicker_confirmDate": "تأكيد التاريخ"
 }

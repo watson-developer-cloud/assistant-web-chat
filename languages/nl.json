@@ -43,6 +43,7 @@
   "options_select": "Selecteer een optie",
   "options_ariaOptionsDisabled": "Deze opties zijn uitgeschakeld en kunnen niet geselecteerd worden",
   "header_previewLinkTitle": "Assistant-preview",
+  "header_ariaCloseRestart": "Gesprek beëindigen en het chatvenster sluiten",
   "header_ariaBotAvatar": "Afbeelding van {botName}-avatar",
   "homeScreen_returnToAssistant": "Terug naar assistent",
   "homeScreen_returnToHome": "Terug naar het homescherm",
@@ -132,6 +133,10 @@
   "iframe_ariaOpenedPanel": "Het venster van de webpagina is geopend.",
   "iframe_ariaClosedPanel": "Het venster van de webpagina is gesloten.",
   "iframe_ariaClickPreviewCard": "Klik op het venster van de webpagina en ga naar {source}.",
+  "closeAndRestartModal_title": "Conversatie beëindigen",
+  "closeAndRestartModal_message": "Weet u zeker dat u uw gesprek wilt beëindigen?",
+  "closeAndRestartModal_confirm": "Ja",
+  "closeAndRestartModal_cancel": "Nee",
   "datePicker_chooseDate": "Kies een datum ({format})",
   "datePicker_confirmDate": "Datum bevestigen"
 }

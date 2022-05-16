@@ -43,6 +43,7 @@
   "options_select": "Seleccionar una opción",
   "options_ariaOptionsDisabled": "Estas opciones están inhabilitadas y no se pueden seleccionar",
   "header_previewLinkTitle": "Vista previa del asistente",
+  "header_ariaCloseRestart": "Finalizar la conversación y cerrar la ventana de conversación",
   "header_ariaBotAvatar": "Imagen de atavar de {botName}",
   "homeScreen_returnToAssistant": "Volver al asistente",
   "homeScreen_returnToHome": "Volver a la pantalla de inicio",
@@ -132,6 +133,10 @@
   "iframe_ariaOpenedPanel": "Se ha abierto el panel de la página web.",
   "iframe_ariaClosedPanel": "Se ha cerrado el panel de la página web.",
   "iframe_ariaClickPreviewCard": "Pulse para abrir el panel de la página web y visite {source}.",
+  "closeAndRestartModal_title": "Finalizar conversación",
+  "closeAndRestartModal_message": "¿Está seguro de que desea finalizar la conversación?",
+  "closeAndRestartModal_confirm": "Sí",
+  "closeAndRestartModal_cancel": "No",
   "datePicker_chooseDate": "Elija una fecha ({format})",
   "datePicker_confirmDate": "Confirme la fecha"
 }

@@ -43,6 +43,7 @@
   "options_select": "オプションの選択",
   "options_ariaOptionsDisabled": "オプションは使用不可のため選択できません",
   "header_previewLinkTitle": "Assistant プレビュー",
+  "header_ariaCloseRestart": "会話を終了してチャットウィンドウを閉じる",
   "header_ariaBotAvatar": "{botName} アバター・イメージ",
   "homeScreen_returnToAssistant": "アシスタントに戻る",
   "homeScreen_returnToHome": "ホーム画面に戻ります。",
@@ -132,6 +133,10 @@
   "iframe_ariaOpenedPanel": "Web ページ・パネルが開きました。",
   "iframe_ariaClosedPanel": "Web ページ・パネルが閉じました。",
   "iframe_ariaClickPreviewCard": "クリックして Web ページ・パネルを開き、{source} にアクセスしてください。",
+  "closeAndRestartModal_title": "会話の終了",
+  "closeAndRestartModal_message": "会話を終了してもよろしいですか?",
+  "closeAndRestartModal_confirm": "はい",
+  "closeAndRestartModal_cancel": "いいえ",
   "datePicker_chooseDate": "日付 ({format}) の選択",
   "datePicker_confirmDate": "日付の確認"
 }
