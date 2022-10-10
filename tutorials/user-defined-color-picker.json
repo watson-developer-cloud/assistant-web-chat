@@ -52,7 +52,7 @@
           {
             "user_defined": {
               "default_color": "blue",
-              "template_name": "color_picker"
+              "user_defined_type": "color_picker"
             },
             "response_type": "user_defined"
           }

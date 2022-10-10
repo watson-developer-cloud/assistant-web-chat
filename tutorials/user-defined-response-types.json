@@ -63,7 +63,7 @@
           },
           {
             "user_defined": {
-              "template_name": "color_box"
+              "user_defined_type": "color_box"
             },
             "response_type": "user_defined"
           },
