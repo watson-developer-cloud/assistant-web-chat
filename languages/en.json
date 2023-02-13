@@ -133,5 +133,9 @@
   "closeAndRestartModal_confirm": "Yes",
   "closeAndRestartModal_cancel": "No",
   "datePicker_chooseDate": "Choose a date ({format})",
-  "datePicker_confirmDate": "Confirm date"
+  "datePicker_confirmDate": "Confirm date",
+  "tour_resumeButton": "Resume",
+  "tour_restartButton": "Restart",
+  "tour_startButton": "Get started",
+  "tour_doneButton": "Done"
 }
