@@ -152,6 +152,7 @@
   "general_ariaAnnounceEscapeOverlay": "Press escape or click the close button to close.",
   "branding_ariaInformationButton": "Learn more about IBM Watson.",
   "channelTransfer_failed": "There was a problem transferring you. To try again either click the original link or send your message to the assistant here.",
+  "conversationalSearch_citations": "How do we know?",
   "launcher_chatNow": "Chat now",
   "iframe_ariaSourceLoaded": "The web page has loaded.",
   "iframe_ariaImageAltText": "Preview image for the web page panel.",
