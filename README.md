@@ -1,8 +1,8 @@
 # Web chat
 
-Welcome to [IBM watsonx assistant](https://www.ibm.com/cloud/watson-assistant/) web chat. With just a few lines of code, you can add a web chat widget to your website and take advantage of all the best and newest that IBM watsonx assistant has to offer.
+Welcome to [IBM watsonx Assistant](https://www.ibm.com/cloud/watson-assistant/) web chat. With just a few lines of code, you can add a web chat widget to your website and take advantage of all the best and newest that IBM watsonx Assistant has to offer.
 
-This repository holds language strings that you can pass into IBM watsonx assistant web chat to match your language, tone and brand.
+This repository holds language strings that you can pass into IBM watsonx Assistant web chat to match your language, tone and brand.
 
 See https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-instance-methods#languages for more information.
 

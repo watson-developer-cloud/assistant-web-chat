@@ -144,7 +144,7 @@
   "disclaimer_decline": "동의하지 않음",
   "sessionHistory_expired": "대화 세션이 비활성 상태입니다. 계속하려면 어떠한 메시지라도 전송하십시오. 지금 페이지를 새로 고치면 새로 대화를 시작해야 합니다.",
   "branding_headline": "<b>IBM watsonx</b>으로 빌드",
-  "branding_description": "IBM watsonx assistant를 사용하면 긴 대기 시간, 지루한 검색, 도움이 되지 않는 챗봇에 실망하는 상황이 없어질 것입니다. 고객이 필요할 때 언제든 빠르고 정확한 응답을 제공하여 비용과 시간을 절약하십시오.",
+  "branding_description": "IBM watsonx Assistant를 사용하면 긴 대기 시간, 지루한 검색, 도움이 되지 않는 챗봇에 실망하는 상황이 없어질 것입니다. 고객이 필요할 때 언제든 빠르고 정확한 응답을 제공하여 비용과 시간을 절약하십시오.",
   "branding_sign_up": "지금 가입하세요.",
   "general_ariaCloseInformationOverlay": "정보 패널을 닫습니다.",
   "general_ariaAnnounceOpenedInformationOverlay": "정보 패널이 열렸습니다.",
