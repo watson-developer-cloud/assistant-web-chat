@@ -188,6 +188,7 @@
   "fileSharing_agentMessageText": "ファイルのアップロード",
   "fileSharing_request": "",
   "serviceDesk_niceDFO_fileUploadError": "最大ファイル・サイズは {fileSize} MB です。 許可されるファイル・タイプは {allowedTypes} です。",
+  "documentViewer_title": "",
   "carousel_prevNavButton": "前のスライドに移動します。",
   "carousel_nextNavButton": "次のスライドに移動します。",
   "carousel_bulletNavButton": "スライド {number} に移動します。"

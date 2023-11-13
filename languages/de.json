@@ -187,6 +187,7 @@
   "fileSharing_uploadFailed": "Fehler beim Hochladen der Datei.",
   "fileSharing_agentMessageText": "Hochladen der Datei",
   "fileSharing_request": "",
+  "documentViewer_title": "",
   "serviceDesk_niceDFO_fileUploadError": "Die maximale Dateigröße beträgt {fileSize} MB. Die zulässigen Dateitypen sind {allowedTypes}.",
   "carousel_prevNavButton": "Zur vorherigen Folie wechseln.",
   "carousel_nextNavButton": "Gehe zur nächsten Folie.",

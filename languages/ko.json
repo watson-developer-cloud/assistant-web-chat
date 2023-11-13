@@ -188,6 +188,7 @@
   "fileSharing_agentMessageText": "파일 업로드",
   "fileSharing_request": "",
   "serviceDesk_niceDFO_fileUploadError": "최대 파일 크기는 {fileSize}MB입니다. 허용되는 파일 유형은 {allowedTypes}입니다.",
+  "documentViewer_title": "",
   "carousel_prevNavButton": "이전 슬라이드로 이동하십시오.",
   "carousel_nextNavButton": "다음 슬라이드로 이동하십시오.",
   "carousel_bulletNavButton": "슬라이드 {number}(으)로 이동하십시오."

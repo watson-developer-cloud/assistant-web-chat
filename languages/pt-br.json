@@ -188,6 +188,7 @@
   "fileSharing_agentMessageText": "Upload de arquivo",
   "fileSharing_request": "",
   "serviceDesk_niceDFO_fileUploadError": "O tamanho máximo do arquivo é {fileSize} MB. Os tipos de arquivo permitidos são {allowedTypes}.",
+  "documentViewer_title": "",
   "carousel_prevNavButton": "Vá para o slide anterior.",
   "carousel_nextNavButton": "Vá para o próximo slide.",
   "carousel_bulletNavButton": "Vá para o slide {number}."

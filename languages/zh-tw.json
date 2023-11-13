@@ -188,6 +188,7 @@
   "fileSharing_agentMessageText": "檔案上傳",
   "fileSharing_request": "",
   "serviceDesk_niceDFO_fileUploadError": "檔案大小上限為 {fileSize} MB。 容許的檔案類型為 {allowedTypes}。",
+  "documentViewer_title": "",
   "carousel_prevNavButton": "移至前一張投影片。",
   "carousel_nextNavButton": "移至下一張投影片。",
   "carousel_bulletNavButton": "移至投影片 {number}。"

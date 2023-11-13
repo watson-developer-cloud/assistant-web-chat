@@ -188,6 +188,7 @@
   "fileSharing_agentMessageText": "Bestand uploaden",
   "fileSharing_request": "",
   "serviceDesk_niceDFO_fileUploadError": "De maximale bestandsgrootte is {fileSize} MB. De toegestane bestandstypen zijn {allowedTypes}.",
+  "documentViewer_title": "",
   "carousel_prevNavButton": "Ga naar de vorige dia.",
   "carousel_nextNavButton": "Ga naar de volgende dia.",
   "carousel_bulletNavButton": "Ga naar dia {number}."

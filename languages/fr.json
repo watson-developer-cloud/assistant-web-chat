@@ -188,6 +188,7 @@
   "fileSharing_agentMessageText": "Téléchargement de fichier",
   "fileSharing_request": "",
   "serviceDesk_niceDFO_fileUploadError": "La taille de fichier maximale est de {fileSize} Mo. Les types de fichier autorisés sont {allowedTypes}.",
+  "documentViewer_title": "",
   "carousel_prevNavButton": "Aller à la diapositive précédente.",
   "carousel_nextNavButton": "Aller à la diapositive suivante.",
   "carousel_bulletNavButton": "Aller à la diapositive {number}."
