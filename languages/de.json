@@ -190,6 +190,5 @@
   "documentViewer_title": "",
   "serviceDesk_niceDFO_fileUploadError": "Die maximale Dateigröße beträgt {fileSize} MB. Die zulässigen Dateitypen sind {allowedTypes}.",
   "carousel_prevNavButton": "Zur vorherigen Folie wechseln.",
-  "carousel_nextNavButton": "Gehe zur nächsten Folie.",
-  "carousel_bulletNavButton": "Wechseln Sie zur Folie {number}."
+  "carousel_nextNavButton": "Gehe zur nächsten Folie."
 }

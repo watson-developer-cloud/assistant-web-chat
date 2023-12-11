@@ -1,5 +1,6 @@
 {
   "components_overflow_ariaLabel": "Open and close list of options",
+  "components_swiper_currentLabel": "{currentSlideNumber} of {totalSlideCount}",
   "errors_communicating": "There was an error communicating with {botName}.",
   "errors_imageSource": "Image is not available.",
   "errors_videoSource": "Video is not available.",
@@ -154,7 +155,9 @@
   "general_ariaAnnounceEscapeOverlay": "Press escape or click the close button to close.",
   "branding_ariaInformationButton": "Learn more about IBM Watson.",
   "channelTransfer_failed": "There was a problem transferring you. To try again either click the original link or send your message to the assistant here.",
-  "conversationalSearch_citations": "How do we know?",
+  "conversationalSearch_viewPDF": "View PDF",
+  "conversationalSearch_viewSourceDocument": "View source",
+  "conversationalSearch_toggleCitations": "Open or close the list of sources",
   "launcher_chatNow": "Chat now",
   "iframe_ariaSourceLoaded": "The web page has loaded.",
   "iframe_ariaImageAltText": "Preview image for the web page panel.",
@@ -209,6 +212,5 @@
   "documentViewer_loadError": "We were unable to load the document. Click Retry to try again, or try downloading the document.",
   "documentViewer_loadErrorRetry": "Retry",
   "carousel_prevNavButton": "Go to previous slide.",
-  "carousel_nextNavButton": "Go to next slide.",
-  "carousel_bulletNavButton": "Go to slide {number}."
+  "carousel_nextNavButton": "Go to next slide."
 }

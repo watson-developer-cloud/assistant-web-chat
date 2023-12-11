@@ -190,6 +190,5 @@
   "serviceDesk_niceDFO_fileUploadError": "Maximální velikost souboru je {fileSize} MB. Povolené typy souborů jsou {allowedTypes}.",
   "documentViewer_title": "",
   "carousel_prevNavButton": "Přejděte na předchozí snímek.",
-  "carousel_nextNavButton": "Přejít na další snímek.",
-  "carousel_bulletNavButton": "Přejděte na snímek {number}."
+  "carousel_nextNavButton": "Přejít na další snímek."
 }

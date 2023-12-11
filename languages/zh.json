@@ -190,6 +190,5 @@
   "serviceDesk_niceDFO_fileUploadError": "最大文件大小为 {fileSize}MB。 允许的文件类型为 {allowedTypes}。",
   "documentViewer_title": "",
   "carousel_prevNavButton": "转至上一张幻灯片。",
-  "carousel_nextNavButton": "转至下一张幻灯片。",
-  "carousel_bulletNavButton": "转至幻灯片 {number}。"
+  "carousel_nextNavButton": "转至下一张幻灯片。"
 }

@@ -190,6 +190,5 @@
   "serviceDesk_niceDFO_fileUploadError": "الحد الأقصى لحجم الملف هو {fileSize} ميجابايت. أنواع الملفات المسموح بها هي {allowedTypes}.",
   "carousel_prevNavButton": "انتقل إلى الشريحة السابقة.",
   "documentViewer_title": "",
-  "carousel_nextNavButton": "انتقل إلى الشريحة التالية.",
-  "carousel_bulletNavButton": "انتقل إلى الشريحة {number}."
+  "carousel_nextNavButton": "انتقل إلى الشريحة التالية."
 }

@@ -190,6 +190,5 @@
   "serviceDesk_niceDFO_fileUploadError": "La dimensione massima del file è {fileSize}MB. I tipi di file consentiti sono {allowedTypes}.",
   "documentViewer_title": "",
   "carousel_prevNavButton": "Vai alla diapositiva precedente.",
-  "carousel_nextNavButton": "Passare alla diapositiva successiva.",
-  "carousel_bulletNavButton": "Andare alla diapositiva {number}."
+  "carousel_nextNavButton": "Passare alla diapositiva successiva."
 }
