@@ -164,7 +164,7 @@
   "general_returnToAssistant": "Return to assistant",
   "branding_ariaInformationButton": "Learn more about IBM Watson.",
   "channelTransfer_failed": "There was a problem transferring you. To try again either click the original link or send your message to the assistant here.",
-  "conversationalSearch_streamingIncomplete": "This message was not completed",
+  "conversationalSearch_streamingIncomplete": "This message was not completed. Please try again.",
   "conversationalSearch_viewPDF": "View PDF",
   "conversationalSearch_viewSourceDocument": "View source",
   "conversationalSearch_toggleCitations": "Open or close the list of sources",
