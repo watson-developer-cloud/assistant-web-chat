@@ -1,5 +1,5 @@
 {
-  "ai_slug_title": "Built with IBM watsonx",
+  "ai_slug_title": "Powered by IBM watsonx",
   "ai_slug_description": "IBM watsonx is powered by the latest AI models to intelligently process conversations and provide help whenever and wherever you may need it.",
   "components_overflow_ariaLabel": "Open and close list of options",
   "components_swiper_currentLabel": "{currentSlideNumber} of {totalSlideCount}",
@@ -154,8 +154,8 @@
   "disclaimer_accept": "I accept",
   "sessionHistory_expired": "Chat session inactive. Send any message to continue. If you refresh the page now, you'll have to start a new chat.",
   "sessionHistory_expiredNoCopy": "Chat session inactive.",
-  "branding_headline": "Built with <b>IBM watsonx</b>",
-  "branding_description": "Remove the frustration of long wait times, tedious searches, and unhelpful chatbots with IBM watsonx Assistant. Save money and time by providing your customers with fast and accurate answers anywhere they need it.",
+  "branding_headline": "Powered by <b>IBM watsonx</b>",
+  "branding_description": "Remove the frustration of long wait times, tedious searches, and unhelpful chatbots with watsonx Assistant. Save money and time by providing your customers with fast and accurate answers anywhere they need it.",
   "branding_sign_up": "Sign up today.",
   "general_ariaCloseInformationOverlay": "Close information panel.",
   "general_ariaAnnounceOpenedInformationOverlay": "An information panel has been opened.",

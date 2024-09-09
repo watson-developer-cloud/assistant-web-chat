@@ -153,7 +153,7 @@
   "sessionHistory_expired": "チャット・セッションが非アクティブです。 続行するには、メッセージを送信してください。 この時点でページを最新表示すると、新しいチャットを開始する必要があります。",
   "sessionHistory_expiredNoCopy": "チャット・セッションが非アクティブです。",
   "branding_headline": "<b>IBM watsonx</b> で構築",
-  "branding_description": "IBM watsonx Assistant を使用すると、長時間の待ち時間、面倒な検索、役に立たないチャットボットのフラストレーションをなくすことができます。 お客様が必要とする正確な情報をすぐに提供できますので、コストと時間を削減できます。",
+  "branding_description": "watsonx Assistant を使用すると、長時間の待ち時間、面倒な検索、役に立たないチャットボットのフラストレーションをなくすことができます。 お客様が必要とする正確な情報をすぐに提供できますので、コストと時間を削減できます。",
   "branding_sign_up": "今すぐ登録します。",
   "general_ariaCloseInformationOverlay": "情報パネルを閉じます。",
   "general_ariaAnnounceOpenedInformationOverlay": "情報パネルを開きました。",

@@ -153,7 +153,7 @@
   "sessionHistory_expired": "聊天会话处于不活动状态。 发送任何消息以继续。 如果您现在刷新页面，那么就必须开始新的聊天会话。",
   "sessionHistory_expiredNoCopy": "聊天会话处于不活动状态。",
   "branding_headline": "使用 <b>IBM watsonx</b> 构建",
-  "branding_description": "使用 IBM watsonx Assistant 消除漫长的等待时间、乏味的搜索和无益的聊天机器人带来的挫败感。 可根据客户需要随时随地为其提供快速准确的答案，节省了资金和时间。",
+  "branding_description": "使用 watsonx Assistant 消除漫长的等待时间、乏味的搜索和无益的聊天机器人带来的挫败感。 可根据客户需要随时随地为其提供快速准确的答案，节省了资金和时间。",
   "branding_sign_up": "立即注册吧。",
   "general_ariaCloseInformationOverlay": "关闭信息面板。",
   "general_ariaAnnounceOpenedInformationOverlay": "已打开一个信息面板。",

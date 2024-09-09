@@ -153,7 +153,7 @@
   "sessionHistory_expired": "Session de discussion inactive. Envoyez un message pour continuer. Si vous actualisez la page maintenant, vous devrez démarrer une nouvelle discussion.",
   "sessionHistory_expiredNoCopy": "Session de discussion inactive.",
   "branding_headline": "Conçu avec <b>IBM watsonx</b>",
-  "branding_description": "Éliminez la frustration liée aux longs temps d'attente, aux recherches fastidieuses et aux chatbots inutiles avec IBM watsonx Assistant. En leur donnant les réponses rapides et précises dont ils ont besoin, vous gagnerez du temps et de l'argent.",
+  "branding_description": "Éliminez la frustration liée aux longs temps d'attente, aux recherches fastidieuses et aux chatbots inutiles avec watsonx Assistant. En leur donnant les réponses rapides et précises dont ils ont besoin, vous gagnerez du temps et de l'argent.",
   "branding_sign_up": "Inscrivez-vous dès aujourd'hui.",
   "general_ariaCloseInformationOverlay": "Fermer le panneau d'information.",
   "general_ariaAnnounceOpenedInformationOverlay": "Un panneau d'information s'est ouvert.",
