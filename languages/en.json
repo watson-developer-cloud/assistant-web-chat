@@ -222,5 +222,7 @@
   "documentViewer_loadError": "We were unable to load the document. Click Retry to try again, or try downloading the document.",
   "documentViewer_loadErrorRetry": "Retry",
   "carousel_prevNavButton": "Go to previous slide.",
-  "carousel_nextNavButton": "Go to next slide."
+  "carousel_nextNavButton": "Go to next slide.",
+  "input_completionsTagApp": "App",
+  "input_completionsTagAssistant": "Assistant"
 }
