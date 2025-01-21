@@ -2,7 +2,7 @@
   "ai_slug_title": "Powered by IBM watsonx",
   "ai_slug_description": "IBM watsonx is powered by the latest AI models to intelligently process conversations and provide help whenever and wherever you may need it.",
   "components_overflow_ariaLabel": "Open and close list of options",
-  "components_swiper_currentLabel": "{currentSlideNumber} of {totalSlideCount}",
+  "components_swiper_currentLabel": "{currentSlideNumber}/{totalSlideCount}",
   "errors_communicating": "{botName} isn't available right now. Problems with a related system are preventing the data from being supplied.",
   "errors_imageSource": "Image is not available.",
   "errors_videoSource": "Video is not available.",
