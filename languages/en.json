@@ -246,5 +246,9 @@
   "feedback_submitLabel": "Submit",
   "feedback_cancelLabel": "Cancel",
   "input_stopResponse": "Stop response",
-  "messages_responseStopped": "Response stopped"
+  "messages_responseStopped": "Response stopped",
+  "chainOfThought_inputLabel": "Input",
+  "chainOfThought_outputLabel": "Output",
+  "chainOfThought_toolLabel": "Tool",
+  "chainOfThought_explainabilityLabel": "How did I get this answer?"
 }
